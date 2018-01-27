@@ -1,0 +1,843 @@
+<configs>
+	<config name="loot">
+	<remove xpath="/lootcontainers/lootgroup[@name='rareBooks']/item[@name='shotgunSlugSchematic']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='rareBooks']/item[@name='firstAidKitSchematic']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='rareBooks']/item[@name='rocketLauncherSchematic']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMilitaryParts']/item[@name='rocketLauncherSchematic']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='rareMedicine']/item[@name='firstAidKitSchematic']" />
+	
+	<remove xpath="/lootcontainers/lootgroup[@name='ammo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='toiletLoot']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='rottenFood']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsAnyShotguns']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsAnyShotguns+ammo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsLongShotgun+ammo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMP5+ammo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifle+ammo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsSniperRifle+ammo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMagnumParts']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsCommonParts']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsHuntingRifleParts']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMilitaryParts']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsRocketLauncher+ammo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsBasicGuns+ammo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMelee']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='weaponsMilitaryGuns+ammo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='militaryAmmo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='treasureAmmo']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='seeds']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='farmCrops']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='cupboard']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='junk']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='rareAutomotive']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='automotive']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='rareTools']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='rareMedicine']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='workingStiffs']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='sportingGoods']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='backpacks']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='lumberjacks']" />
+	<remove xpath="/lootcontainers/lootgroup[@name='ZombieUtilityWorker']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='6']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='15']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='17']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='19']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='22']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='36']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='37']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='38']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='39']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='43']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='44']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='48']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='50']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='53']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='54']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='59']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='61']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='66']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='73']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='75']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='81']" />
+	<remove xpath="/lootcontainers/lootcontainer[@id='83']" />
+
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='empty']">
+<lootgroup name="tommygun+ammo" count="1,2">
+	<item name="ThompsonAR" prob="0.001"/>
+	<item name="45ACPBullet" count="1,30" prob="0.005"/>
+</lootgroup>
+<lootgroup name="aksu+ammo" count="1,2">
+	<item name="gunAKSU" prob="0.001"/>
+	<item name="545mmBullet" count="1,30" prob="0.005"/>
+</lootgroup>
+<lootgroup name="gunCruger+ammo" count="1,2">
+	<item name="gunCruger" prob="0.001"/>
+	<item name="3006mmBullet" count="1,15" prob="0.01"/>
+</lootgroup>
+<lootgroup name="saiga+ammo" count="1,2">
+	<item name="Saiga" prob="0.001"/>
+	<item name="shotgunShell" count="1,10" prob="0.025"/>
+	<item name="shotgunSlug" count="1,8" prob="0.015"/>
+</lootgroup>
+<lootgroup name="oldfood">
+	<item name="rEgg" count="1,2"/>
+	<item name="dryBlueberryPie"/>
+	<item name="rMeatStew"/>
+	<item name="rRabbitMeat" count="1,2"/>
+	<item name="rPigMeat" count="1,2"/>
+	<item name="rBacon" count="1,2"/>
+	<item name="rChickenMeat" count="1,2"/>
+	<item name="dryCorn"/>
+	<item name="rPotato"/>
+	<item name="dryBlueberries"/>
+</lootgroup>
+<lootgroup name="oldBeverages" count="1,3">
+	<item name="emptyJar" prob="2.5"/>
+	<item name="bottledWater" prob="0.5"/>
+	<item name="bottledRiverWater" prob="2.5"/>
+	<item name="beer"/>
+	<item name="megaCrush" prob=".045"/>
+</lootgroup>
+<lootgroup name="decoration" count="1,3">
+	<item name="cntGraniteSink" prob="0.05"/>
+	<item name="cntCabinetOldSink" prob="0.5"/>
+	<item name="cntWallOven" prob="0.05"/>
+	<item name="cntOven" prob="0.5"/>
+	<item name="cntFridge" prob=".05"/>
+	
+	<item name="endTableLamp" prob="0.5"/>
+	<item name="tv" prob=".002"/>
+	<item name="ceilingLight01" prob="0.5"/>
+	<item name="ceilingLight02" prob=".05"/>
+		
+	<item name="cntDesk02" prob="0.05"/>
+	<item name="officeChair01" prob="0.5"/>
+	<item name="cntWallOven" prob="0.05"/>
+	<item name="chair01" prob="0.5"/>
+	<item name="cntMailBox01" prob=".05"/>
+	<item name="cntMailBox02" prob=".05"/>
+	<item name="cntMailBox03" prob=".05"/>
+	
+	<item name="cntFridgeTop" prob="0.005"/>
+	<item name="cntFridgeBottom" prob="0.005"/>
+	
+	<item name="cntGunSafe" prob="0.005"/>
+	<item name="cntDeskSafe" prob="0.007"/>
+	<item name="cntWallSafe" prob="0.01"/>
+</lootgroup>
+</insertAfter>
+	
+<insertAfter xpath="/lootcontainers/lootgroup[@name='treasureMaps']">
+<lootgroup name="factoryAmmoBoxs" count="1,2">
+	<item name="12AmmoBox" count="1,3" prob="0.02"/>
+	<item name="9mmAmmoBox" count="1,3" prob="0.01"/>
+	<item name="10mmAmmoBox" count="1,3" prob="0.01"/>
+	<item name="762AmmoBox" count="1,3" prob="0.01"/>
+	<item name="44AmmoBox" count="1,3" prob="0.01"/>
+	<item name="545AmmoBox" count="1,3" prob="0.015"/>
+	<item name="3006AmmoBox" count="1,3" prob="0.01"/>
+	<item name="12AmmoBoxSST" count="1,3" prob="0.015"/>
+</lootgroup>
+<lootgroup name="homemadeAmmo" count="1,2">
+	<item name="shotgunShellH" count="1,4" prob="0.02"/>
+	<item name="9mmBulletH" count="1,5" prob="0.015"/>
+	<item name="10mmBulletH" count="1,15" prob="0.015"/>
+	<item name="762mmBulletH" count="1,3" prob="0.005"/>
+	<item name="44MagBulletH" count="1,3" prob="0.005"/>
+	<item name="545mmBulletH" count="1,15" prob="0.015"/>
+	<item name="3006mmBulletH" count="1,7" prob="0.01"/>
+	<item name="shotgunSlugH" count="1,4" prob="0.015"/>
+</lootgroup>
+<lootgroup name="factoryAmmo" count="1,2">
+	<item name="shotgunShell" count="1,8" prob="0.025"/>
+	<item name="9mmBullet" count="1,9" prob="0.01"/>
+	<item name="10mmBullet" count="1,30" prob="0.01"/>
+	<item name="762mmBullet" count="1,6" prob="0.01"/>
+	<item name="50CALBullet" count="1,3" prob="0.005"/>
+	<item name="45ACPBullet" count="1,3" prob="0.005"/>
+	<item name="44MagBullet" count="1,6" prob="0.01"/>
+	<item name="545mmBullet" count="1,30" prob="0.01"/>
+	<item name="3006mmBullet" count="1,15" prob="0.01"/>
+	<item name="shotgunSlug" count="1,8" prob="0.015"/>
+	<item name="12AmmoBox" count="1" prob="0.01"/>
+	<item name="9mmAmmoBox" count="1" prob="0.005"/>
+	<item name="10mmAmmoBox" count="1" prob="0.005"/>
+	<item name="762AmmoBox" count="1" prob="0.005"/>
+	<item name="44AmmoBox" count="1" prob="0.005"/>
+	<item name="545AmmoBox" count="1" prob="0.0075"/>
+	<item name="3006AmmoBox" count="1" prob="0.005"/>
+	<item name="12AmmoBoxSST" count="1" prob="0.0075"/>
+</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='banditArmor']">
+<lootgroup name="rottenFood">
+	<item name="rottingFlesh"/>
+	<item name="shamSandwich"/>
+	<item name="moldyBread"/>
+</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='rottenFood']">
+<lootgroup name="weaponsMelee" count="1,2">
+	<item name="clubWood"/>
+	<item name="clubIron"/>
+	<item name="clubBarbed" prob="0.002"/>
+	<item group="crudeMelee" prob="0.002"/>
+	<item name="clubSpiked" prob="0.0015"/>
+	<item name="huntingKnife" prob="0.002"/>
+	<item name="machete" prob="0.001"/>
+	<item name="bat" prob="0.002"/>
+	<item name="claw" prob="0.0001"/>
+</lootgroup>
+<lootgroup name="crudeMelee" count="1,2">
+	<item name="woodenSpear"/>
+	<item name="spearStone"/>
+	<item name="fullMetalSpear" prob="0.002"/>
+	<item name="spearIron" prob="0.0015"/>
+	<item name="spearSteel" prob="0.002"/>
+	<item name="huntingKnifeSpear" prob="0.001"/>
+	<item name="nailedBat" prob="0.001"/>
+	<item name="chainNlocks" prob="0.002"/>
+	<item name="nailwood" prob="0.004"/>
+</lootgroup>
+<lootgroup name="weaponsBasicGuns+ammo" count="1,2">
+	<item group="weaponsPistol+ammo" prob="0.001"/>
+	<item group="gunCruger+ammo" prob="0.001"/>
+	<item group="weaponsAnyShotguns+ammo" prob="0.001"/>
+	<item group="saiga+ammo" prob="0.001"/>
+	<item group="weaponsHuntingRifle+ammo" prob="0.001"/>
+</lootgroup>
+<lootgroup name="weaponsRocketLauncher+ammo" count="1,2">
+	<item name="gunRocketLauncher" prob="0.001"/>
+	<item name="rocket" count="1,2" prob="0.005"/>
+</lootgroup>
+<lootgroup name="weaponsSniperRifle+ammo" count="1,2">
+	<item name="gunSniperRifle" prob="0.0001"/>
+	<item name="50CALBullet" count="1,3" prob="0.0005"/>
+</lootgroup>
+<lootgroup name="weaponsHuntingRifle+ammo" count="1,2">
+	<item name="gunHuntingRifle" prob="0.001"/>
+	<item name="762mmBullet" count="1,6" prob="0.01"/>
+	<item name="762mmBulletH" count="1,3" prob="0.005"/>
+</lootgroup>
+<lootgroup name="weaponsMP5+ammo" count="1,2">
+	<item name="gunMP5" prob="0.001"/>
+	<item name="10mmBullet" count="1,30" prob="0.01"/>
+	<item name="10mmBulletH" count="1,15" prob="0.015"/>
+</lootgroup>
+<lootgroup name="weaponsLongShotgun+ammo" count="1,2">
+	<item name="gunPumpShotgun" prob="0.001"/>
+	<item name="shotgunShell" count="1,8" prob="0.025"/>
+	<item name="shotgunSlug" count="1,8" prob="0.015"/>
+	<item name="shotgunShellH" count="1,4" prob="0.02"/>
+	<item name="shotgunSlugH" count="1,4" prob="0.015"/>
+</lootgroup>
+<lootgroup name="weaponsAnyShotguns+ammo" count="1,2">
+	<item group="weaponsAnyShotguns" prob="0.001"/>
+	<item name="shotgunShell" count="1,8" prob="0.025"/>
+	<item name="shotgunShellH" count="1,4" prob="0.02"/>
+</lootgroup>
+<lootgroup name="weaponsAnyShotguns" count="1">
+	<item name="gunSawedOffPumpShotgun" prob="0.005"/>
+	<item name="gunPumpShotgun" prob="0.001"/>
+</lootgroup>
+<lootgroup name="toiletLoot" count="1">
+	<item name="bottledRiverWater" count="1,2" prob="0.055"/>
+	<item name="turd" count="1,2" prob="0.03"/>
+</lootgroup>
+<lootgroup name="weaponsPistol+ammo" count="1,2">
+	<item name="9mmBullet" count="1,9" prob="0.01"/>
+	<item name="9mmBulletH" count="1,5" prob="0.015"/>
+	<item name="gunPistol" prob="0.001"/>
+</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='books']">
+<lootgroup name="treasureAmmo">
+	<item name="shotgunShell" count="29,75" prob="0.05"/>
+	<item name="9mmBullet" count="34,84" prob="0.02"/>
+	<item name="10mmBullet" count="106,280" prob="0.04"/>
+	<item name="762mmBullet" count="22,56" prob="0.04"/>
+	<item name="44MagBullet" count="22,56" prob="0.02"/>
+	<item name="shotgunShellH" count="15,37" prob="0.04"/>
+	<item name="9mmBulletH" count="19,47" prob="0.03"/>
+	<item name="10mmBulletH" count="54,140" prob="0.03"/>
+	<item name="762mmBulletH" count="12,28" prob="0.01"/>
+	<item name="44MagBulletH" count="12,28" prob="0.01"/>
+</lootgroup>
+<lootgroup name="militaryAmmo">
+	<item name="10mmBullet" count="16,60" prob="0.02"/>
+	<item name="762mmBullet" count="4,12" prob="0.02"/>
+	<item name="shotgunSlug" count="5,16" prob="0.03"/>
+	<item name="50CALBullet" count="3,6" prob="0.01"/>
+	<item name="545mmBullet" count="16,60" prob="0.02"/>
+	<item name="3006mmBullet" count="9,30" prob="0.02"/>
+	<item name="rocket" count="2,4" prob="0.01"/>
+	<item name="10mmAmmoBox" count="2,6" prob="0.02"/>
+	<item name="762AmmoBox" count="2,6" prob="0.02"/>
+	<item name="545AmmoBox" count="2,6" prob="0.03"/>
+	<item name="3006AmmoBox" count="2,6" prob="0.02"/>
+	<item name="12AmmoBoxSST" count="2,6" prob="0.03"/>
+</lootgroup>
+<lootgroup name="weaponsMilitaryGuns+ammo">
+	<item group="weaponsMP5+ammo" prob="0.001"/>
+	<item group="tommygun+ammo" prob="0.001"/>
+	<item group="weaponsSniperRifle+ammo" prob="0.001"/>
+	<item group="weaponsRocketLauncher+ammo" prob="0.001"/>
+</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='cannedfood']">
+<lootgroup name="seeds">
+	<item name="plantedPotato1" prob="0.003"/>
+	<item name="plantedCoffee1" prob="0.003"/>
+	<item name="plantedCorn1" prob="0.003"/>
+	<item name="plantedBlueberry1" prob="0.003"/>
+	<item name="coffeeBeans" prob="0.003"/>
+	<item name="plantedCotton1" prob="0.003"/>
+	<item name="plantedGoldenrod1" prob="0.003"/>
+	<item name="plantedAloe1" prob="0.003"/>
+	<item name="plantedMushroom1" prob="0.003"/>
+	<item name="plantedYucca1" prob="0.003"/>
+	<item name="plantedChrysanthemum1" prob="0.003"/>
+	<item name="treePlantedMountainPine1m" prob="0.003"/>
+	<item name="treePlantedMaple1m" prob="0.003"/>
+	<item name="treePlantedWinterPine1m" prob="0.003"/>
+</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='coldfood']">
+<lootgroup name="cupboard">
+	<item name="canEmpty"/>
+	<item group="cannedfood" prob=".05"/>
+	<item name="bottledWater" prob=".005"/>
+	<item name="bottledRiverWater" prob="1.5"/>
+	<item name="emptyJar" count="1,4"/>
+	<item name="salt" count="5,20" prob="0.05"/>
+	<item name="sugar" count="5,20" prob="0.05"/>
+	<item name="saltPocket" prob=".01"/>
+	<item name="sugarBag" prob=".01"/>
+	<item name="sugarCubes" count="2,10" prob="0.05"/>
+	<item name="sugarCubesPack" prob=".01"/>
+	<item name="speciesPack" prob=".025"/>
+	<item name="vinegar" prob=".025"/>
+	<item name="potassiumNitratePowder" count="2,6" prob=".015"/>
+</lootgroup>
+<lootgroup name="farmCrops">
+	<item name="corn" prob="0.03"/>
+	<item name="potato" prob="0.03"/>
+	<item name="blueberries" prob="0.03"/>
+	<item name="cottonPlant" prob="0.03"/>
+	<item name="coffeeBeans" prob="0.03"/>
+	<item name="goldenrodPlant" prob="0.03"/>
+</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='rareOres']">
+<lootgroup name="firemanGear">
+	<item name="firemanBoots" count="1,4" prob="0.002"/>
+	<item name="firemanPants" count="1,4" prob="0.001"/>
+	<item name="firemanShirt" count="1,4" prob="0.001"/>
+	<item name="firemanGloves" count="1,4" prob="0.02"/>
+	<item name="firemanMask" count="1,4" prob="0.002"/>
+	<item name="militaryFiber" count="1,5" prob=".02"/>
+</lootgroup>
+<lootgroup name="automotive">
+	<item name="gasCan" count="50,300" prob=".02"/>
+	<item name="radiator" prob=".02"/>
+	<item name="headlight" prob=".02"/>
+	<item name="hubcap" prob=".02"/>
+	<item name="airFilter" prob=".02"/>
+	<item name="carBattery" prob=".02"/>
+	<item name="oil" count="1,4" prob=".02"/>
+	<item name="spring" count="1,4" prob=".02"/>
+	<item group="rareAutomotive" prob=".002"/>
+	<item name="flashlight02" prob="0.005" />
+	<item name="electricParts" count="1,3" prob=".03"/>
+	<item name="electronicParts" count="1,2" prob=".01"/>
+	<item name="mechanicalParts" count="1,3" prob=".03"/>
+</lootgroup>	
+<lootgroup name="rareAutomotive">
+	<item name="smallEngine" prob=".002"/>
+	<item name="minibikeWheels" prob=".002"/>
+</lootgroup>
+<lootgroup name="junk">
+	<item name="candyTin"/>
+	<item name="emptyJar" count="1"/>
+	<item name="canEmpty" count="1"/>
+	<item name="paper" count="1,6" prob="0.07"/>
+	<item name="cloth" count="1,4" prob=".2"/>
+	<item group="trophyGroup" prob=".02"/>
+	<item name="candleStick" prob=".02"/>
+	<item name="doorKnob" count="1" prob=".02"/>
+	<item name="oil" count="2,6" prob=".002"/>
+	<item name="shortMetalPipe" count="1" prob=".02"/>
+	<item name="fishingWeight" count="1,3" prob=".002"/>
+	<item name="scrapLead" count="1,10" prob=".002"/>
+	<item name="glue" count="1" prob=".002"/>
+	<item name="nail" count="1" prob=".002"/>
+	<item name="ductTape" count="1,3" prob=".002"/>
+	<item group="rottenFood" count="1" prob=".002"/>
+	<item name="femur" count="1,2" prob="0.005"/>
+	<item name="scrapPlastics" count="1,2" prob=".03"/>	
+</lootgroup>			
+</insertAfter>
+	
+<insertAfter xpath="/lootcontainers/lootgroup[@name='metalpipe']">	
+<lootgroup name="rareTools" count="1">
+	<item name="chainsaw" prob=".002"/>
+	<item name="auger" prob="0.003"/>
+	<item name="sledgehammer" prob=".002"/>
+	<item name="pickaxeSteel" prob=".02"/>
+	<item name="fireaxeSteel" prob=".02"/>
+	<item name="shovelSteel" prob=".02"/>
+	<item name="blacksmithHammer" prob=".002"/>
+	<item name="forceps" prob=".002"/>
+	<item name="cut-off" prob=".002"/>
+	<item name="toolAndDieSet" prob="0.09"/>
+	<item group="nailgun+parts" prob=".02"/>
+</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='tools']">	
+<lootgroup name="rareMedicine" count="1">
+	<item name="firstAidKit" prob=".002"/>
+	<item name="beaker" prob=".002"/>
+	<item name="antibiotics" prob=".02"/>
+	<item name="bloodDrawKit" prob=".02"/>
+</lootgroup>
+<lootgroup name="workingStiffs" count="1">
+	<item name="pickaxeIron"/>
+	<item name="shovelIron"/>
+	<item name="fireaxeIron"/>
+	<item name="hoeIron"/>
+	<item name="clawHammer"/>
+	<item name="wrench" prob="0.8"/>
+	<item name="repairKit" count="1,4"/>
+	<item name="woodFrameBlock" count="10,30"/>
+	<item name="rebarFrameBlock" count="10,20"/>
+	<item name="nail" count="10,40"/>
+	<item name="wood" count="50,250"/>
+	<item name="anvil" count="1"/>
+	<item name="ironDoor1_v1"/>
+	<item group="rareTools"/>
+	<item name="forgedIron" count="1,2" prob="0.21"/> <!-- together 2% per crate -->
+	<item name="forgedSteel" count="1,2" prob="0.12"/>
+	<item name="bHamHead" prob="0.02"/>
+	<item name="electricParts" count="1,5" prob=".5"/>
+	<item name="electronicParts" count="1,3" prob=".2"/>
+	<item name="mechanicalParts" count="1,5" prob="1"/>
+	<item name="scrapPlastics" count="1,8" prob=".4"/>
+</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='medicine']">	
+<lootgroup name="sportingGoods" count="1">
+	<item name="flashlight02" prob=".02"/>
+	<item name="huntingKnife" prob=".02"/>
+	<item name="steelArrowHead" prob=".02"/>
+	<item name="cookingGrill" prob=".02"/>
+	<item name="cookingPot" prob=".02"/>
+	<item name="firstAidKit" prob=".02"/>
+	<item name="padlock" prob=".02"/>
+	<item name="bedroll" prob=".02"/>
+	<item group="skullCapAll" prob=".02"/>
+	<item group="shirtLongAll" prob=".02"/>
+	<item group="pantsAll" prob=".02"/>
+	<item group="denimShortsPantsAll" prob=".02"/>
+	<item group="bandanaAll" prob=".02"/>
+	<item group="tshirtAll" prob=".02"/>
+	<item name="goggles" prob=".02"/>
+	<item name="shades" prob=".02"/>
+	<item name="shadesBlack" prob=".01"/>
+	<item group="ballCapAll" prob=".02"/>
+	<item name="wornBoots" prob=".02"/>
+	<item name="footballHelmet" prob=".02"/>
+</lootgroup>
+</insertAfter>	
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='automotive+tools+junk']">	
+<lootgroup name="backpacks">
+	<item group="cupboard" prob=".02"/>
+	<item group="weaponsBasicGuns+ammo" prob="0.05"/>
+	<item group="weaponsMelee" prob="0.05"/>
+	<item group="Armor" prob="0.05"/>
+	<item name="flashlight02" prob="0.03"/>
+</lootgroup>
+</insertAfter>	
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='airdropMedicine']">
+<lootgroup name="lumberjacks" count="1">
+	<item name="stoneAxe" prob=".02"/>
+	<item name="fireaxeIron" prob=".2"/>
+	<item group="rareTools" prob=".02"/>
+	<item name="grainAlcohol" prob=".02"/>
+</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='banditsGeneral']">
+<lootgroup name="ZombieUtilityWorker">
+	<item group="pantsAll" prob=".02"/>
+	<item group="tankTopAll" prob=".02"/>
+	<item group="tshirtAll" prob=".02"/>
+	<item group="tools" prob=".02"/>
+	<item name="wornBoots" prob=".02"/>
+	<item name="shades" prob=".02"/>
+	<item name="miningHelmet" prob=".02"/>
+	<item name="flashlight02" prob="0.03"/>
+	<item name="nail" count="10,40" prob=".03"/>
+	<item name="forgedIron" count="5,15" prob=".002"/>
+</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='ZombieFootballPlayer']">
+<lootgroup name="policeLoot">
+	<item group="weaponsPistol+ammo" prob="0.1"/>
+	<item group="weaponsAnyShotguns+ammo" prob="0.1"/>
+	<item group="automotive"/>
+	<item group="junk"/>
+	<item group="Armor"/>
+	<item name="firstAidKit"/>
+	<item name="shades" prob=".1"/>
+	<item name="shadesBlack" prob=".5"/>
+	<item name="flashlight02" prob="0.3"/>
+	<item name="swatHelmet" prob=".3"/>
+	<item name="painkillers"/>
+</lootgroup>
+<lootgroup name="warTanks">
+	<item group="weaponsMilitaryGuns+ammo"/>
+	<item group="militaryAmmo"/>
+	<item group="automotive"/>
+	<item group="junk"/>
+	<item group="militaryArmor"/>
+	<item name="rocket" count="0,4" prob="0.1"/>
+	<item name="firstAidKit"/>
+	<item name="huntingKnife"/>
+	<item name="flashlight02" prob="0.3"/>
+	<item name="swatHelmet" prob=".3"/>
+	<item name="antibiotics" prob=".02"/>
+</lootgroup>
+<lootgroup name="armyTruck">
+	<item group="armyFull"/>
+	<item group="automotive"/>
+	<item group="junk"/>
+</lootgroup>
+<lootgroup name="armyFull">
+	<item group="armyLite"/>
+	<item group="weaponsMilitaryGuns+ammo"/>
+	<item group="militaryArmor"/>
+	<item name="swatHelmet" prob=".3"/>
+</lootgroup>
+<lootgroup name="armyBike">
+	<item group="armyLite"/>
+	<item name="heavyBanditGasmask" prob=".3"/>
+	<item group="automotive+tools+junk"/>
+</lootgroup>
+<lootgroup name="armyLite">
+	<item group="weaponsBasicGuns+ammo"/>
+	<item group="militaryAmmo"/>
+	<item group="lightArmor"/>
+	<item name="firstAidKit"/>
+	<item name="huntingKnife"/>
+	<item name="flashlight02" prob="0.3"/>
+	<item name="painkillers"/>
+</lootgroup>
+<lootgroup name="fireTruck">
+	<item group="firemanGear"/>
+	<item group="automotive+tools+junk"/>
+	<item name="firstAidKit"/>
+	<item name="shovelIron" prob="0.3"/>
+	<item name="fireaxeIron" prob="0.4"/>
+	<item name="fireaxeSteel" prob="0.03"/>
+	<item name="shovelSteel" prob="0.03"/>
+	<item name="flashlight02" prob="0.3"/>
+	<item name="painkillers"/>
+	<item name="heavyBanditGasmask" prob=".3"/>
+</lootgroup>
+<lootgroup name="ambulLoot">
+	<item group="medicine"/>
+	<item group="automotive"/>
+	<item group="junk"/>
+	<item name="firstAidKit"/>
+	<item name="flashlight02" prob="0.3"/>
+	<item name="painkillers"/>
+</lootgroup>
+
+<lootgroup name="dwheelsGroup">
+	<item name="firstAidKit"/>
+	<item name="partsHandlebars"/>
+	<item name="spring" count="1,4"/>
+	<item name="flashlight02" prob="0.3"/>
+	<item name="painkillers"/>
+</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='5']">
+<lootcontainer id="6" count="1,2" size="4,3" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="baseTemplate">
+	<item group="clothes" prob="40"/>
+	<item group="books" count="1"/>
+	<item group="medicine"/>
+	<item name="flashlight02"/>
+</lootcontainer>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='14']">
+<lootcontainer id="15" count="0,2" size="4,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+	<item group="junk" prob="1"/>
+	<item group="clothes" prob="0.19"/>
+	<item group="rottenFood" prob="0.062"/>
+	<item group="questChallenge" count="1" prob="0.0105"/>
+	<item group="treasureMaps" count="1" prob="0.0105"/> 
+</lootcontainer>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='16']">
+
+<lootcontainer id="19" count="1,8" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="baseTemplate">
+	<item group="automotive"/>
+	<item group="junk"/>
+	<item group="clothes" prob="0.19"/>
+	<item name="huntingKnife" prob="0.15"/>
+	<item name="firstAidKit" prob="0.45"/>
+	<item group="weaponsAnyShotguns+ammo" prob="0.025"/>
+	<item group="weaponsPistol+ammo" prob="0.1"/>
+	<item group="weaponsBasicGuns+ammo" prob="0.01"/>
+</lootcontainer>
+
+<lootcontainer id="17" count="1,2" size="4,3" destroy_on_close="false" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="baseTemplate">
+	<item group="weaponsPistol+ammo"/>
+	<item name="shamSandwich" count="1,5"/>
+	<item name="flashlight02" prob="0.5"/>
+	<item name="cloth" count="1,6" prob="0.4"/>
+</lootcontainer>
+
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='21']">
+
+<lootcontainer id="22" count="0,2" size="5,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="baseTemplate">
+	<item group="automotive" prob="0.1"/>
+	<item group="tools" prob="0.1"/>
+	<item group="junk" prob="0.1"/>
+</lootcontainer>
+
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='35']">
+
+<lootcontainer id="39" count="1,3" size="4,3" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="baseTemplate">
+	<item group="factoryAmmoBoxs" prob="0.5"/>
+	<item group="factoryAmmo" prob="0.1"/>
+	<item group="weaponsBasicGuns+ammo" prob="0.1"/>
+	<item group="sportingGoods" prob="1"/>
+</lootcontainer>
+
+<lootcontainer id="38" count="0,3" size="4,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+	<item name="bottledWater" count="1,2" prob="0.15"/>
+	<item name="shamSandwich" prob="0.5"/>
+	<item group="cannedfood" prob=".2"/>
+	<item name="painkillers" prob="0.1"/>
+</lootcontainer>
+
+<lootcontainer id="37" count="0,2" size="4,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+	<item group="junk"/>
+	<item group="homemadeAmmo"/>
+	<item group="clothes" prob="0.3"/>
+	<item group="questChallenge" count="1" prob="0.035"/>
+	<item group="treasureMaps" count="1" prob="0.035"/> 
+</lootcontainer>
+
+<lootcontainer id="36" count="0,3" size="4,3" sound_open="UseActions/open_suitcase" sound_close="UseActions/close_suitcase" loot_quality_template="baseTemplate">
+	<item name="bottledWater" count="1,2" prob="0.15"/>
+	<item group="junk"/>
+	<item name="flashlight02" prob="0.1"/>
+	<item group="medicine" prob="0.1"/>
+</lootcontainer>
+
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='42']">
+
+<lootcontainer id="44" count="0,2" size="4,3" sound_open="UseActions/open_file_cabinet" sound_close="UseActions/close_file_cabinet" loot_quality_template="baseTemplate">
+	<item group="books" count="1"/>
+	<item name="paper" count="5,10"/>
+	<item name="paper" count="5,10" prob="0.86"/>
+	<item name="oldCash" count="1,6" prob="0.3"/>
+	<item name="painkillers" prob="0.05"/>
+	<item group="trophyGroup"/>
+</lootcontainer>
+
+<lootcontainer id="43" count="0,3" size="4,3" sound_open="UseActions/open_locker" sound_close="UseActions/close_locker" loot_quality_template="baseTemplate">
+	<item group="clothes" prob="28"/>
+	<item group="hats" prob="10"/>
+	<item group="books" count="1,2"/>
+	<item name="paper" count="1,2" prob="0.7"/>
+	<item name="oldCash" count="1,3" prob="0.3"/>
+	<item group="medicine" prob="0.05"/>
+	<item group="trophyGroup"/>
+</lootcontainer>
+
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='45']">
+<lootcontainer id="48" count="1,2" size="4,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" loot_quality_template="baseTemplate">
+	<item group="cannedfood"/>
+	<item name="bottledWater"/>
+	<item group="medicine"/>
+	<item name="paper" count="2,8" prob="0.5"/>
+	<item name="oldCash" count="4,13" prob="1.5"/>
+</lootcontainer>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='49']">
+<lootcontainer id="50" count="0,3" size="5,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="baseTemplate">
+	<item group="weaponsBasicGuns+ammo" prob="0.03"/>
+	<item name="scrapPlastics" count="1,6" prob=".015"/>
+	<item name="repairKit" count="1,2" prob=".015"/>
+	<item name="huntingKnife" prob="0.08"/>
+	<item name="machete" prob="0.001"/>
+</lootcontainer>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='52']">
+<lootcontainer id="53" count="0,3" size="5,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="baseTemplate">
+	<item group="workingStiffs"/>
+	<item group="decoration"/>
+</lootcontainer>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='53']">
+<lootcontainer id="54" count="1,3" size="5,4" sound_open="UseActions/open_shopping_cart" sound_close="UseActions/close_shopping_cart" loot_quality_template="baseTemplate">
+	<item group="cupboard"/>
+	<item group="oldBeverages"/>
+	<item name="scrapPlastics" count="1,2" prob=".15"/>
+</lootcontainer>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='58']">
+<lootcontainer id="59" count="0,3" size="5,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="baseTemplate">
+	<item name="shamSandwich" count="1,3"/>
+	<item group="cannedfood" count="1,2"/>
+	<item group="oldfood"/>
+	<item group="oldBeverages" count="1,2"/>
+	<item name="foodHoney" count="1" prob="0.001"/>
+	<item name="scrapPlastics" count="1,8" prob=".5"/>
+</lootcontainer>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='60']">
+<lootcontainer id="61" count="1,3" size="4,4" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+	<item group="weaponsMilitaryGuns+ammo" prob="0.2"/>
+	<item group="militaryArmor" prob="0.1"/>
+</lootcontainer>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='65']">
+<lootcontainer id="66" count="0,2" size="4,4" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+	<item group="lumberjacks" prob="0.42"/>
+	<item group="warmClothes" prob="1"/>
+	<item group="junk" prob="0.15"/>
+	<item group="rareOres" prob="0.02"/>
+</lootcontainer>
+</insertAfter>
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='72']">
+	<lootcontainer id="73" count="0,2" size="4,4" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+		<item group="junk" prob="2" />
+		<item group="weaponsMilitaryGuns+ammo" prob="1" />
+		<item group="weaponsRocketLauncher+ammo" prob="0.06" />
+		<item name="rocket" count="2,6" prob="0.12" />
+		<item group="militaryArmor" prob="1" />
+		<item name="nightvisionGoggles" prob="0.3" />
+	</lootcontainer>
+</insertAfter>
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='74']">
+<lootcontainer id="75" count="0,2" size="5,3" sound_open="UseActions/open_dumpster" sound_close="UseActions/close_dumpster" loot_quality_template="baseTemplate">
+	<item name="rottingFlesh" count="1,2" prob="2"/>
+	<item name="femur" count="1,2" prob="0.5"/>
+	<item group="junk"/>
+	<item name="fertilizer" count="1,3" prob="0.05"/>
+	<item name="goldNugget" count="1" prob="0.05"/>
+</lootcontainer>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='80']">
+<lootcontainer id="81" count="0,3" size="4,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+	<item group="junk" prob="10"/>
+	<item group="weaponsHuntingRifle+ammo" prob="1"/>
+	<item name="dynamite" count="1,3" prob="1"/>
+	<item group="cowboyHatAll" prob="1"/>
+	<item group="bandanaAll" prob="1"/>
+	<item name="animalHidePoncho" prob="1"/>
+	<item name="denimPants" prob="1"/>
+	<item name="cowboyBootsBrown" prob="1"/>
+	<item name="cowboyBootsBlack" prob="1"/>
+	<item name="cigar" prob="1"/>
+	<item group="rareOres" prob="1"/>
+	<item name="grainAlcohol" count="1,3" prob="0.7"/>
+	<item group="cannedfood" count="1,2" prob="1"/>
+	<item name="bottledWater" count="1,3" prob="1"/>
+	<item name="oldCash" count="2,15" prob="1"/>
+	<item group="treasureMaps" count="1" prob="1"/>
+</lootcontainer>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='81']">
+<lootcontainer id="83" count="0,3" size="4,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+	<item group="junk" prob="2"/>
+	<item name="swatHelmet"/>
+	<item name="gothicPants"/>
+	<item name="gothBootsBlack"/>
+	<item name="shades" prob=".1"/>
+	<item name="shadesBlack" prob=".5"/>
+	<item name="beer" prob="3"/>
+	<item name="grainAlcohol"/>
+	<item name="oldCash" count="1,15"/>
+	<item name="casinoCoin" count="1,10"/>
+	<item name="antibiotics"/>
+	<item name="painkillers"/>
+	<item group="weaponsPistol+ammo" prob="0.1"/>
+	<item group="weaponsAnyShotguns+ammo" prob="0.1"/>
+	<item group="tools" prob="0.1"/>
+	<item name="clubIron"/>
+	<item name="clubBarbed" prob="0.6"/>
+	<item name="clubSpiked" prob="0.5"/>
+	<item name="huntingKnife"/>
+	<item name="machete" prob="0.8"/>
+	<item name="firstAidKit"/>
+</lootcontainer>
+</insertAfter>
+
+
+<append xpath="/lootcontainers">
+<lootcontainer id="200" count="1" size="7,6" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="7" loot_quality_template="baseTemplate">
+	<item group="warTanks"/>
+</lootcontainer>
+<lootcontainer id="201" count="1" size="4,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="baseTemplate">
+	<item group="policeLoot"/>
+</lootcontainer>
+<lootcontainer id="202" count="1" size="4,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="2" loot_quality_template="baseTemplate">  <!-- army bike -->
+	<item group="armyBike"/>
+</lootcontainer>
+<lootcontainer id="203" count="1" size="7,7" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="5" loot_quality_template="baseTemplate"> <!-- army truck2 -->
+	<item group="armyTruck"/>
+</lootcontainer>
+<lootcontainer id="204" count="1" size="5,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="3" loot_quality_template="baseTemplate">  <!-- DVP -->
+	<item group="armyLite"/>
+</lootcontainer>
+<lootcontainer id="205" count="1" size="5,3" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="baseTemplate"> <!-- firetruck -->
+	<item group="fireTruck"/>
+</lootcontainer>
+<lootcontainer id="206" count="1,2" size="7,2" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="5" loot_quality_template="baseTemplate"> <!-- army truck(gas) -->
+	<item group="armyTruck"/>
+	<item name="gasCan" count="0,1000" prob="0.454"/>
+</lootcontainer>
+<lootcontainer id="207" count="1" size="4,3" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="baseTemplate"> <!-- firetruck -->
+	<item group="ambulLoot"/>
+</lootcontainer>
+
+		</append>
+	</config>
+</configs>

@@ -1,0 +1,1939 @@
+<configs>
+	<config name="items">
+	<remove xpath="/items/item[@name='rottingFlesh']" />
+	<remove xpath="/items/item[@name='scrapPlastics']" />
+	<set xpath="/items/item[(contains(@name, 'plantFiber') or contains(@name, 'leatherBoots') or contains(@name, 'cowboyHat') or contains(@name, 'Cap') or contains(@name, 'miningHelmet') or contains(@name, 'footballHelmet') or contains(@name, 'shades') or contains(@name, 'goggles') or contains(@name, 'Goggles') or contains(@name, 'eyeglasses') or contains(@name, 'nerdGlasses') or contains(@name, 'bandana') or contains(@name, 'Pants') or contains(@name, 'tankTop') or contains(@name, 'worn') or contains(@name, 'runningShoes') or contains(@name, 'shirt') or contains(@name, 'pufferCoat') or contains(@name, 'jacketWhite'))]/property[@name='ActionSkillGroup' and (@value='Clothing/Armor')]/@value">Clothing</set>
+	<set xpath="/items/item[starts-with(@name, 'cloth') and not(contains(@name, 'Jacket'))]/property[@name='ActionSkillGroup' and (@value='Clothing/Armor')]/@value">Clothing</set>
+	<set xpath="/items/item[(contains(@name, 'scrap') or contains(@name, 'iron') or contains(@name, 'heavyBandit') or contains(@name, 'swatHelmet'))]/property[@name='ActionSkillGroup' and (@value='Clothing/Armor')]/@value">Heavy Armor</set>
+	<set xpath="/items/item[(contains(@name, 'military') or contains(@name, 'hazmat') or contains(@name, 'leatherHood') or contains(@name, 'miningHelmet') or contains(@name, 'gasMask') or contains(@name, 'animalHide') or contains(@name, 'leatherDuster') or contains(@name, 'armyShirt'))]/property[@name='ActionSkillGroup' and (@value='Clothing/Armor')]/@value">Light Armor</set>
+<insertAfter xpath="/items/item[@name='forgedSteel']">
+<item id="1309" name="scrapPlastics">
+		<!-- scrap material -->
+		<property name="Meshfile" value="Items/Misc/sackPrefab" />
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+		<property name="Material" value="Mplastics" />
+		<property name="HoldType" value="45" />
+		<property name="Stacknumber" value="1000" />
+		<!-- STK resource -->
+		<property name="Weight" value="1" />
+		<property name="EconomicValue" value="20" />
+		<property name="EconomicBundleSize" value="10" />
+		<property name="Group" value="Resources" />
+</item>
+</insertAfter>
+			<append xpath="/items">
+				<item id="736" name="rottingFlesh">
+					<property name="Meshfile" value="Items/Food/meat_rabbit" />
+					<property name="Material" value="organic" />
+					<property name="HoldType" value="21" />
+					<property name="Stacknumber" value="50" /><!-- STK food -->
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="1" />
+					<property name="SellableToTrader" value="false" />
+					<property class="Action1">
+						<property name="Class" value="Eat" />
+						<property name="Delay" value="1.0" />
+						<property name="Use_time" value="..." />
+						<property name="Gain_health" value="0" />
+						<property name="Gain_food" value="10" />
+						<property name="Buff" value="foodPoisoning" />
+						<property name="Gain_water" value="-5" />
+						<property name="Gain_stamina" value="-20" />
+						<property name="Gain_sickness" value="30" />
+						<property name="Sound_start" value="UseActions/player_eating" />
+					</property>
+					<property name="CraftingIngredientExp" value="0" />
+					<property name="CraftingIngredientTime" value="95" />
+					<property name="Group" value="Food/Cooking" />
+				</item>
+				<item id="" name="infectedFlesh">
+					<property name="Meshfile" value="Items/Food/meat_rabbit" />
+					<property name="Material" value="organic" />
+					<property name="HoldType" value="21" />
+					<property name="Stacknumber" value="100" /><!-- STK food -->
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="1" />
+					<property name="SellableToTrader" value="false" />
+					<property class="Action1">
+						<property name="Class" value="Eat" />
+						<property name="Delay" value="1.0" />
+						<property name="Use_time" value="..." />
+						<property name="Gain_health" value="-20" />
+						<property name="Gain_food" value="5" />
+						<property name="Buff" value="foodPoisoning,infection" />
+						<property name="Gain_water" value="-25" />
+						<property name="Gain_stamina" value="-50" />
+						<property name="Gain_sickness" value="100" />
+						<property name="Sound_start" value="UseActions/player_eating" />
+					</property>
+					<property name="CraftingIngredientExp" value="0" />
+					<property name="CraftingIngredientTime" value="95" />
+					<property name="Group" value="Food/Cooking" />
+				</item>
+				<item id="" name="infectedBloodBag">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="organic" />
+					<property name="Stacknumber" value="50" /><!-- STK resource -->
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="1" />
+					<property name="SellableToTrader" value="false" />
+					<property name="HoldType" value="45" />
+					<property class="Action1">
+						<property name="Class" value="UseOther" />
+						<property name="Delay" value="1.0" />
+						<property name="Use_time" value="..." />
+						<property name="Gain_health" value="-5" />
+						<property name="Buff" value="infection" />
+						<property name="Gain_food" value="5" />
+						<property name="Gain_water" value="5" />
+						<property name="Sound_start" value="UseActions/player_blooddraw" />
+					</property>
+					<property class="Action1">
+						<property name="Class" value="Eat" />
+						<property name="Delay" value="1.0" />
+						<property name="Use_time" value="..." />
+						<property name="Gain_health" value="-5" />
+						<property name="Buff" value="infection" />
+						<property name="Gain_food" value="5" />
+						<property name="Gain_water" value="5" />
+						<property name="Sound_start" value="UseActions/player_drinking" />
+					</property>
+					<property name="ActionSkillGroup" value="Medicine" />
+					<property name="CraftingSkillGroup" value="Science" />
+					<property name="Group" value="Medicine" />
+					<property name="ActionExp" value="10" />
+				</item>
+				<item id="" name="primitiveHandle">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="wood" />
+					<property name="Weight" value="5" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="5000" />
+					<property name="FuelValue" value="10" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="Group" value="Basics,Resources" />
+					<property name="RepairAmount" value="100" />
+					<property name="LootExpValue" value="1" />
+					<property name="DescriptionKey" value="woodDesc" />
+					<property name="CraftingIngredientTime" value="0.05" />
+				</item>
+<item id="" name="stoneAxeHead">
+	<property name="Meshfile" value="Items/Crafting/rock_smallPrefab" />
+	<property name="Material" value="stone" />
+	<property name="HoldType" value="40" />
+	<property name="Stacknumber" value="50" />
+	<property name="Weight" value="5" />
+	<property name="EconomicValue" value="5" />
+	<property name="Group" value="Basics,Resources" />
+	<property name="EconomicBundleSize" value="50" />
+</item>
+<item id="" name="stonePickaxeHead">
+	<property name="Meshfile" value="Items/Crafting/rock_smallPrefab" />
+	<property name="Material" value="stone" />
+	<property name="HoldType" value="40" />
+	<property name="Stacknumber" value="50" />
+	<property name="Weight" value="5" />
+	<property name="EconomicValue" value="5" />
+	<property name="Group" value="Basics,Resources" />
+	<property name="EconomicBundleSize" value="50" />
+</item>
+<item id="" name="stoneShovelHead">
+	<property name="Meshfile" value="Items/Crafting/rock_smallPrefab" />
+	<property name="Material" value="stone" />
+	<property name="HoldType" value="40" />
+	<property name="Stacknumber" value="50" />
+	<property name="Weight" value="5" />
+	<property name="EconomicValue" value="5" />
+	<property name="Group" value="Basics,Resources" />
+	<property name="EconomicBundleSize" value="50" />
+</item>
+<item id="" name="stoneHammerHead">
+	<property name="Meshfile" value="Items/Crafting/rock_smallPrefab" />
+	<property name="Material" value="stone" />
+	<property name="HoldType" value="40" />
+	<property name="Stacknumber" value="50" />
+	<property name="Weight" value="5" />
+	<property name="EconomicValue" value="5" />
+	<property name="Group" value="Basics,Resources" />
+	<property name="EconomicBundleSize" value="50" />
+</item>
+<item id="" name="stoneHoeHead">
+	<property name="Meshfile" value="Items/Crafting/rock_smallPrefab" />
+	<property name="Material" value="stone" />
+	<property name="HoldType" value="40" />
+	<property name="Stacknumber" value="50" />
+	<property name="Weight" value="5" />
+	<property name="EconomicValue" value="5" />
+	<property name="Group" value="Basics,Resources" />
+	<property name="EconomicBundleSize" value="50" />
+</item>
+
+<item id="" name="woodHandle">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="wood" />
+	<property name="Weight" value="2.5" />
+	<property name="HoldType" value="45" />
+	<property name="Stacknumber" value="500" />
+	<property name="FuelValue" value="5" />
+	<property name="EconomicValue" value="3" />
+	<property name="EconomicBundleSize" value="25" />
+	<property name="Group" value="Resources,Basics" />
+	<property name="LootExpValue" value="1" />
+	<property name="DescriptionKey" value="woodDesc" />
+	<property name="CraftingIngredientTime" value="0.25" />
+</item>			
+		
+<item id="" name="ironAxeHead">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="HoldType" value="45" />
+	<property name="Material" value="metal" />
+	<property name="Stacknumber" value="500" />
+	<property name="EconomicValue" value="12" />
+	<property name="CraftingIngredientExp" value="10" />
+	<property name="CraftingIngredientTime" value="10" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="ironPickaxexeHead">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="HoldType" value="45" />
+	<property name="Material" value="metal" />
+	<property name="Stacknumber" value="500" />
+	<property name="EconomicValue" value="12" />
+	<property name="CraftingIngredientExp" value="10" />
+	<property name="CraftingIngredientTime" value="10" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="ironShovelHead">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="HoldType" value="45" />
+	<property name="Material" value="metal" />
+	<property name="Stacknumber" value="500" />
+	<property name="EconomicValue" value="12" />
+	<property name="CraftingIngredientExp" value="10" />
+	<property name="CraftingIngredientTime" value="10" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="ironHoeHead">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="HoldType" value="45" />
+	<property name="Material" value="metal" />
+	<property name="Stacknumber" value="500" />
+	<property name="EconomicValue" value="12" />
+	<property name="CraftingIngredientExp" value="10" />
+	<property name="CraftingIngredientTime" value="10" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="ironHammerHead">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="HoldType" value="45" />
+	<property name="Material" value="metal" />
+	<property name="Stacknumber" value="500" />
+	<property name="EconomicValue" value="12" />
+	<property name="CraftingIngredientExp" value="10" />
+	<property name="CraftingIngredientTime" value="10" />
+	<property name="Group" value="Resources" />
+</item>
+
+<item id="" name="shortMetalHandle">
+		<property name="Meshfile" value="Items/Crafting/Metal/shortMetalPipe" />
+		<property name="HoldType" value="16" />
+		<property name="Material" value="metal" />
+		<property name="Stacknumber" value="500" />
+		<!-- STK resource -->
+		<property name="EconomicValue" value="12" />
+		<property name="Group" value="Resources" />
+	</item>
+	<item id="" name="metalHandle">
+		<property name="Meshfile" value="Items/Crafting/Metal/shortMetalPipe" />
+		<property name="HoldType" value="16" />
+		<property name="Material" value="metal" />
+		<property name="Stacknumber" value="500" />
+		<!-- STK resource -->
+		<property name="EconomicValue" value="12" />
+		<property name="Group" value="Resources" />
+	</item>
+
+<item id="" name="steelAxeHead">
+	<property name="Meshfile" value="Items/Crafting/ingotIron" />
+	<property name="HoldType" value="21" />
+	<property name="Material" value="metal" />
+	<property name="Stacknumber" value="500" />
+	<property name="EconomicValue" value="32" />
+	<property name="CraftingIngredientExp" value="15" />
+	<property name="CraftingIngredientTime" value="15" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="steelPickaxeHead">
+	<property name="Meshfile" value="Items/Crafting/ingotIron" />
+	<property name="HoldType" value="21" />
+	<property name="Material" value="metal" />
+	<property name="Stacknumber" value="500" />
+	<property name="EconomicValue" value="32" />
+	<property name="CraftingIngredientExp" value="15" />
+	<property name="CraftingIngredientTime" value="15" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="steelShovelHead">
+	<property name="Meshfile" value="Items/Crafting/ingotIron" />
+	<property name="HoldType" value="21" />
+	<property name="Material" value="metal" />
+	<property name="Stacknumber" value="500" />
+	<property name="EconomicValue" value="32" />
+	<property name="CraftingIngredientExp" value="15" />
+	<property name="CraftingIngredientTime" value="15" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="steelHoeHead">
+	<property name="Meshfile" value="Items/Crafting/ingotIron" />
+	<property name="HoldType" value="21" />
+	<property name="Material" value="metal" />
+	<property name="Stacknumber" value="500" />
+	<property name="EconomicValue" value="32" />
+	<property name="CraftingIngredientExp" value="15" />
+	<property name="CraftingIngredientTime" value="15" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="steelHammerHead">
+	<property name="Meshfile" value="Items/Crafting/ingotIron" />
+	<property name="HoldType" value="21" />
+	<property name="Material" value="metal" />
+	<property name="Stacknumber" value="500" />
+	<property name="EconomicValue" value="32" />
+	<property name="CraftingIngredientExp" value="15" />
+	<property name="CraftingIngredientTime" value="15" />
+	<property name="Group" value="Resources" />
+</item>
+
+<item id="" name="firemanBoots"> <!-- armorMasterHazMatArmor -->
+	<property name="Insulation" value="6"/>
+	<property name="Encumbrance" value="0.03" />
+	<property name="Material" value="MmilitaryFiber" />
+	<property name="RepairTools" value="militaryFiber" />
+	<property name="DegradationBreaksAfter" value="false" />
+	<property name="Weight" value="5" />
+	<property name="EconomicValue" value="1600" />
+	<property name="EquipSlot" value="Feet" />
+ 	<property name="HoldType" value="45" />
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property class="Attributes">
+		<property name="ConcussiveProtection" value="0.08,0.2" />
+		<property name="PunctureProtection" value="0.1,0.25" />
+		<property name="FireProtection" value="0.1,1" />
+		<property name="RadiationProtection" value="0.01,0.026" />
+		<property name="DegradationMax" value="160,400" />
+	</property>
+	<property class="UMA">
+		<property name="Mesh" value="armor_hazmat_feet" />
+		<property name="Overlay0" value="armor_hazmat_boots" />
+		<property name="Overlay0Tint" value="200,100,100" />
+		<property name="Layer" value="0" />
+		<property name="UISlot" value="Footwear" />
+	</property>
+	<property name="DescriptionKey" value="hazmatClothesGroupDesc"/>
+	<property name="Group" value="Clothing" />
+	<property name="ActionSkillGroup" value="Light Armor"/>
+	<property name="CraftingSkillGroup" value="Science"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+</item>
+<item id="" name="firemanPants"> <!-- hazMatArmor -->
+	<property name="Extends" value="firemanBoots" />
+	<property name="Weight" value="10" />
+	<property name="EconomicValue" value="3200" />
+	<property name="EquipSlot" value="Legs" />
+	<property class="UMA">
+		<property name="Mesh" value="armor_hazmat_legs" />
+		<property name="Mask0" value="legs" param1="middle"/>	
+		<property name="Overlay0" value="armor_hazmat_pants" />	
+		<property name="Overlay0Tint" value="200,100,100" />
+		<property name="Layer" value="1" />
+		<property name="UISlot" value="Pants" />
+	</property>
+</item>
+<item id="" name="firemanShirt"> <!-- hazMatArmor -->
+	<property name="Extends" value="firemanBoots" />
+	<property name="Weight" value="10" />
+	<property name="EconomicValue" value="3200" />
+	<property name="EquipSlot" value="Chest" />
+	<property class="UMA">
+		<property name="Mesh" value="armor_hazmat_chest" />
+		<property name="Overlay0" value="armor_hazmat_chest" />
+		<property name="Overlay0Tint" value="200,100,100" />
+		<property name="Layer" value="1" />
+		<property name="UISlot" value="Shirt" />
+	</property>
+</item>
+<item id="" name="firemanGloves"> <!-- hazMatArmor -->
+	<property name="Extends" value="firemanBoots" />
+	<property name="EquipSlot" value="Hands" />
+	<property class="UMA">
+		<property name="Mesh" value="armor_hazmat_hands" />
+		<property name="Overlay0" value="armor_hazmat_gloves" />
+		<property name="Overlay0Tint" value="200,100,100" />
+		<property name="Layer" value="0" />
+		<property name="UISlot" value="Gloves" />
+	</property>
+</item>
+<item id="" name="firemanMask"> <!-- hazMatArmor -->
+	<property name="Extends" value="firemanBoots" />
+	<property name="EquipSlot" value="Head" />
+	<property class="UMA">
+		<property name="Mesh" value="armor_hazmat_head" />
+		<property name="Overlay0" value="armor_hazmat_hood" />
+		<property name="Overlay0Tint" value="200,100,100" />
+		<property name="Layer" value="middle" />
+		<property name="UISlot" value="Headgear" />
+		<property name="Mask0" value="Head" param1="base"/>
+		<property name="Mask1" value="Head" param1="inner"/>
+		<property name="Mask2" value="Face" param1="base"/>
+		<property name="Mask3" value="Face" param1="inner"/>
+		<property name="Mask4" value="Face" param1="middle"/>
+		<property name="Mask5" value="Face" param1="outer"/>
+		<property name="Mask6" value="Head" param1="base"/>
+		<property name="Mask7" value="Eyes" param1="base"/>
+		<property name="Mask8" value="Eyes" param1="inner"/>
+		<property name="Mask9" value="Eyes" param1="middle"/>
+		<property name="ShowAltHair" value="true" />
+	</property>	
+</item>		
+	
+	<item id="" name="cotton">
+		<property name="CustomIcon" value="plantedCotton3Harvest" />
+		<property name="Meshfile" value="Items/Misc/sackPrefab" />
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+		<property name="Material" value="plants" />
+		<property name="HoldType" value="45" />
+		<property name="Stacknumber" value="500" />
+		<property name="EconomicValue" value="12" />
+		<property name="EconomicBundleSize" value="5" />
+		<property name="CraftingIngredientTime" value="2" />
+		<property name="Group" value="Resources" />
+		<property name="DescriptionKey" value="plantedCotton3HarvestDesc" />
+	</item>
+
+<item id="" name="bottlePlastics">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property class="Action1">
+			<!-- UseAction -->
+			<property name="Class" value="ExchangeItem" />
+			<property name="Delay" value="1.0" />
+			<property name="Change_item_to" value="pBottleRiverWater" />
+			<property name="Do_block_action" value="deplete1" />
+			<property name="Focused_blockname_1" value="water" />
+			<property name="Focused_blockname_2" value="waterMoving" />
+			<property name="Focused_blockname_3" value="waterStaticBucket" />
+			<property name="Focused_blockname_4" value="waterMovingBucket" />
+			<property name="Focused_blockname_5" value="waterSource8" />
+			<property name="Sound_start" value="UseActions/bucketfill_water" />
+	</property>
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="pBottleRiverWater">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property class="Action1">
+			<property name="Class" value="Eat" />
+			<property name="Delay" value="1" />
+			<property name="Use_time" value="..." />
+			<property name="Gain_health" value="0" />
+			<property name="Gain_stamina" value="5" />
+			<property name="Gain_food" value="0" />
+			<property name="Gain_water" value="15" />
+			<property name="Gain_sickness" value="15" />
+			<property name="Gain_wellness" value="-0.1" />
+			<property name="Sound_start" value="UseActions/player_drinking" />
+			<property name="Buff" value="dysentery" />
+			<property name="Buff_chance" value="0.5" />
+			<property name="Debuff" value="burningSmall,burning" />
+			<property name="Create_item" value="bottlePlastics" />
+	</property>
+	<property name="Group" value="Food/Cooking" />
+</item>
+<item id="" name="pBottleWater">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property class="Action1">
+			<property name="Class" value="Eat" />
+			<property name="Delay" value="1" />
+			<property name="Use_time" value="..." />
+			<property name="Gain_health" value="0" />
+			<property name="Gain_stamina" value="20" />
+			<property name="Gain_food" value="0" />
+			<property name="Gain_water" value="20" />
+			<property name="Sound_start" value="UseActions/player_drinking" />
+			<property name="Debuff" value="burningSmall,burning" />
+			<property name="Create_item" value="bottlePlastics" />
+	</property>
+	<property name="Group" value="Food/Cooking" />
+</item>
+<item id="" name="bagPlastics">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="cupPlastics">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property class="Action1">
+			<!-- UseAction -->
+			<property name="Class" value="ExchangeItem" />
+			<property name="Delay" value="1.0" />
+			<property name="Change_item_to" value="pCupRiverWater" />
+			<property name="Do_block_action" value="deplete1" />
+			<property name="Focused_blockname_1" value="water" />
+			<property name="Focused_blockname_2" value="waterMoving" />
+			<property name="Focused_blockname_3" value="waterStaticBucket" />
+			<property name="Focused_blockname_4" value="waterMovingBucket" />
+			<property name="Focused_blockname_5" value="waterSource8" />
+			<property name="Sound_start" value="UseActions/bucketfill_water" />
+	</property>
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="pCupRiverWater">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property class="Action1">
+			<property name="Class" value="Eat" />
+			<property name="Delay" value="1" />
+			<property name="Use_time" value="..." />
+			<property name="Gain_health" value="0" />
+			<property name="Gain_stamina" value="5" />
+			<property name="Gain_food" value="0" />
+			<property name="Gain_water" value="5" />
+			<property name="Gain_sickness" value="5" />
+			<property name="Gain_wellness" value="-0.1" />
+			<property name="Sound_start" value="UseActions/player_drinking" />
+			<property name="Buff" value="dysentery" />
+			<property name="Buff_chance" value="0.5" />
+			<property name="Debuff" value="burningSmall,burning" />
+			<property name="Create_item" value="cupPlastics" />
+	</property>
+	<property name="Group" value="Food/Cooking" />
+</item>
+<item id="" name="pCupWater">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property class="Action1">
+			<property name="Class" value="Eat" />
+			<property name="Delay" value="1" />
+			<property name="Use_time" value="..." />
+			<property name="Gain_health" value="0" />
+			<property name="Gain_stamina" value="10" />
+			<property name="Gain_food" value="0" />
+			<property name="Gain_water" value="10" />
+			<property name="Sound_start" value="UseActions/player_drinking" />
+			<property name="Debuff" value="burningSmall,burning" />
+			<property name="Create_item" value="cupPlastics" />
+	</property>
+	<property name="Group" value="Food/Cooking" />
+</item>
+<item id="" name="forkPlastics">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="spoonPlastics">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="knifePlastics">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="keyboard">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="15" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="pcMouse">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="6" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="phonePlastics">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="25" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="markersPlastics">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="5" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+
+<item id="" name="bleach">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="Mplastics" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="shirtParts">
+	<property name="Insulation" value="2" />
+	<property name="Material" value="cloth" />
+	<property name="RepairTools" value="cloth" />
+	<property name="DegradationBreaksAfter" value="false" />
+	<property name="Weight" value="15" />
+	<property name="FuelValue" value="4" />
+	<property name="EconomicValue" value="40" />
+	<property name="HoldType" value="45" />
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="DescriptionKey" value="shirtClothesGroupDesc" />
+	<property name="Group" value="Clothing" />
+	<property name="ActionSkillGroup" value="Clothing/Armor" />
+	<property name="CraftingSkillGroup" value="craftSkillMiscellaneous" />
+	<property name="RepairExpMultiplier" value="5.5" />
+</item>
+<item id="" name="blackShirtParts">
+	<property name="Insulation" value="2" />
+	<property name="Material" value="cloth" />
+	<property name="RepairTools" value="cloth" />
+	<property name="DegradationBreaksAfter" value="false" />
+	<property name="Weight" value="15" />
+	<property name="FuelValue" value="4" />
+	<property name="EconomicValue" value="40" />
+	<property name="HoldType" value="45" />
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="DescriptionKey" value="shirtClothesGroupDesc" />
+	<property name="Group" value="Clothing" />
+	<property name="ActionSkillGroup" value="Clothing/Armor" />
+	<property name="CraftingSkillGroup" value="craftSkillMiscellaneous" />
+	<property name="RepairExpMultiplier" value="5.5" />
+</item>
+<item id="" name="blueShirtParts">
+	<property name="Insulation" value="2" />
+	<property name="Material" value="cloth" />
+	<property name="RepairTools" value="cloth" />
+	<property name="DegradationBreaksAfter" value="false" />
+	<property name="Weight" value="15" />
+	<property name="FuelValue" value="4" />
+	<property name="EconomicValue" value="40" />
+	<property name="HoldType" value="45" />
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="DescriptionKey" value="shirtClothesGroupDesc" />
+	<property name="Group" value="Clothing" />
+	<property name="ActionSkillGroup" value="Clothing/Armor" />
+	<property name="CraftingSkillGroup" value="craftSkillMiscellaneous" />
+	<property name="RepairExpMultiplier" value="5.5" />
+</item>
+<item id="" name="greenShirtParts">
+	<property name="Insulation" value="2" />
+	<property name="Material" value="cloth" />
+	<property name="RepairTools" value="cloth" />
+	<property name="DegradationBreaksAfter" value="false" />
+	<property name="Weight" value="15" />
+	<property name="FuelValue" value="4" />
+	<property name="EconomicValue" value="40" />
+	<property name="HoldType" value="45" />
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="DescriptionKey" value="shirtClothesGroupDesc" />
+	<property name="Group" value="Clothing" />
+	<property name="ActionSkillGroup" value="Clothing/Armor" />
+	<property name="CraftingSkillGroup" value="craftSkillMiscellaneous" />
+	<property name="RepairExpMultiplier" value="5.5" />
+</item>
+<item id="" name="redShirtParts">
+	<property name="Insulation" value="2" />
+	<property name="Material" value="cloth" />
+	<property name="RepairTools" value="cloth" />
+	<property name="DegradationBreaksAfter" value="false" />
+	<property name="Weight" value="15" />
+	<property name="FuelValue" value="4" />
+	<property name="EconomicValue" value="40" />
+	<property name="HoldType" value="45" />
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="DescriptionKey" value="shirtClothesGroupDesc" />
+	<property name="Group" value="Clothing" />
+	<property name="ActionSkillGroup" value="Clothing/Armor" />
+	<property name="CraftingSkillGroup" value="craftSkillMiscellaneous" />
+	<property name="RepairExpMultiplier" value="5.5" />
+</item>
+<item id="" name="brownShirtParts">
+	<property name="Insulation" value="2" />
+	<property name="Material" value="cloth" />
+	<property name="RepairTools" value="cloth" />
+	<property name="DegradationBreaksAfter" value="false" />
+	<property name="Weight" value="15" />
+	<property name="FuelValue" value="4" />
+	<property name="EconomicValue" value="40" />
+	<property name="HoldType" value="45" />
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="DescriptionKey" value="shirtClothesGroupDesc" />
+	<property name="Group" value="Clothing" />
+	<property name="ActionSkillGroup" value="Clothing/Armor" />
+	<property name="CraftingSkillGroup" value="craftSkillMiscellaneous" />
+	<property name="RepairExpMultiplier" value="5.5" />
+</item>
+
+
+<item id="" name="forkMetal">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="metal" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="spoonMetal">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="metal" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="knifeMetal">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="metal" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>	
+<item id="" name="bowlMetal">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="metal" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="kettleMetal">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="metal" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="scissorsMetal">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="metal" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="mugMetal">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="metal" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>			
+<item id="" name="flatEmptyMetalCan">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="metal" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>	
+<item id="" name="flatMetalCan">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="metal" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>
+<item id="" name="fullMetalCan">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="metal" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" />
+	<!-- STK loot -->
+	<property name="Weight" value="2" />
+	<property name="EconomicValue" value="40" />
+	<property name="Group" value="Resources" />
+</item>	
+			</append>
+	</config>	
+	
+	<config name="recipes">
+	<remove xpath="/recipes/recipe[@name='cloth']" />
+	<remove xpath="/recipes/recipe[@name='cloth']" />
+	<remove xpath="/recipes/recipe[@name='bed01']" />
+	<remove xpath="/recipes/recipe[@name='bed02']" />	
+	<remove xpath="/recipes/recipe[@name='cntBeerCooler']" />
+	<remove xpath="/recipes/recipe[@name='cntCooler']" />
+	<remove xpath="/recipes/recipe[@name='cntCabinet']" />
+	<remove xpath="/recipes/recipe[@name='cntCabinetTop']" />
+	<remove xpath="/recipes/recipe[@name='cntDesk01']" />
+	<remove xpath="/recipes/recipe[@name='cntDesk02']" />
+	<remove xpath="/recipes/recipe[@name='cntDeskSafe']" />
+	<remove xpath="/recipes/recipe[@name='cntWallSafe']" />
+	<remove xpath="/recipes/recipe[@name='cntGreenDrawerSecure']" />
+	<remove xpath="/recipes/recipe[@name='cntGunSafe']" />
+	<remove xpath="/recipes/recipe[@name='cntFridge']" />
+	<remove xpath="/recipes/recipe[@name='cntFridgeBottom']" />
+	<remove xpath="/recipes/recipe[@name='cntFridgeTop']" />
+	<remove xpath="/recipes/recipe[@name='cntMailBox01']" />
+	<remove xpath="/recipes/recipe[@name='cntMailBox02']" />
+	<remove xpath="/recipes/recipe[@name='cntMailBox03']" />
+	<remove xpath="/recipes/recipe[@name='cntNightstand']" />
+	<remove xpath="/recipes/recipe[@name='cntToilet01']" />
+	<remove xpath="/recipes/recipe[@name='cntToilet02']" />
+	<remove xpath="/recipes/recipe[@name='cntToilet03']" />
+	
+	<remove xpath="/recipes/recipe[@name='pouredConcreteBlock']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteArrowSlitHalf']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteCNRFull']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteCNRInside']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteCNRRamp']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteCNRRound']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteCNRRoundTop']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteCTRPlate']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteEighth']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteHalf']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcretePillar100']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcretePillar50']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcretePlate']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcretePole']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcretePyramid']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteQuarter']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteRamp']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteStairs25']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteSupport']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteWedge']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteWedgeTip']" />
+	<remove xpath="/recipes/recipe[@name='cookingGrill']" />
+	<remove xpath="/recipes/recipe[@name='cookingPot']" />
+	<remove xpath="/recipes/recipe[@name='endTable']" />
+	<remove xpath="/recipes/recipe[@name='endTableLamp']" />
+	<remove xpath="/recipes/recipe[@name='huntingKnife']" />
+	<remove xpath="/recipes/recipe[@name='ironDoor1_v1']" />
+	<remove xpath="/recipes/recipe[@name='rustyIronTable']" />
+	<remove xpath="/recipes/recipe[@name='ladderMetal']" />
+	<remove xpath="/recipes/recipe[@name='ladderSteel']" />
+	<remove xpath="/recipes/recipe[@name='ladderWood']" />
+	
+	<remove xpath="/recipes/recipe[@name='antibiotics']" />
+	<remove xpath="/recipes/recipe[@name='antibiotics']" />
+	
+	<remove xpath="/recipes/recipe[@name='animalHideBoots']" />
+	<remove xpath="/recipes/recipe[@name='animalHideGloves']" />
+	<remove xpath="/recipes/recipe[@name='animalHideHood']" />
+	<remove xpath="/recipes/recipe[@name='animalHideChestArmor']" />
+	<remove xpath="/recipes/recipe[@name='animalHideLegArmor']" />
+	<remove xpath="/recipes/recipe[@name='animalHidePoncho']" />
+	<remove xpath="/recipes/recipe[@name='bandana']" />	
+	<remove xpath="/recipes/recipe[@name='awningBlock']" />
+	<remove xpath="/recipes/recipe[@name='awningRamp']" />
+	<remove xpath="/recipes/recipe[@name='awningCNRFull']" />
+	<remove xpath="/recipes/recipe[@name='awningCNRInside']" />
+	<remove xpath="/recipes/recipe[@name='awningGable']" />
+	<remove xpath="/recipes/recipe[@name='awningPyramid']" />
+	<remove xpath="/recipes/recipe[@name='awningCNRRound']" />
+	<remove xpath="/recipes/recipe[@name='awningCNRRoundTop']" />
+	<remove xpath="/recipes/recipe[@name='barbedFence']" />
+	<remove xpath="/recipes/recipe[@name='barbedWireSheet']" />	
+	<remove xpath="/recipes/recipe[@name='bellows']" />
+	<remove xpath="/recipes/recipe[@name='blunderbuss']" />	
+	<remove xpath="/recipes/recipe[@name='bucket']" />	
+	<remove xpath="/recipes/recipe[@name='camoNetBlock']" />	
+	<remove xpath="/recipes/recipe[@name='camoNetRamp']" />	
+	<remove xpath="/recipes/recipe[@name='camoNetCNRFull']" />	
+	<remove xpath="/recipes/recipe[@name='camoNetSheet']" />	
+	<remove xpath="/recipes/recipe[@name='clothBoots']" />	
+	<remove xpath="/recipes/recipe[@name='clothGloves']" />	
+	<remove xpath="/recipes/recipe[@name='clothHat']" />	
+	<remove xpath="/recipes/recipe[@name='clothJacket']" />	
+	<remove xpath="/recipes/recipe[@name='clothPants']" />	
+	<remove xpath="/recipes/recipe[@name='campfire']" />	
+	<remove xpath="/recipes/recipe[@name='clubIron']" />	
+	<remove xpath="/recipes/recipe[@name='cntStorageGeneric']" />
+	
+	<remove xpath="/recipes/recipe[@name='clubBarbed']" />	
+	<remove xpath="/recipes/recipe[@name='clubSpiked']" />
+	<remove xpath="/recipes/recipe[@name='bedroll']" />
+	<remove xpath="/recipes/recipe[@name='boneShiv']" />
+	
+	<remove xpath="/recipes/recipe[@name='cntSecureStorageChest']" />
+	<remove xpath="/recipes/recipe[@name='crossbow']" />
+	<remove xpath="/recipes/recipe[@name='ductTape']" />
+	<remove xpath="/recipes/recipe[@name='garageDoorMetal_v1']" />
+	<remove xpath="/recipes/recipe[@name='ironBoots']" />
+	<remove xpath="/recipes/recipe[@name='ironChestArmor']" />
+	<remove xpath="/recipes/recipe[@name='ironGloves']" />
+	<remove xpath="/recipes/recipe[@name='ironHelmet']" />
+	<remove xpath="/recipes/recipe[@name='ironLegArmor']" />
+	<remove xpath="/recipes/recipe[@name='keystoneBlock']" />
+	<remove xpath="/recipes/recipe[@name='leather']" />
+	<remove xpath="/recipes/recipe[@name='leatherBoots']" />
+	<remove xpath="/recipes/recipe[@name='leatherGloves']" />
+	<remove xpath="/recipes/recipe[@name='leatherHood']" />
+	<remove xpath="/recipes/recipe[@name='leatherJacket']" />
+	<remove xpath="/recipes/recipe[@name='leatherPants']" />
+	<remove xpath="/recipes/recipe[@name='cntLockers']" />
+	
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_a']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_b']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_c']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_d']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_e']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_f']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_g']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_h']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_i']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_j']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_k']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_l']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_m']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_n']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_o']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_p']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_q']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_r']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_s']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_t']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_u']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_v']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_w']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_x']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_y']" />
+	<remove xpath="/recipes/recipe[@name='metalSignLetter_z']" />
+	
+	<remove xpath="/recipes/recipe[@name='officeChair01']" />
+	<remove xpath="/recipes/recipe[@name='oldChair']" />
+
+	
+	<remove xpath="/recipes/recipe[@name='plantFiberGloves']" />
+	<remove xpath="/recipes/recipe[@name='plantFiberHat']" />
+	<remove xpath="/recipes/recipe[@name='plantFiberHood']" />
+	<remove xpath="/recipes/recipe[@name='plantFiberPants']" />
+	<remove xpath="/recipes/recipe[@name='plantFiberShirt']" />
+	<remove xpath="/recipes/recipe[@name='plantFiberShoes']" />
+	<remove xpath="/recipes/recipe[@name='playerSignWood1x1']" />
+	<remove xpath="/recipes/recipe[@name='playerSignWood1x3']" />
+	<remove xpath="/recipes/recipe[@name='playerSignWood2x5']" />
+	
+	<remove xpath="/recipes/recipe[@name='scrapBoots']" />
+	<remove xpath="/recipes/recipe[@name='scrapChestArmor']" />
+	<remove xpath="/recipes/recipe[@name='scrapGloves']" />
+	<remove xpath="/recipes/recipe[@name='scrapHelmet']" />
+	<remove xpath="/recipes/recipe[@name='scrapLegArmor']" />
+	
+	<remove xpath="/recipes/recipe[@name='scrapIronSheet']" />
+	<remove xpath="/recipes/recipe[@name='scrapHatch_v1']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameBlock']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameCNRFull']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameCNRInside']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameRamp']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameWedge']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameWedgeTip']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronLogSpike4']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronStairs25']" />
+	<remove xpath="/recipes/recipe[@name='rScrapIronTable']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronArrowSlitHalf']" />
+	<remove xpath="/recipes/recipe[@name='sectionalPlaidCouchSofaArm']" />
+	<remove xpath="/recipes/recipe[@name='sectionalLeatherCouchSofaArm']" />
+	<remove xpath="/recipes/recipe[@name='sectionalPlaidCouchSofaCorner']" />
+	<remove xpath="/recipes/recipe[@name='sectionalLeatherCouchSofaCorner']" />
+	<remove xpath="/recipes/recipe[@name='sectionalPlaidCouchSofaMiddle']" />
+	<remove xpath="/recipes/recipe[@name='sectionalLeatherCouchSofaMiddle']" />
+	<remove xpath="/recipes/recipe[@name='secureDoorWooden']" />
+	
+	<remove xpath="/recipes/recipe[@name='whitePicketFenceSheet']" />
+	<remove xpath="/recipes/recipe[@name='window03Wood']" />
+	<remove xpath="/recipes/recipe[@name='woodFenceFarmSheet']" />
+	<remove xpath="/recipes/recipe[@name='woodFenceSheet']" />
+	<remove xpath="/recipes/recipe[@name='woodFrameBlock']" />
+	<remove xpath="/recipes/recipe[@name='woodFrameCNRFull']" />
+	<remove xpath="/recipes/recipe[@name='woodFrameCNRInside']" />
+	
+	<remove xpath="/recipes/recipe[@name='woodFrameRamp']" />
+	<remove xpath="/recipes/recipe[@name='woodFrameWedge']" />
+	<remove xpath="/recipes/recipe[@name='woodLogPillar100']" />
+	<remove xpath="/recipes/recipe[@name='woodLogSpike1']" />
+	<remove xpath="/recipes/recipe[@name='woodPillar100']" />
+	<remove xpath="/recipes/recipe[@name='woodPlate']" />
+	<remove xpath="/recipes/recipe[@name='woodPole']" />
+	<remove xpath="/recipes/recipe[@name='woodStairs25']" />
+	<remove xpath="/recipes/recipe[@name='woodSupport']" />
+	<remove xpath="/recipes/recipe[@name='woodTable']" />
+	<remove xpath="/recipes/recipe[@name='woodenBow']" />
+	<remove xpath="/recipes/recipe[@name='woodArrowSlitHalf']" />
+	<remove xpath="/recipes/recipe[@name='woodHatch1_v1']" />
+	<remove xpath="/recipes/recipe[@name='woodCatwalk']" />	
+	<remove xpath="/recipes/recipe[@name='woodCatwalkRailing']" />
+	<remove xpath="/recipes/recipe[@name='woodRailing']" />
+	<remove xpath="/recipes/recipe[@name='woodCatwalkRailingCNR']" />
+	<remove xpath="/recipes/recipe[@name='woodCatwalkWedgeRailing']" />
+	<remove xpath="/recipes/recipe[@name='woodStairsBoard']" />
+	<remove xpath="/recipes/recipe[@name='woodStairsBoardRailing']" />
+	<remove xpath="/recipes/recipe[@name='woodWedgeTip']" />	
+	<remove xpath="/recipes/recipe[@name='signShopColdBeer']" />
+	<remove xpath="/recipes/recipe[@name='workbench']" />
+	<remove xpath="/recipes/recipe[@name='storeShelving01']" />
+	<remove xpath="/recipes/recipe[@name='railingOldWoodSheet']" />
+	<remove xpath="/recipes/recipe[@name='shortMetalPipe']" />
+
+	
+	<remove xpath="/recipes/recipe[@name='looseBoardsTrapBlock1x1']" />
+	<remove xpath="/recipes/recipe[@name='looseBoardsTrapBlock3x3']" />
+	<remove xpath="/recipes/recipe[@name='looseBoardsTrapPlate1x1']" />
+	<remove xpath="/recipes/recipe[@name='woodFrameHalf']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameHalf']" />
+	<remove xpath="/recipes/recipe[@name='woodFrameWedgeIncline']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameWedgeIncline']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteWedgeIncline']" />	
+	<remove xpath="/recipes/recipe[@name='woodFrameWedgeTipCNRFullBottom']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameWedgeTipCNRFullBottom']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteWedgeTipCNRFullBottom']" />	
+	<remove xpath="/recipes/recipe[@name='woodFrameWedgeCNRInsideBottom']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameWedgeCNRInsideBottom']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteWedgeCNRInsideBottom']" />	
+	<remove xpath="/recipes/recipe[@name='woodFrameWedgeCNRInsideTop']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameWedgeCNRInsideTop']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteWedgeCNRInsideTop']" />		
+	<remove xpath="/recipes/recipe[@name='woodFrameStairs25CornerCNR']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameStairs25CornerCNR']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteStairs25CornerCNR']" />	
+	
+	<remove xpath="/recipes/recipe[@name='woodCTRpole']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronCTRpole']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteCTRpole']" />	
+	
+	<remove xpath="/recipes/recipe[@name='woodFrameCNRRampFiller']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameCNRRampFiller']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteCNRRampFiller']" />	
+	
+	<remove xpath="/recipes/recipe[@name='woodFrameArch']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameArch']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteArch']" />	
+
+	<remove xpath="/recipes/recipe[@name='woodFrameWedgeTipCNRFullTop']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameWedgeTipCNRFullTop']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteWedgeTipCNRFullTop']" />	
+	
+	<remove xpath="/recipes/recipe[@name='woodFrameWedgeStairs']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameWedgeStairs']" />
+	<remove xpath="/recipes/recipe[@name='pouredConcreteWedgeStairs']" />	
+	
+	<remove xpath="/recipes/recipe[@name='woodFrameWedgeTipStairs']" />
+	<remove xpath="/recipes/recipe[@name='scrapIronFrameWedgeTipStairs']" />	
+	<remove xpath="/recipes/recipe[@name='pouredConcreteWedgeTipStairs']" />
+		<append xpath="/recipes">
+
+	<recipe name="cloth" count="1" tooltip="ttScrapMetalBrass">
+		<wildcard_forge_category />
+	</recipe>
+	<recipe name="animalHideBoots" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="animalHide" count="5" />
+	</recipe>
+	<recipe name="animalHideGloves" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="animalHide" count="5" />
+	</recipe>
+	<recipe name="animalHideHood" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="animalHide" count="5" />
+	</recipe>
+	<recipe name="animalHideChestArmor" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="animalHide" count="10" />
+	</recipe>
+	<recipe name="animalHideLegArmor" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="animalHide" count="10" />
+	</recipe>
+	<recipe name="animalHidePoncho" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="leather" count="20" />
+	</recipe>
+
+	<recipe name="bandana" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="cloth" count="4" />
+	</recipe>
+	
+	<recipe name="awningBlock" craft_area="workbench" count="1">
+		<ingredient name="wood" count="4" />
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	<recipe name="awningRamp" craft_area="workbench" count="1">
+		<ingredient name="wood" count="4" />
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	<recipe name="awningCNRFull" craft_area="workbench" count="1">
+		<ingredient name="wood" count="4" />
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	<recipe name="awningCNRInside" craft_area="workbench" count="1">
+		<ingredient name="wood" count="4" />
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	<recipe name="awningGable" craft_area="workbench" count="1">
+		<ingredient name="wood" count="4" />
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	<recipe name="awningPyramid" craft_area="workbench" count="1">
+		<ingredient name="wood" count="4" />
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	<recipe name="awningCNRRound" craft_area="workbench" count="1">
+		<ingredient name="wood" count="4" />
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	<recipe name="awningCNRRoundTop" craft_area="workbench" count="1">
+		<ingredient name="wood" count="4" />
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	
+	<recipe name="barbedWireSheet" craft_area="workbench" count="1">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	
+	<recipe name="bellows" craft_area="workbench" count="1">
+		<ingredient name="wood" count="6" />
+		<ingredient name="leather" count="20" />
+		<ingredient name="shortMetalPipe" count="1" />
+	</recipe>
+	
+	<recipe name="blunderbuss" craft_area="workbench" count="1">
+		<ingredient name="forgedIron" count="16" />
+		<ingredient name="shortMetalPipe" count="2" />
+		<ingredient name="glue" count="1" />
+		<ingredient name="ductTape" count="1" />
+		<ingredient name="wood" count="4" />
+	</recipe>
+	
+	<recipe name="bucket" craft_area="workbench" count="1">
+		<ingredient name="forgedIron" count="7" />
+	</recipe>
+	
+	<recipe name="camoNetBlock" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	<recipe name="camoNetRamp" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	<recipe name="camoNetCNRFull" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	<recipe name="camoNetSheet" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="cloth" count="10" />
+	</recipe>
+	
+	<recipe name="clothBoots" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="cloth" count="3" />
+		<ingredient name="ductTape" count="1" />
+	</recipe>
+	<recipe name="clothGloves" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="cloth" count="3" />
+		<ingredient name="ductTape" count="1" />
+	</recipe>
+	<recipe name="clothHat" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="cloth" count="3" />
+		<ingredient name="ductTape" count="1" />
+	</recipe>
+	<recipe name="clothJacket" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="cloth" count="7" />
+		<ingredient name="ductTape" count="1" />
+	</recipe>
+	<recipe name="clothPants" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="cloth" count="7" />
+		<ingredient name="ductTape" count="1" />
+	</recipe>
+	
+	<recipe name="clubIron" craft_area="ArmorWorkbench" count="1">
+		<ingredient name="scrapIron" count="100" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	
+	<recipe name="cntStorageGeneric" craft_area="workbench" count="1">
+		<ingredient name="nail" count="10" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	
+
+	<recipe name="pouredConcreteBlock" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteArrowSlitHalf" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteCNRFull" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteCNRInside" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteCNRRamp" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteCNRRound" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteCNRRoundTop" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteCTRPlate" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteEighth" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteHalf" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcretePillar100" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcretePillar50" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcretePlate" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcretePole" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcretePyramid" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteQuarter" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteRamp" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteStairs25" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteSupport" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteWedge" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="pouredConcreteWedgeTip" craft_area="workbench" count="1">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	
+	<recipe name="cookingGrill" count="1" craft_area="weldingStation" >
+		<ingredient name="forgedIron" count="10" />
+	</recipe>
+	<recipe name="huntingKnife" craft_area="workbench" count="1">
+		<ingredient name="forgedIron" count="8" />
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="ironDoor1_v1" craft_area="weldingStation" count="1">
+		<ingredient name="forgedIron" count="20" />
+	</recipe>
+	<recipe name="rustyIronTable" craft_area="workbench" count="1">
+		<ingredient name="forgedIron" count="7" />
+	</recipe>
+	
+	<recipe name="ladderMetal" craft_area="weldingStation" count="1">
+		<ingredient name="forgedIron" count="5" />
+	</recipe>
+	<recipe name="ladderSteel" count="1" craft_area="weldingStation">
+		<ingredient name="forgedSteel" count="5" />
+	</recipe>
+	<recipe name="ladderWood" craft_area="workbench" count="1">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	
+	<recipe name="campfire" count="1">
+		<ingredient name="rockSmall" count="8" />
+		<ingredient name="wood" count="4" />
+	</recipe>
+
+	<recipe name="clubBarbed" count="1">
+		<ingredient name="barbedWireSheet" count="1" />
+		<ingredient name="clubWood" count="1" />
+	</recipe>
+	<recipe name="barbedFence" craft_area="workbench" count="1">
+		<ingredient name="barbedWireSheet" count="5" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	<recipe name="clubSpiked" count="1">
+		<ingredient name="nail" count="10" />
+		<ingredient name="clubWood" count="1" />
+	</recipe>
+	<recipe name="bedroll" count="1">
+		<ingredient name="yuccaFibers" count="20" />
+		<ingredient name="cloth" count="15" />
+	</recipe>
+	<recipe name="boneShiv" count="1">
+		<ingredient name="femur" count="1" />
+		<ingredient name="sSharpStone" count="1" />
+	</recipe>
+	<recipe name="cotton" count="1">
+		<ingredient name="cottonPlant" count="1" />
+	</recipe>
+	<recipe name="cloth" count="1">
+		<ingredient name="cotton" count="2" />
+	</recipe>
+	<recipe name="cntSecureStorageChest" count="1">
+		<ingredient name="wood" count="10" />
+		<ingredient name="nail" count="10" />
+	</recipe>
+	<recipe name="crossbow" count="1" craft_area="workbench">
+		<ingredient name="forgedIron" count="10" />
+		<ingredient name="leather" count="2" />
+		<ingredient name="glue" count="2" />
+		<ingredient name="ductTape" count="1" />
+		<ingredient name="wood" count="8" />
+	</recipe>
+	<recipe name="ductTape" count="1" craft_area="workbench">
+		<ingredient name="glue" count="10" />
+		<ingredient name="cloth" count="5" />
+		<ingredient name="paper" count="5" />
+	</recipe>
+
+	<recipe name="ironBoots" count="1" craft_area="weldingStation">
+		<ingredient name="forgedIron" count="20" />
+		<ingredient name="leather" count="3" />
+	</recipe>
+	<recipe name="ironChestArmor" count="1" craft_area="weldingStation">
+		<ingredient name="forgedIron" count="30" />
+		<ingredient name="leather" count="5" />
+	</recipe>
+	<recipe name="ironGloves" count="1" craft_area="weldingStation">
+		<ingredient name="forgedIron" count="20" />
+		<ingredient name="leather" count="3" />
+	</recipe>
+	<recipe name="ironHelmet" count="1" craft_area="weldingStation">
+		<ingredient name="forgedIron" count="20" />
+		<ingredient name="leather" count="3" />
+	</recipe>
+	<recipe name="ironLegArmor" count="1" craft_area="weldingStation">
+		<ingredient name="forgedIron" count="30" />
+		<ingredient name="leather" count="5" />
+	</recipe>
+	<recipe name="keystoneBlock" count="1" craft_area="weldingStation">
+		<ingredient name="forgedIron" count="1000" />
+	</recipe>
+	<recipe name="leather" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="animalHide" count="1" />
+	</recipe>
+	<recipe name="leatherBoots" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="leather" count="5" />
+	</recipe>
+	<recipe name="leatherGloves" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="leather" count="5" />
+	</recipe>
+	<recipe name="leatherHood" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="leather" count="5" />
+	</recipe>
+	<recipe name="leatherJacket" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="leather" count="10" />
+	</recipe>
+	<recipe name="leatherPants" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="leather" count="10" />
+	</recipe>
+	<recipe name="cntLockers" count="1" craft_area="weldingStation">
+		<ingredient name="forgedIron" count="2" />
+	</recipe>
+		
+	
+	<recipe name="metalSignLetter_a" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_b" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_c" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_d" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_e" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_f" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_g" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_h" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_i" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_j" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_k" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_l" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_m" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_n" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_o" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_p" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_q" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_r" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_s" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_t" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_u" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_v" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_w" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_x" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_y" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="metalSignLetter_z" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	
+	<recipe name="officeChair01" count="1" craft_area="workbench">
+		<ingredient name="leather" count="5" />
+		<ingredient name="cottonPlant" count="10" />
+		<ingredient name="mechanicalParts" count="2" />
+		<ingredient name="forgedIron" count="3" />
+	</recipe>
+	<recipe name="oldChair" count="1" craft_area="workbench">
+		<ingredient name="nail" count="10" />
+		<ingredient name="wood" count="6" />
+	</recipe>
+	
+	<recipe name="plantFiberGloves" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="yuccaFibers" count="5" />
+	</recipe>
+	<recipe name="plantFiberHat" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="yuccaFibers" count="5" />
+	</recipe>
+	<recipe name="plantFiberHood" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="yuccaFibers" count="5" />
+	</recipe>
+	<recipe name="plantFiberPants" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="yuccaFibers" count="10" />
+	</recipe>
+	<recipe name="plantFiberShirt" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="yuccaFibers" count="10" />
+	</recipe>
+	<recipe name="plantFiberShoes" count="1" craft_area="ArmorWorkbench">
+		<ingredient name="yuccaFibers" count="5" />
+	</recipe>
+	<recipe name="playerSignWood1x1" count="1" craft_area="workbench">
+		<ingredient name="nail" count="4" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	<recipe name="playerSignWood1x3" count="1" craft_area="workbench">
+		<ingredient name="nail" count="10" />
+		<ingredient name="wood" count="30" />
+	</recipe>
+	<recipe name="playerSignWood2x5" count="1" craft_area="workbench">
+		<ingredient name="nail" count="20" />
+		<ingredient name="wood" count="100" />
+	</recipe>
+	
+	<recipe name="scrapBoots" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="100" />
+		<ingredient name="leather" count="2" />
+		<ingredient name="ductTape" count="1" />
+	</recipe>
+	<recipe name="scrapChestArmor" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="150" />
+		<ingredient name="leather" count="5" />
+		<ingredient name="ductTape" count="3" />
+	</recipe>
+	<recipe name="scrapGloves" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="100" />
+		<ingredient name="leather" count="2" />
+		<ingredient name="ductTape" count="1" />
+	</recipe>
+	
+	<recipe name="scrapHelmet" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="100" />
+		<ingredient name="leather" count="2" />
+		<ingredient name="ductTape" count="1" />
+	</recipe>
+	<recipe name="scrapLegArmor" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="150" />
+		<ingredient name="leather" count="5" />
+		<ingredient name="ductTape" count="3" />
+	</recipe>
+	
+	<recipe name="scrapIronSheet" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="40" />
+	</recipe>
+	<recipe name="scrapHatch_v1" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="40" />
+	</recipe>
+	<recipe name="scrapIronFrameBlock" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="scrapIronFrameCNRFull" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="scrapIronFrameCNRInside" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="scrapIronFrameRamp" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="scrapIronFrameWedge" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="scrapIronFrameWedgeTip" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="scrapIronLogSpike4" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="40" />
+	</recipe>
+	<recipe name="scrapIronStairs25" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="40" />
+	</recipe>
+	<recipe name="rScrapIronTable" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="40" />
+	</recipe>
+	<recipe name="scrapIronArrowSlitHalf" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="40" />
+	</recipe>
+	<recipe name="sectionalPlaidCouchSofaArm" count="1" craft_area="workbench">
+		<ingredient name="cloth" count="5" />
+		<ingredient name="nail" count="10" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	<recipe name="sectionalLeatherCouchSofaArm" count="1" craft_area="workbench">
+		<ingredient name="leather" count="5" />
+		<ingredient name="nail" count="10" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	<recipe name="sectionalPlaidCouchSofaCorner" count="1" craft_area="workbench">
+		<ingredient name="cloth" count="5" />
+		<ingredient name="nail" count="10" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	<recipe name="sectionalLeatherCouchSofaCorner" count="1" craft_area="workbench">
+		<ingredient name="leather" count="5" />
+		<ingredient name="nail" count="10" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	<recipe name="sectionalPlaidCouchSofaMiddle" count="1" craft_area="workbench">
+		<ingredient name="cloth" count="5" />
+		<ingredient name="nail" count="10" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	<recipe name="sectionalLeatherCouchSofaMiddle" count="1" craft_area="workbench">
+		<ingredient name="leather" count="5" />
+		<ingredient name="nail" count="10" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	<recipe name="secureDoorWooden" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="shortMetalPipe" count="1" craft_area="weldingStation">
+		<ingredient name="forgedIron" count="1" />
+	</recipe>
+	
+	<recipe name="whitePicketFenceSheet" count="1" craft_area="workbench">
+		<ingredient name="wood" count="3" />
+	</recipe>
+	<recipe name="window03Wood" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="woodFenceFarmSheet" count="1" craft_area="workbench">
+		<ingredient name="wood" count="3" />
+	</recipe>
+	<recipe name="woodFenceSheet" count="1" craft_area="workbench">
+		<ingredient name="wood" count="3" />
+	</recipe>
+	<recipe name="woodFrameBlock" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="woodFrameCNRFull" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="woodFrameCNRInside" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="woodFrameRamp" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="woodFrameWedge" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="woodLogPillar100" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="woodLogSpike1" count="1" craft_area="workbench">
+		<ingredient name="wood" count="15" />
+	</recipe>
+	<recipe name="woodPillar100" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="woodPlate" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="woodPole" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="woodStairs25" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="woodSupport" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="woodTable" count="1" craft_area="workbench">
+		<ingredient name="nail" count="10" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	<recipe name="woodenBow" count="1" craft_area="workbench">
+		<ingredient name="wood" count="8" />
+		<ingredient name="yuccaFibers" count="3" />
+	</recipe>
+	<recipe name="woodArrowSlitHalf" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="woodHatch1_v1" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="woodCatwalk" count="1" craft_area="workbench">
+		<ingredient name="wood" count="8" />
+	</recipe>
+	<recipe name="woodCatwalkRailing" count="1" craft_area="workbench">
+		<ingredient name="wood" count="8" />
+	</recipe>
+	<recipe name="woodRailing" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="woodCatwalkRailingCNR" count="1" craft_area="workbench">
+		<ingredient name="wood" count="8" />
+	</recipe>
+	<recipe name="woodCatwalkWedgeRailing" count="1" craft_area="workbench">
+		<ingredient name="wood" count="8" />
+	</recipe>
+	<recipe name="woodStairsBoard" count="1" craft_area="workbench">
+		<ingredient name="wood" count="8" />
+	</recipe>
+	<recipe name="woodStairsBoardRailing" count="1" craft_area="workbench">
+		<ingredient name="wood" count="8" />
+	</recipe>
+	<recipe name="woodWedgeTip" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="signShopColdBeer" count="1" craft_area="workbench">
+		<ingredient name="nail" count="4" />
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="workbench" count="1">
+		<ingredient name="forgedIron" count="25" />
+		<ingredient name="mechanicalParts" count="20" />
+		<ingredient name="wood" count="50" />
+	</recipe>
+	
+	<recipe name="looseBoardsTrapBlock1x1" count="1" craft_area="SawTable">
+		<ingredient name="nail" count="5" />
+		<ingredient name="wood" count="20" />
+	</recipe>
+	<recipe name="looseBoardsTrapBlock3x3" count="1" craft_area="SawTable">
+		<ingredient name="nail" count="30" />
+		<ingredient name="wood" count="180" />
+	</recipe>
+	<recipe name="looseBoardsTrapPlate1x1" count="1" craft_area="SawTable">
+		<ingredient name="nail" count="5" />
+		<ingredient name="wood" count="20" />
+	</recipe>
+
+	<recipe name="woodFrameHalf" count="1" craft_area="SawTable">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameHalf" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="woodFrameWedgeIncline" count="1" craft_area="SawTable">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameWedgeIncline" count="1" craft_area="weldingStation">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="pouredConcreteWedgeIncline" count="1" craft_area="cementMixer">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	
+	<recipe name="storeShelving01" count="1" craft_area="weldingStation">
+		<ingredient name="forgedIron" count="3" />
+	</recipe>
+
+	<recipe name="railingOldWoodSheet" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	
+	<recipe name="looseBoardsTrapBlock1x1" count="1" craft_area="workbench">
+		<ingredient name="nail" count="5" />
+		<ingredient name="wood" count="20" />
+	</recipe>
+	<recipe name="looseBoardsTrapBlock3x3" count="1" craft_area="workbench">
+		<ingredient name="nail" count="30" />
+		<ingredient name="wood" count="180" />
+	</recipe>
+	<recipe name="looseBoardsTrapPlate1x1" count="1" craft_area="workbench">
+		<ingredient name="nail" count="5" />
+		<ingredient name="wood" count="20" />
+	</recipe>
+	<recipe name="woodFrameHalf" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameHalf" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="woodFrameWedgeIncline" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameWedgeIncline" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="pouredConcreteWedgeIncline" count="1" craft_area="workbench">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>	
+	
+	<recipe name="woodFrameWedgeTipCNRFullTop" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameWedgeTipCNRFullTop" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="pouredConcreteWedgeTipCNRFullTop" count="1" craft_area="workbench">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>	
+	<recipe name="woodFrameWedgeTipCNRFullBottom" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameWedgeTipCNRFullBottom" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="pouredConcreteWedgeTipCNRFullBottom" count="1" craft_area="workbench">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="woodFrameWedgeCNRInsideBottom" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameWedgeCNRInsideBottom" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="pouredConcreteWedgeCNRInsideBottom" count="1" craft_area="workbench">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="woodFrameWedgeCNRInsideTop" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameWedgeCNRInsideTop" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="pouredConcreteWedgeCNRInsideTop" count="1" craft_area="workbench"> 
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="woodFrameStairs25CornerCNR" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameStairs25CornerCNR" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="pouredConcreteStairs25CornerCNR" count="1" craft_area="workbench">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="woodCTRpole" count="1" craft_area="workbench">
+		<ingredient name="wood" count="4" />
+	</recipe>
+	<recipe name="scrapIronCTRpole" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="40" />
+	</recipe>
+	<recipe name="pouredConcreteCTRpole" count="1" craft_area="workbench">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="woodFrameArch" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameArch" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="pouredConcreteArch" count="1" craft_area="workbench">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+	<recipe name="woodFrameWedgeStairs" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameWedgeStairs" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="pouredConcreteWedgeStairs" count="1" craft_area="workbench">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+
+	<recipe name="woodFrameWedgeTipStairs" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameWedgeTipStairs" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="pouredConcreteWedgeTipStairs" count="1" craft_area="workbench">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+
+	<recipe name="woodFrameWedgeTipCNRFullTop" count="1" craft_area="workbench">
+		<ingredient name="wood" count="2" />
+	</recipe>
+	<recipe name="scrapIronFrameWedgeTipCNRFullTop" count="1" craft_area="workbench">
+		<ingredient name="scrapIron" count="15" />
+	</recipe>
+	<recipe name="pouredConcreteWedgeTipCNRFullTop" count="1" craft_area="workbench">
+		<ingredient name="concreteMix" count="10" />
+	</recipe>
+		
+	</append>
+	</config>
+</configs>

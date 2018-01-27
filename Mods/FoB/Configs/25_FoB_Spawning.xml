@@ -1,0 +1,42 @@
+<configs>
+	<config name="spawning">
+<remove xpath="/spawning/biome[@name='city']" />
+<remove xpath="/spawning/biome[@name='city_wasteland']" />
+<remove xpath="/spawning/biome[@name='wasteland']" />
+
+<insertAfter xpath="/spawning/biome[@name='wasteland_hub']">
+<biome name="city">
+		<spawn maxcount="5" respawndelay="1" time="Day" entitygroup="ZombiesAll" />
+		<spawn maxcount="5" respawndelay="1" time="Night" entitygroup="ZombiesNight" />
+</biome>		
+
+<biome name="city_wasteland">
+		<spawn maxcount="5" respawndelay="1" time="Day" entitygroup="ZombiesAll" />
+		<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="ZombiesBoss" />
+		<spawn maxcount="5" respawndelay="1" time="Night" entitygroup="ZombiesWastelandNight" />
+		</biome>
+
+<biome name="wasteland">
+		<spawn maxcount="1" respawndelay="4" time="Day" entitygroup="ZombiesAll" />
+		<spawn maxcount="1" respawndelay="4" time="Night" entitygroup="ZombiesWastelandNight" />
+		<spawn maxcount="1" respawndelay="15" time="Any" entitygroup="AnimalsSmall" spawnDeadChance="0" />
+		</biome>
+</insertAfter>
+	</config>
+	<config name="entitygroups">
+	<entitygroup name="ZombiesAll">
+		<insertAfter xpath="/entitygroups/entitygroup/entity[@name='zombieFatHawaiian']">
+				<entity name="!ZombieFemaleOlder" />
+				<entity name="!ZombieMaleOlder" />		
+				<entity name="!ZombieGeekFemale" />
+				<entity name="!ZombieGeekMale" />	
+				<entity name="!ZombieWimpFemale" />
+				<entity name="!ZombieWimpMale" />	
+				<entity name="!ZombieGlamoure" />
+				<entity name="!ZombieHipster" />	
+				<entity name="!ZombieGirl" />
+				<entity name="!ZombieHBoy" />					
+		</insertAfter>
+	</entitygroup>
+	</config>		
+</configs>

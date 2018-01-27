@@ -1,0 +1,275 @@
+<configs>
+
+  <!-- Read the xui.xml and remove the window groups -->
+  <config name="xui">
+    <!-- Remove these entitiys from the default view of the tool belt -->
+
+   <remove xpath="/xui/ruleset[@name='default']/window_group[@name='toolbelt']/window[@name='HUDLeftStatBars']" />
+   <remove xpath="/xui/ruleset[@name='default']/window_group[@name='toolbelt']/window[@name='HUDRightStatBars']" /> 
+    <remove xpath="/xui/ruleset[@name='default']/window_group[@name='toolbelt']/window[@name='windowToolbelt']" /> 
+	<remove xpath="/xui/ruleset[@name='default']/window_group[@name='character']/window[@name='PlayerStatsWindow']" />
+	<!--<remove xpath="/xui/ruleset[@name='default']/window_group[@name='character']/window[@name='ActiveBuffsWindow']" />-->
+	    <!-- Remove quest tracker -->
+  <!-- <remove xpath="/xui/ruleset[@name='default']/window_group[@name='toolbelt']/window[@name='windowQuestTracker']" /> -->
+
+    <!-- Window timer has to go -->
+   <!-- <remove xpath="/xui/ruleset[@name='default']/window_group[@name='timer']/window[@name='windowTimer']" />-->
+
+    <!-- Compass has to go  -->
+    <!--<remove xpath="/xui/ruleset[@name='default']/window_group[@name='compass']/window[@name='windowCompass']" /> -->
+
+    <append xpath="/xui/ruleset[@name='default']/window_group[@name='backpack']" >
+		<window name="windowToolbelt" anchor="CenterBottom" />
+		<window name="HUDLeftStatBars" anchor="LeftBottom" />
+		<window name="HUDRightStatBars" anchor="RightBottom" />
+    </append>
+<!--	<append xpath="/xui/ruleset[@name='default']/window_group[@name='character']" >
+		<window name="PlayerStatWindow"  />
+    </append>-->
+	<!--<append xpath="/xui/ruleset[@name='default']/window_group[@name='character']" >
+		<window name="windowTimer" anchor="Center" />
+		<window name="windowCompass" anchor="Center" />
+    </append>
+	<append xpath="/xui/ruleset[@name='default']/window_group[@name='quests']" >
+		<window name="windowQuestTracker" anchor="RightTop" />
+    </append>-->
+</config>
+	
+<config name="XUi/controls" >
+	<remove xpath="/controls/active_buff_entry" />
+		<insertBefore xpath="/controls/buff_item">
+	<active_buff_entry>
+		<panel height="50" controller="ActiveBuffEntry" width="100" style="press" sound="[recipe_click]" on_hover="true" disableautobackground="true" on_scroll="true" >
+			<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="106" height="56" color="[black]" type="sliced" fillcenter="false" />	
+			<sprite depth="0" name="background" color="[darkGrey]" type="sliced" height="52" width="102" pos="-1,1" /> 
+			<sprite depth="2" name="Icon" sprite="{bufficon|once}" style="icon32px" pos="5,-5"/>
+			<label depth="2" pos="999,999" width="0" height="0" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" font_size="0" pivot="topleft"/>
+		</panel>
+	</active_buff_entry>
+	</insertBefore>
+	<append xpath="/controls">
+	</append>
+  </config>
+  
+  
+<config name="XUi/windows">
+	<remove xpath="/windows/window[@name='ActiveBuffsWindow']"/>
+	<remove xpath="/windows/window[@name='HUDLeftStatBars']/grid[@name='hud']"/>
+	<remove xpath="/windows/window[@name='PlayerStatsWindow']"/>
+	<remove xpath="/windows/window[@name='windowCompass']"/>
+	
+	<insertAfter xpath="/windows/window[@name='windowNonPagingHeader']">
+	<window name="windowCompass" style="compass.window" pos="999,999" controller="CompassWindow">
+		<sprite style="compass.window.background.border" />
+		<sprite style="compass.window.background" />
+		<sprite style="compass.window.compass.background"></sprite>
+		<texture style="compass.window.compass.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0"></texture>
+		<sprite pos="999,999" sprite="" color="255,255,255,255" globalopacitymod="1.8">
+			<label depth="2" width="0" height="0" text="{daytitle}: {day|always}  {timetitle}: {time|always}" font_size="28" pivot="center" effect="outline" upper_case="true" justify="center" />
+		</sprite>
+	</window>
+	</insertAfter>
+	<insertBefore xpath="/windows/window[@name='HUDLeftStatBars']/rect[@name='hud']">
+		<grid name="hud" pos="9,98" rows="2" cols="2" width="342" cell_width="170" cell_height="46" repeat_content="false" side="left" >
+			<rect width="168" height="43" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced" />
+				<sprite depth="2" pos="3,-3"  name="background" height="37" width="162" color="64,64,64,100" type="sliced" />
+				<sprite depth="3" pos="3,-3"  name="BarContent" sprite="{statimage|once}" type="filled" height="37" width="162" fill="0" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="8,-6" foregroundlayer="true" />
+				<label depth="6" name="TextContent" pos="0,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{statcurrentwithmax}" height="30" />
+			</rect>
+			<rect width="168" height="43" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced" />
+				<sprite depth="2" pos="3,-3"  name="background" height="37" width="162" color="64,64,64,100" type="sliced" />
+				<sprite depth="3" pos="3,-3"  name="BarContent" color="0,153,255,100" type="filled" height="37" width="162" fill="0" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="8,-6" foregroundlayer="true" />
+				<label depth="6" name="TextContent" pos="0,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{playerwater} %" height="30" controller="PlayerStatsWindow" effect="outline" upper_case="true" />
+			</rect>
+			<rect width="168" height="43" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced" />
+				<sprite depth="2" pos="3,-3"  name="background" height="37" width="162" color="64,64,64,100" type="sliced" />
+				<sprite depth="3" pos="3,-3"  name="BarContent" sprite="{statimage|once}" type="filled" height="37" width="162" fill="0" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="8,-6" foregroundlayer="true" />
+				<label depth="6" name="TextContent" pos="0,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{statcurrentwithmax}" height="30" />
+			</rect>
+			<rect width="168" height="43" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced" />
+				<sprite depth="2" pos="3,-3"  name="background" height="37" width="162" color="64,64,64,100" type="sliced" />
+				<sprite depth="3" pos="3,-3"  name="BarContent" color="0,128,0,100" type="filled" height="37" width="162" fill="0" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_fork" size="32,32" pos="8,-6" foregroundlayer="true" />
+				<label depth="6" name="TextContent" pos="0,-8" font_size="28" color="[white]" justify="center" pivot="topleft" text="{playerfood} %" height="30" controller="PlayerStatsWindow" effect="outline" upper_case="true" />
+			</rect>
+		</grid>
+	</insertBefore>
+	
+	<insertAfter xpath="/windows/window[@name='CharacterFrameWindow']">
+		
+<window name="PlayerStatsWindow" width="0" height="0" panel="LeftTop" cursor_area="false" >
+		<!--<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+			<sprite depth="2" name="windowIcon" style="icon32px" pos="5,-5" sprite="ui_game_symbol_muscle"/>
+			<label depth="2" name="characterName" pos="42,-6" width="230" height="32" text="PLAYER STATS" text_key="xuiPlayerStats" font_size="32"/>
+		</panel>
+
+		<rect name="content" depth="0" pos="0,-46" height="343">
+			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="320" height="342" color="[black]" type="sliced" fillcenter="false" />
+			<sprite depth="1" color="[darkGrey]" type="sliced" />
+			<rect depth="2" pos="6,-5">
+				<grid name="stats" rows="10" cols="1" pos="3,-5" cell_width="360" cell_height="30" repeat_content="false" controller="PlayerStatsWindow">
+					<panel height="30" width="320" disableautobackground="true">
+						<sprite depth="1" name="windowIcon" style="icon22px" pos="2,-2" sprite="ui_game_symbol_trophy"/>
+
+						<label depth="1" width="200" pos="30,0" font_size="26" text="{playerleveltitle}: [DECEA3]{playerlevel}[-]" />
+
+						<sprite depth="2" width="107" pos="190, -7" height="10" type="sliced" color="[black]" />
+						<sprite depth="2" width="105" pos="191, -8" height="8" type="sliced" color="[mediumGrey]" />
+						<sprite depth="2" width="105" pos="191, -8" height="8" type="filled" color="49,91,203" fill="{playerlevelfill}" />
+					</panel>
+					<panel height="30" width="320" disableautobackground="true">
+						<sprite depth="1" name="windowIcon" style="icon22px" pos="2,-2" sprite="ui_game_symbol_muscle"/>
+						<label depth="1" width="200" pos="30,0" name="lblWellness" font_size="26" text="{playerwellnesstitle}: [DECEA3]{playerwellness}[-]" />
+
+						<sprite depth="2" width="107" pos="190, -7" height="10" type="sliced" color="[black]" />
+						<sprite depth="2" width="105" pos="191, -8" height="8" type="sliced" color="[mediumGrey]" />
+						<sprite depth="2" width="105" pos="191, -8" height="8" type="filled" color="175,52,54" fill="{playerwellnessfill}" />
+					</panel>
+					<panel height="30" width="320" disableautobackground="true">
+						<sprite depth="1" name="windowIcon" style="icon22px" pos="2,-2" sprite="ui_game_symbol_fork"/>
+						<label depth="1" width="200" pos="30,0" name="lblFood" font_size="26" text="{playerfoodtitle}: [DECEA3]{playerfood}%[-]" />
+
+						<sprite depth="2" width="107" pos="190, -7" height="10" type="sliced" color="[black]" />
+						<sprite depth="2" width="105" pos="191, -8" height="8" type="sliced" color="[mediumGrey]" />
+						<sprite depth="2" width="105" pos="191, -8" height="8" type="filled" color="52,174,86" fill="{playerfoodfill}" />
+					</panel>
+					<panel height="30" width="320" disableautobackground="true">
+						<sprite depth="1" name="windowIcon" style="icon22px" pos="2,-2" sprite="ui_game_symbol_water"/>
+						<label depth="1" width="200" pos="30,0" name="lblWater" font_size="26" text="{playerwatertitle}: [DECEA3]{playerwater}%[-]" />
+
+						<sprite depth="2" width="107" pos="190, -7" height="10" type="sliced" color="[black]" />
+						<sprite depth="2" width="105" pos="191, -8" height="8" type="sliced" color="[mediumGrey]" />
+						<sprite depth="2" width="105" pos="191, -8" height="8" type="filled" color="52,137,167" fill="{playerwaterfill}" />
+					</panel>
+					<panel height="30" width="320" disableautobackground="true">
+						<sprite depth="1" name="windowIcon" style="icon22px" pos="2,-2" sprite="ui_game_symbol_temperature"/>
+						<label depth="1" width="200" pos="30,0" font_size="26" text="{playercoretemptitle}: [DECEA3]{playercoretemp}[-]" />
+					</panel>
+					<panel height="30" width="320" disableautobackground="true">
+						<sprite depth="1" name="windowIcon" style="icon22px" pos="2,-2" sprite="ui_game_symbol_zombie"/>
+						<label depth="1" width="200" pos="30,0" font_size="26" text="{playerzombiekillstitle}: [DECEA3]{playerzombiekills|once}[-]" />
+					</panel>
+					<panel height="30" width="320" disableautobackground="true">
+						<sprite depth="1" name="windowIcon" style="icon22px" pos="2,-2" sprite="ui_game_symbol_knife"/>
+						<label depth="1" width="200" pos="30,0" font_size="26" text="{playerpvpkillstitle}: [DECEA3]{playerpvpkills|once}[-]" />
+					</panel>
+					<panel height="30" width="320" disableautobackground="true">
+						<sprite depth="1" name="windowIcon" style="icon22px" pos="2,-2" sprite="ui_game_symbol_death"/>
+						<label depth="1" width="200" pos="30,0" font_size="26" text="{playerdeathstitle}: [DECEA3]{playerdeaths|once}[-]" />
+					</panel>
+					<panel height="30" width="320" disableautobackground="true">
+						<sprite depth="1" name="windowIcon" style="icon22px" pos="2,-2" sprite="ui_game_symbol_run"/>
+						<label depth="1" width="200" pos="30,0" font_size="26" text="{playertravelledtitle}: [DECEA3]{playertravelled|once}[-]" />
+					</panel>
+					<panel height="30" width="320" disableautobackground="true">
+						<sprite depth="1" name="windowIcon" style="icon22px" pos="2,-2" sprite="ui_game_symbol_hammer"/>
+						<label depth="1" width="200" pos="30,0" font_size="26" text="{playeritemscraftedtitle}: [DECEA3]{playeritemscrafted}[-]" />
+					</panel>
+					<panel height="30" width="320" disableautobackground="true">
+						<sprite depth="1" name="windowIcon" style="icon22px" pos="2,-2" sprite="ui_game_symbol_skull"/>
+						<label depth="1" width="290" pos="30,0" font_size="26" text="{playerlongestlifetitle}: [DECEA3]{playerlongestlife}[-]" />
+					</panel>
+				</grid>
+			</rect>
+		</rect>-->
+	</window>
+	</insertAfter>
+	
+	
+	<insertAfter xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='equipment']">
+		<panel name="BuffsPanel" Controller="BuffsPanel" width="106" height="325" pos="244,-191" cursor_area="true">
+			<panel name="header" height="50" depth="1" backgroundspritename="ui_game_panel_header">
+			<sprite depth="2" name="windowIcon" style="icon32px" pos="5,-5" sprite="ui_game_symbol_medical" />
+			<label depth="2" name="characterName" pos="42,-6" width="106" height="32" text="BUFFS" text_key="xuiBuffsActive" font_size="32" />
+		</panel>
+			<panel name="content" depth="0" pos="0,-40" disableautobackground="true">
+				<rect height="100">
+					<sprite depth="8" name="backgroundMain" pos="0,0" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" />
+					<sprite color="[mediumGrey]" type="sliced" />
+					<panel pos="10,-10" height="50" disableautobackground="true">
+						<button depth="4" name="pageDown" style="icon30px, press" pos="10,-10" sprite="ui_game_symbol_arrow_left" pivot="center" sound="[paging_click]" />
+						<rect depth="4" pos="28,0">
+							<sprite name="background" style="icon30px" color="[black]" type="sliced" />
+							<label depth="5" name="pageNumber" pos="0, -3" width="30" height="28" text="1" font_size="26" justify="center" />
+						</rect>
+						<button depth="4" name="pageUp" style="icon30px, press" pos="75,-10" sprite="ui_game_symbol_arrow_right" pivot="center" sound="[paging_click]" />
+					</panel>
+				</rect>
+				<grid name="buffs" rows="6" cols="1" pos="3,-52" cell_width="100" cell_height="52" repeat_content="true" controller="ActiveBuffList">
+					<active_buff_entry />
+				</grid>
+			</panel>
+		</panel>
+	</insertAfter>
+	
+
+	<remove xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='header']"/>
+	<insertBefore xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='previewFrame']">
+		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+			<!--<sprite depth="2" name="windowIcon" style="icon32px" pos="5,-5" sprite="ui_game_symbol_character" />-->
+			<label depth="2" name="characterName" pos="5,-5" width="150" height="32" text="" font_size="32" />
+			<sprite depth="2" name="windowIcon" width="26" height="26" pos="100,-8" sprite="ui_game_symbol_trophy" color="[mediumGrey]" />
+			<label depth="2" name="levelNumber" pos="140,-5" width="80" height="28" text="" color="[lightGrey]" />
+			<sprite depth="2" width="82" pos="139, -32" height="10" type="sliced" color="[black]" />
+			<sprite depth="2" width="80" pos="140, -33" height="8" type="sliced" color="[mediumGrey]" />
+			<sprite depth="2" width="80" pos="140, -33" height="8" type="filled" color="49,91,203" controller="PlayerStatsWindow" fill="{playerlevelfill}" />
+			<sprite depth="2" name="windowIcon" width="26" height="26" pos="230,-8" sprite="ui_game_symbol_muscle" color="[mediumGrey]" />
+			<label depth="2" width="70" pos="260,-5" name="lblWellness" controller="PlayerStatsWindow" color="[lightGrey]" font_size="26" text="{playerwellnesstitle}:"/>
+			<label depth="2" width="70" pos="260,-25" controller="PlayerStatsWindow" font_size="22" text="{playerwellness}" />
+
+		</panel>
+	</insertBefore>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/@width">347</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/@height">400</set>
+	
+	
+	
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='previewFrame']/@width">241</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='previewFrame']/@pos">0,-191</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='previewFrame']/rect/sprite/@width">241</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='previewFrame']/rect/sprite[@name='backgroundMain']/@width">241</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='previewFrame']/rect/sprite[@name='backgroundMain']/@height">400</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='previewFrame']/rect/sprite/@height">400</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='previewFrame']/rect/texture/@size">241,400</set>
+	
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='equipment']/@pos">5,-49</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='equipment']/@width">347</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='equipment']/@height">70</set>
+	
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='equipment']/grid[@name='inventory']/@rows">2</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='equipment']/grid[@name='inventory']/@cols">5</set>
+	
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='equipment']/grid[@name='inventory']/@cell_width">69</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='equipment']/grid[@name='inventory']/@cell_height">69</set>
+		
+	<set xpath="/windows/window[@name='windowTimer']/rect/@height">0</set>
+	<set xpath="/windows/window[@name='windowTimer']/rect/@width">0</set>
+	
+	<set xpath="/windows/window[@name='windowQuestTracker']/@pos">999,999</set>
+	<set xpath="/windows/window[@name='windowQuestTracker']/@height">0</set>
+	<set xpath="/windows/window[@name='windowQuestTracker']/@width">0</set>
+	
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='previewFrame']/@width">241</set>
+	<set xpath="/windows/window[@name='CharacterFrameWindow']/panel[@name='previewFrame']/@width">241</set>
+	
+	
+	<!--<set xpath="/windows/window[@name='ActiveBuffsWindow']/@panel">CenterTop</set>
+	<set xpath="/windows/window[@name='ActiveBuffsWindow']/@width">106</set>
+	<set xpath="/windows/window[@name='ActiveBuffsWindow']/panel[@name='header']/label[@name='characterName']/@width">106</set>
+	<set xpath="/windows/window[@name='ActiveBuffsWindow']/panel[@name='header']/label[@name='characterName']/@text">BUFFS</set>
+	<set xpath="/windows/window[@name='ActiveBuffsWindow']/panel[@name='header']/label[@name='characterName']/@text_key">xuiBuffsActive</set>
+	<set xpath="/windows/window[@name='ActiveBuffsWindow']/panel[@name='content']/rect/panel/@pos">10,-10</set>
+	<set xpath="/windows/window[@name='ActiveBuffsWindow']/panel[@name='content']/rect/panel/button[@name='pageDown']/@pos">10,-10</set>
+	<set xpath="/windows/window[@name='ActiveBuffsWindow']/panel[@name='content']/rect/panel/rect/@pos">27,0</set>
+	<set xpath="/windows/window[@name='ActiveBuffsWindow']/panel[@name='content']/rect/panel/button[@name='pageUp']/@pos">75,-10</set>
+	<set xpath="/windows/window[@name='ActiveBuffsWindow']/panel[@name='header']/label[@name='characterName']/@font_size">32</set>-->
+
+  </config>
+</configs>

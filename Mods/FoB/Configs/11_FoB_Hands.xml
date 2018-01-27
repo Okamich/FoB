@@ -1,0 +1,406 @@
+<configs>
+	<config name="items">
+	<remove xpath="/items/item[@name='handMaster']" />
+	<remove xpath="/items/item[@name='handPlayer']" />
+	<remove xpath="/items/item[@name='handZombie']" />
+	<remove xpath="/items/item[@name='handZombie02']" />
+	<remove xpath="/items/item[@name='handZombieBurning']" />
+	<remove xpath="/items/item[@name='handZombieCop']" />
+	<remove xpath="/items/item[@name='projectileZombieVomit']" />
+	<remove xpath="/items/item[@name='handAnimalZombieDog']" />
+	<remove xpath="/items/item[@name='handZombieStrong']" />	
+	<remove xpath="/items/item[@name='handAnimalBear']" />
+	<remove xpath="/items/item[@name='handAnimalZombieBear']" />
+	<remove xpath="/items/item[@name='handZombieHazMat']" />
+	<remove xpath="/items/item[@name='handZombieWorker']" />
+	<remove xpath="/items/item[@name='handZombieFootballPlayer']" />
+	<remove xpath="/items/item[@name='handZombieStripper']" />
+	<remove xpath="/items/item[@name='handZombieBurningCrawler']" />
+	
+	<remove xpath="/items/item[@name='handZombieFeral']" />
+	<remove xpath="/items/item[@name='handZombie02Feral']" />
+	<remove xpath="/items/item[@name='handZombieBurningFeral']" />
+	<remove xpath="/items/item[@name='handZombieCopFeral']" />
+	<remove xpath="/items/item[@name='projectileZombieVomitFeral']" />
+	<remove xpath="/items/item[@name='handAnimalZombieDogFeral']" />
+	<remove xpath="/items/item[@name='handZombieStrongFeral']" />	
+	<remove xpath="/items/item[@name='handAnimalZombieBearFeral']" />
+	<remove xpath="/items/item[@name='handZombieHazMatFeral']" />
+	<remove xpath="/items/item[@name='handZombieWorkerFeral']" />
+	<remove xpath="/items/item[@name='handZombieFootballPlayerFeral']" />
+	<remove xpath="/items/item[@name='handZombieStripperFeral']" />
+	<remove xpath="/items/item[@name='handZombieBehemoth']" />
+	<remove xpath="/items/item[@name='handAnimalZombieVulture']" />
+	<remove xpath="/items/item[@name='handAnimalWolf']" />
+	
+			<append xpath="/items">		
+	<item id="69" name="handMaster">
+		<property name="CreativeMode" value="None" />
+		<property name="Material" value="organic" />
+		<property name="Canhold" value="false" />
+		<property name="HoldType" value="9" />
+		<property name="Stacknumber" value="1" />
+		<property name="Candrop" value="false" />
+		<property class="Action0">
+			<property name="Class" value="Melee" />
+			<property name="Delay" value="0.8" />
+			<property name="Range" value="1.65" />
+			<property name="Sphere" value="0.1" />
+			<property name="Block_range" value="2.5" />
+			<property name="DamageEntity" value="10" />
+			<property name="DamageBlock" value="20" />
+			<property name="Sound_start" value="swoosh" />
+			<property name="DamageBonus.glass" value="1" />
+		</property>
+	</item>
+	<item id="70" name="handPlayer">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="0" />
+		<property class="Action0">
+			<property name="Delay" value="0.75" />
+			<property name="Range" value="2.5" />
+			<property name="DamageEntity" value="5" />
+			<property name="DamageBlock" value="1" />
+			<property name="Stamina_usage" value="3" />
+			<property name="DamageBonus.head" value="2" />
+			<property name="DamageBonus.organic" value="5" />
+			<property name="ToolCategory.harvestingTools" value="1.5" param1="1" />
+		</property>
+		<property class="Action1">
+			<property name="Class" value="Eat" />
+			<property name="Delay" value="1" />
+			<property name="Use_time" value="..." />
+			<property name="Gain_health" value="0" />
+			<property name="Gain_stamina" value="5" />
+			<property name="Gain_food" value="0" />
+			<property name="Gain_water" value="15" />
+			<property name="Gain_sickness" value="15" />
+			<property name="Condition_raycast_block" value="826,1472" />
+			<property name="Sound_start" value="player_drinking" />
+			<property name="Buff" value="dysentery" />
+			<property name="Buff_chance" value="0.5" />
+		</property>
+		<property class="Attributes">
+			<property name="DismembermentBaseChance" value="-0.2,-0.2" />
+			<property name="DismembermentBonus" value="0,0" />
+		</property>
+		<property name="ActionSkillGroup" value="Athletics" />
+	</item>
+	<item id="76" name="handZombie">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="10" />
+			<property name="DamageBlock" value="20" />
+			<property name="Buff" value="bleeding,infection,stunned" />
+			<property name="Buff_chance" value="0.04,0.04,0.5" />
+		</property>
+	</item>
+	<item id="77" name="handZombie02">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="24" />
+		<property class="Action0">
+			<property name="Delay" value="2.0" />
+			<property name="Buff" value="sprainedLeg,infection" />
+			<property name="Buff_chance" value="0.2,0.025" />
+		</property>
+	</item>
+	<item id="78" name="handZombieBurning">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="Class" value="Melee" />
+			<property name="Sphere" value="0.4" />
+			<property name="DamageEntity" value="12" />
+			<property name="DamageBlock" value="2" />
+			<property name="Buff" value="burningSmall,infection,stunned" />
+			<property name="Buff_chance" value="0.5,0.07,0.4" />
+		</property>
+	</item>
+	<item id="79" name="handZombieCop">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property name="Degradation" value="99999" param1="true" />
+		<property class="Action0">
+			<property name="Range" value="1.75" />
+			<property name="DamageEntity" value="20" />
+			<property name="DamageBlock" value="250" />
+			<property name="Buff" value="bleeding,infection,stunned" />
+			<property name="Buff_chance" value="0.2,0.2,0.4" />
+		</property>
+		<property class="Action1">
+			<property name="Class" value="Vomit" />
+			<property name="Delay" value="0.35" />
+			<property name="Range" value="200" />
+			<property name="Auto_fire" value="true" />
+			<property name="Infinite_ammo" value="true" />
+			<property name="Magazine_items" value="projectileZombieVomit" />
+			<property name="Rays_spread" value="0.5" />
+			<property name="Reload_time" value="2" />
+			<property name="Bullet_icon" value="uzi" />
+			<property name="Sound_warning" value="hulkvomitwarning" />
+			<property name="Sound_start" value="hulkvomitattack" />
+			<property name="Sound_repeat" value="" />
+			<property name="Sound_end" value="" />
+			<property name="Sound_empty" value="" />
+			<property name="Sound_reload" value="" />
+			<property name="Buff" value="infection" />
+			<property name="Buff_chance" value="0.2" />
+		</property>
+	</item>
+	<item id="80" name="projectileZombieVomit">
+		<property name="Meshfile" value="Items/Weapons/Ranged/Vomit/vomitBulbPrefab" />
+		<property name="Material" value="organic" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action1">
+			<property name="Class" value="Projectile" />
+			<property name="DamageEntity" value="10" />
+			<property name="DamageBlock" value="150" />
+			<property name="Explosion.ParticleIndex" value="7" />
+			<property name="Velocity" value="20" />
+			<property name="FlyTime" value="0.50" />
+			<property name="LifeTime" value="4" />
+			<property name="CollisionRadius" value="0.5" />
+			<property name="DamageBonus.earth" value="0" />
+		</property>
+	</item>
+	<item id="81" name="handAnimalZombieDog">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="35" />
+		<property class="Action0">
+			<property name="Delay" value="0.7" />
+			<property name="DamageEntity" value="18" />
+			<property name="DamageBlock" value="18" />
+			<property name="Buff" value="bleeding,infection" />
+			<property name="Buff_chance" value="0.3,0.2" />
+			<property name="DamageBonus.earth" value="4" />
+		</property>
+	</item>
+	<item id="82" name="handZombieStrong">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="20" />
+			<property name="DamageBlock" value="50" />
+			<property name="Buff" value="bleeding,infection,stunned" />
+			<property name="Buff_chance" value="0.2,0.2,0.4" />
+		</property>
+	</item>
+	<item id="83" name="handAnimalBear">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="46" />
+		<property class="Action0">
+			<property name="Delay" value="1.5" />
+			<property name="Range" value="3.75" />
+			<property name="Sphere" value="0.4" />
+			<property name="DamageEntity" value="30" />
+			<property name="DamageBlock" value="50" />
+			<property name="Buff" value="bleeding,stunned" />
+			<property name="Buff_chance" value="0.2,0.3" />
+		</property>
+	</item>
+	<item id="84" name="handAnimalZombieBear">
+		<property name="Extends" value="handAnimalBear" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="Range" value="2.75" />
+			<property name="DamageEntity" value="50" />
+			<property name="DamageBlock" value="100" />
+			<property name="Buff" value="bleeding,stunned,infection" />
+			<property name="Buff_chance" value="0.3,0.4,0.4" />
+		</property>
+	</item>
+	<item id="85" name="handZombieHazMat">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="9" />
+		<property class="Action0">
+			<property name="Buff" value="bleeding,infection1,stunned" />
+			<property name="Buff_chance" value="0.04,0.25,0.5" />
+		</property>
+	</item>
+	<item id="86" name="handZombieWorker">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="9" />
+		<property class="Action0">
+			<property name="DamageBlock" value="150" />
+		</property>
+	</item>
+	<item id="87" name="handZombieFootballPlayer">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="9" />
+		<property class="Action0">
+			<property name="Buff" value="bleeding,infection,stunned" />
+			<property name="Buff_chance" value="0.04,0.04,0.6" />
+		</property>
+	</item>
+	<item id="88" name="handZombieStripper">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="8" />
+			<property name="Buff" value="bleeding,infection,stunned" />
+			<property name="Buff_chance" value="0.02,0.2,0.1" />
+		</property>
+	</item>
+	<item id="89" name="handZombieBurningCrawler">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="24" />
+		<property class="Action0">
+			<property name="DamageEntity" value="8" />
+			<property name="DamageBlock" value="2" />
+			<property name="Delay" value="2.0" />
+			<property name="Buff" value="sprainedLeg,infection,burningSmall" />
+			<property name="Buff_chance" value="0.2,0.025,0.5" />
+		</property>
+	</item>
+	<item id="90" name="handZombieFeral">
+		<property name="Extends" value="handZombie" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="20" />
+			<property name="DamageBlock" value="40" />
+		</property>
+	</item>
+	<item id="91" name="handZombie02Feral">
+		<property name="Extends" value="handZombie02" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="20" />
+			<property name="DamageBlock" value="40" />
+		</property>
+	</item>
+	<item id="92" name="handZombieBurningFeral">
+		<property name="Extends" value="handZombieBurning" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="24" />
+			<property name="DamageBlock" value="4" />
+		</property>
+	</item>
+	<item id="93" name="handZombieCopFeral">
+		<property name="Extends" value="handZombieCop" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="40" />
+			<property name="DamageBlock" value="500" />
+		</property>
+		<property class="Action1">
+			<property name="Magazine_items" value="projectileZombieVomitFeral" />
+		</property>
+	</item>
+	<item id="94" name="projectileZombieVomitFeral">
+		<property name="Extends" value="projectileZombieVomit" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action1">
+			<property name="DamageEntity" value="20" />
+			<property name="DamageBlock" value="300" />
+		</property>
+	</item>
+	<item id="95" name="handAnimalZombieDogFeral">
+		<property name="Extends" value="handAnimalZombieDog" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="36" />
+			<property name="DamageBlock" value="36" />
+		</property>
+	</item>
+	<item id="96" name="handZombieStrongFeral">
+		<property name="Extends" value="handZombieStrong" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="40" />
+			<property name="DamageBlock" value="100" />
+		</property>
+	</item>
+	<item id="97" name="handAnimalZombieBearFeral">
+		<property name="Extends" value="handAnimalZombieBear" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="100" />
+			<property name="DamageBlock" value="200" />
+		</property>
+	</item>
+	<item id="98" name="handZombieHazMatFeral">
+		<property name="Extends" value="handZombieHazMat" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="9" />
+		<property class="Action0">
+			<property name="DamageEntity" value="20" />
+			<property name="DamageBlock" value="40" />
+		</property>
+	</item>
+	<item id="99" name="handZombieWorkerFeral">
+		<property name="Extends" value="handZombieWorker" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="9" />
+		<property class="Action0">
+			<property name="DamageEntity" value="20" />
+			<property name="DamageBlock" value="300" />
+		</property>
+	</item>
+	<item id="100" name="handZombieFootballPlayerFeral">
+		<property name="Extends" value="handZombieFootballPlayer" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="9" />
+		<property class="Action0">
+			<property name="DamageEntity" value="20" />
+			<property name="DamageBlock" value="40" />
+		</property>
+	</item>
+	<item id="101" name="handZombieStripperFeral">
+		<property name="Extends" value="handZombieStripper" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="16" />
+			<property name="DamageBlock" value="40" />
+		</property>
+	</item>
+	<item id="102" name="handZombieBehemoth">
+		<property name="Extends" value="handZombieStripper" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="500" />
+			<property name="DamageBlock" value="2000" />
+			<property name="Range" value="4" />
+			<property name="Sphere" value="2" />
+			<property name="Block_range" value="5" />
+		</property>
+	</item>
+	<item id="103" name="handAnimalZombieVulture">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="35" />
+		<property class="Action0">
+			<property name="Delay" value="0.7" />
+			<property name="DamageEntity" value="10" />
+			<property name="DamageBlock" value="10" />
+			<property name="Buff" value="bleeding,infection" />
+			<property name="Buff_chance" value="0.1,0.4" />
+		</property>
+	</item>
+	<item id="104" name="handAnimalWolf">
+		<property name="Extends" value="handMaster" />
+		<property name="CreativeMode" value="None" />
+		<property name="HoldType" value="35" />
+		<property class="Action0">
+			<property name="Delay" value="0.7" />
+			<property name="Range" value="2" />
+			<property name="DamageEntity" value="22" />
+			<property name="DamageBlock" value="22" />
+			<property name="Buff" value="bleeding" />
+			<property name="Buff_chance" value="0.3" />
+			<property name="DamageBonus.earth" value="4" />
+		</property>
+	</item>
+			
+			</append>
+	</config>
+</configs>

@@ -1,0 +1,78 @@
+					<!--MATERIALS-->
+<configs>
+	<config name="recipes">
+		<append xpath="/recipes">	
+			<recipe name="fibersRope" count="1">
+				<ingredient name="yuccaFibers" count="3"/>
+			</recipe>
+			<recipe name="stick" count="8">
+				<ingredient name="wood" count="1"/>
+			</recipe>
+			<recipe name="plank" count="2">
+				<ingredient name="wood" count="1"/>
+			</recipe>
+			<recipe name="stick" count="4">
+				<ingredient name="plank" count="1"/>
+			</recipe>
+			<recipe name="wood" count="4">
+				<ingredient name="woodLog" count="1"/>
+			</recipe>			
+			<recipe name="plank" count="20">
+				<ingredient name="woodLog" count="1"/>
+			</recipe>			
+			<recipe name="stick" count="160">
+				<ingredient name="woodLog" count="1"/>
+			</recipe>	
+			<recipe name="plank" count="1">
+				<ingredient name="burnWood" count="1"/>
+			</recipe>			
+			<recipe name="stick" count="4">
+				<ingredient name="burnWood" count="1"/>
+			</recipe>
+			<recipe name="burnWood" count="2">
+				<ingredient name="burnWoodLog" count="1"/>
+			</recipe>
+			
+			<recipe name="stick" count="16" craft_area="SawTable">
+				<ingredient name="wood" count="1"/>
+			</recipe>
+			<recipe name="plank" count="4" craft_area="SawTable">
+				<ingredient name="wood" count="1"/>
+			</recipe>
+			<recipe name="stick" count="8" craft_area="SawTable">
+				<ingredient name="plank" count="1"/>
+			</recipe>
+			<recipe name="wood" count="8" craft_area="SawTable">
+				<ingredient name="woodLog" count="1"/>
+			</recipe>			
+			<recipe name="plank" count="40" craft_area="SawTable">
+				<ingredient name="woodLog" count="1"/>
+			</recipe>			
+			<recipe name="stick" count="320" craft_area="SawTable">
+				<ingredient name="woodLog" count="1"/>
+			</recipe>	
+			<recipe name="plank" count="2" craft_area="SawTable">
+				<ingredient name="burnWood" count="1"/>
+			</recipe>			
+			<recipe name="stick" count="8" craft_area="SawTable">
+				<ingredient name="burnWood" count="1"/>
+			</recipe>
+			<recipe name="burnWood" count="4" craft_area="SawTable">
+				<ingredient name="burnWoodLog" count="1"/>
+			</recipe>
+			
+			<recipe name="sharpStick" count="1">
+				<ingredient name="stick" count="1"/>
+			</recipe>			
+			<recipe name="sSharpStone" count="1">
+				<ingredient name="rockSmall" count="2"/>
+			</recipe>			
+			<recipe name="sharpStone" count="1">
+				<ingredient name="rockMedium" count="1"/>
+				<ingredient name="rockSmall" count="1"/>
+			</recipe>
+					
+
+		</append>
+	</config>
+</configs>

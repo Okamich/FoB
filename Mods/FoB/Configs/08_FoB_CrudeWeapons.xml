@@ -1,0 +1,492 @@
+<configs>
+<config name="items">	
+<append xpath="/items">	
+	<!-- CRUDE WEAPONS -->
+	<item id="" name="woodenSpear">
+		<property name="DescriptionKey" value="woodenSpearDesc" />
+		<property name="Meshfile" value="#crudeweapons?woddenSpear" />
+		<property name="Material" value="wood" />
+		<property name="HoldType" value="18" />
+		<property name="Stacknumber" value="1" />
+		<property name="RepairTools" value="wood" />
+		<property name="Degradation" value="50" param1="true" />
+		<property name="FuelValue" value="4" />
+		<property name="SoundDestroy" value="wooddestroy1" />
+		<property name="Weight" value="4" />
+		<property class="Action0">
+			<!-- AttackAction -->
+			<property name="Class" value="Melee" />
+			<property name="Delay" value="1.5" />
+			<property name="Range" value="3" />
+			<property name="Sphere" value="0.1" />					
+			<property name="Sound_start" value="swoosh" />
+			<property name="Stamina_usage" value="13" />	
+			<property name="Buff" value="bleeding,criticalBlunt" />
+			<property name="Buff_chance" value=".5,.4" />
+			<property name="DamageBonus.head" value="10" />
+			<property name="DamageBonus.body" value="0.1" />
+			<property name="DamageBonus.glass" value="25" />
+			<property name="DamageBonus.plants" value="25" />
+			<property name="DamageBonus.leaves" value="25" />
+		</property>
+		<property class="Attributes">
+			<property name="EntityDamage" value="4,15" />
+			<property name="BlockDamage" value="1,5" />
+			<property name="DegradationMax" value="50,150" />	
+			<property name="DismembermentBaseChance" value="0.1,0.3" />
+			<property name="DismembermentBonus" value="0.01,0.05" />
+		</property>
+		<property name="CritChance" value=".4" />
+		<property name="Group" value="Ammo/Weapons,Basics" />
+		<property class="Preview">
+			<property name="Zoom" value="8" />
+			<property name="Pos" value="-0.1,-0.7" />
+		</property>		
+		<property name="ActionSkillGroup" value="Primitive Weapons" />
+		<property name="CraftingSkillGroup" value="Weapon Smithing" />
+	</item>
+	
+	<item id="" name="spearStone">
+		<property name="DescriptionKey" value="woodenSpearDesc" />
+		<property name="Meshfile" value="#stonetools?StoneSpear" />
+		<property name="Material" value="wood" />
+		<property name="HoldType" value="18" />
+		<property name="Stacknumber" value="1" />
+		<property name="RepairTools" value="rockSmall" />
+		<property name="Degradation" value="50" param1="true" />
+		<property name="FuelValue" value="4" />
+		<property name="SoundDestroy" value="wooddestroy1" />
+		<property name="Weight" value="4" />
+		<property class="Action0">
+			<!-- AttackAction -->
+			<property name="Class" value="Melee" />
+			<property name="Delay" value="1.6" />
+			<property name="Range" value="3.2" />
+			<property name="Sphere" value="0.1" />					
+			<property name="Sound_start" value="swoosh" />
+			<property name="Stamina_usage" value="14" />	
+			<property name="Buff" value="bleeding,criticalBlunt" />
+			<property name="Buff_chance" value=".6,.6" />
+			<property name="DamageBonus.head" value="15" />
+			<property name="DamageBonus.body" value="0.1" />
+			<property name="DamageBonus.glass" value="25" />
+			<property name="DamageBonus.plants" value="25" />
+			<property name="DamageBonus.leaves" value="25" />
+		</property>
+		<property class="Attributes">
+			<property name="EntityDamage" value="6,15" />
+			<property name="BlockDamage" value="1,5" />
+			<property name="DegradationMax" value="50,150" />	
+			<property name="DismembermentBaseChance" value="0.1,0.3" />
+			<property name="DismembermentBonus" value="0.01,0.05" />
+		</property>
+		<property name="CritChance" value=".5" />
+		<property name="Group" value="Ammo/Weapons,Basics" />
+		<property class="Preview">
+			<property name="Zoom" value="8" />
+			<property name="Pos" value="-0.1,-0.7" />
+		</property>		
+		<property name="ActionSkillGroup" value="Primitive Weapons" />
+		<property name="CraftingSkillGroup" value="Weapon Smithing" />
+	</item>
+	
+	<item id="" name="fullMetalSpear">
+		<property name="DescriptionKey" value="woodenSpearDesc" />
+		<property name="Meshfile" value="#crude?FullMetallSpear" />
+		<property name="Material" value="metal" />
+		<property name="HoldType" value="18" />
+		<property name="Stacknumber" value="1" />
+		<property name="RepairTools" value="forgedIron" />
+		<property name="Degradation" value="50" param1="true" />
+		<property name="FuelValue" value="4" />
+		<property name="SoundDestroy" value="wooddestroy1" />
+		<property name="Weight" value="4" />
+		<property class="Action0">
+			<!-- AttackAction -->
+			<property name="Class" value="Melee" />
+			<property name="Delay" value="2" />
+			<property name="Range" value="3" />
+			<property name="Sphere" value="0.1" />					
+			<property name="Sound_start" value="swoosh" />
+			<property name="Stamina_usage" value="19" />	
+			<property name="Buff" value="bleeding,criticalBlunt" />
+			<property name="Buff_chance" value=".6,.8" />
+			<property name="DamageBonus.head" value="20" />
+			<property name="DamageBonus.body" value="0.1" />
+			<property name="DamageBonus.glass" value="25" />
+			<property name="DamageBonus.plants" value="25" />
+			<property name="DamageBonus.leaves" value="25" />
+		</property>
+		<property class="Attributes">
+			<property name="EntityDamage" value="10,19" />
+			<property name="BlockDamage" value="1,5" />
+			<property name="DegradationMax" value="50,150" />	
+			<property name="DismembermentBaseChance" value="0.1,0.3" />
+			<property name="DismembermentBonus" value="0.01,0.05" />
+		</property>
+		<property name="CritChance" value=".4" />
+		<property name="Group" value="Ammo/Weapons,Basics" />
+		<property class="Preview">
+			<property name="Zoom" value="8" />
+			<property name="Pos" value="-0.1,-0.7" />
+		</property>		
+		<property name="ActionSkillGroup" value="Primitive Weapons" />
+		<property name="CraftingSkillGroup" value="Weapon Smithing" />
+	</item>
+	
+	<item id="" name="spearIron">
+		<property name="DescriptionKey" value="woodenSpearDesc" />
+		<property name="Meshfile" value="#crude?SteelSpear" />
+		<property name="Material" value="wood" />
+		<property name="HoldType" value="18" />
+		<property name="Stacknumber" value="1" />
+		<property name="RepairTools" value="forgedIron" />
+		<property name="Degradation" value="50" param1="true" />
+		<property name="FuelValue" value="4" />
+		<property name="SoundDestroy" value="wooddestroy1" />
+		<property name="Weight" value="6" />
+		<property class="Action0">
+			<!-- AttackAction -->
+			<property name="Class" value="Melee" />
+			<property name="Delay" value="1.8" />
+			<property name="Range" value="3.3" />
+			<property name="Sphere" value="0.1" />					
+			<property name="Sound_start" value="swoosh" />
+			<property name="Stamina_usage" value="15" />	
+			<property name="Buff" value="bleeding,criticalBlunt" />
+			<property name="Buff_chance" value=".9,.3" />
+			<property name="DamageBonus.head" value="25" />
+			<property name="DamageBonus.body" value="0.1" />
+			<property name="DamageBonus.glass" value="25" />
+			<property name="DamageBonus.plants" value="25" />
+			<property name="DamageBonus.leaves" value="25" />
+		</property>
+		<property class="Attributes">
+			<property name="EntityDamage" value="10,29" />
+			<property name="BlockDamage" value="1,5" />
+			<property name="DegradationMax" value="50,150" />	
+			<property name="DismembermentBaseChance" value="0.1,0.3" />
+			<property name="DismembermentBonus" value="0.01,0.05" />
+		</property>
+		<property name="CritChance" value=".8" />
+		<property name="Group" value="Ammo/Weapons,Basics" />
+		<property class="Preview">
+			<property name="Zoom" value="8" />
+			<property name="Pos" value="-0.1,-0.7" />
+		</property>		
+		<property name="ActionSkillGroup" value="Primitive Weapons" />
+		<property name="CraftingSkillGroup" value="Weapon Smithing" />
+	</item>	
+	<item id="" name="spearSteel">
+		<property name="DescriptionKey" value="woodenSpearDesc" />
+		<property name="Meshfile" value="#crude?SteelSpear" />
+		<property name="Material" value="wood" />
+		<property name="HoldType" value="18" />
+		<property name="Stacknumber" value="1" />
+		<property name="RepairTools" value="forgedSteel" />
+		<property name="Degradation" value="50" param1="true" />
+		<property name="FuelValue" value="4" />
+		<property name="SoundDestroy" value="wooddestroy1" />
+		<property name="Weight" value="6" />
+		<property class="Action0">
+			<!-- AttackAction -->
+			<property name="Class" value="Melee" />
+			<property name="Delay" value="1.7" />
+			<property name="Range" value="3.4" />
+			<property name="Sphere" value="0.1" />					
+			<property name="Sound_start" value="swoosh" />
+			<property name="Stamina_usage" value="17" />	
+			<property name="Buff" value="bleeding,criticalBlunt" />
+			<property name="Buff_chance" value="1,.5" />
+			<property name="DamageBonus.head" value="30" />
+			<property name="DamageBonus.body" value="0.1" />
+			<property name="DamageBonus.glass" value="25" />
+			<property name="DamageBonus.plants" value="25" />
+			<property name="DamageBonus.leaves" value="25" />
+		</property>
+		<property class="Attributes">
+			<property name="EntityDamage" value="15,30" />
+			<property name="BlockDamage" value="1,5" />
+			<property name="DegradationMax" value="50,150" />	
+			<property name="DismembermentBaseChance" value="0.1,0.3" />
+			<property name="DismembermentBonus" value="0.01,0.05" />
+		</property>
+		<property name="CritChance" value=".9" />
+		<property name="Group" value="Ammo/Weapons,Basics" />
+		<property class="Preview">
+			<property name="Zoom" value="8" />
+			<property name="Pos" value="-0.1,-0.7" />
+		</property>		
+		<property name="ActionSkillGroup" value="Primitive Weapons" />
+		<property name="CraftingSkillGroup" value="Weapon Smithing" />
+	</item>
+	
+	<item id="" name="huntingKnifeSpear">
+		<property name="DescriptionKey" value="huntingKnifeSpearDesc" />
+		<property name="Meshfile" value="#crudeweapons?HuntingKnifeSpear" />
+		<property name="Material" value="wood" />
+		<property name="HoldType" value="18" />
+		<property name="Stacknumber" value="1" />
+		<property name="RepairTools" value="wood" />
+		<property name="Degradation" value="100" param1="true" />
+		<property name="FuelValue" value="4" />
+		<property name="SoundDestroy" value="wooddestroy1" />
+		<property name="Weight" value="4" />
+		<property class="Action0">
+			<!-- AttackAction -->
+			<property name="Class" value="Melee" />
+			<property name="Delay" value="1.9" />
+			<property name="Range" value="4" />
+			<property name="Sphere" value="0.1" />					
+			<property name="Sound_start" value="swoosh" />
+			<property name="Stamina_usage" value="10" />	
+			<property name="Buff" value="bleeding,criticalBlunt" />
+			<property name="Buff_chance" value=".7,.8" />
+			<property name="DamageBonus.head" value="15" />
+			<property name="DamageBonus.body" value="0.1" />
+			<property name="DamageBonus.glass" value="25" />
+			<property name="DamageBonus.plants" value="25" />
+			<property name="DamageBonus.leaves" value="25" />
+		</property>
+		<property class="Attributes">
+			<property name="EntityDamage" value="10,20" />
+			<property name="BlockDamage" value="1,2" />
+			<property name="DegradationMax" value="100,250" />	
+			<property name="DismembermentBaseChance" value="0.1,0.3" />
+			<property name="DismembermentBonus" value="0.01,0.05" />
+		</property>
+		<property name="CritChance" value=".6" />
+		<property name="Group" value="Ammo/Weapons,Basics" />
+		<property class="Preview">
+			<property name="Zoom" value="8" />
+			<property name="Pos" value="-0.1,-0.7" />
+		</property>		
+		<property name="ActionSkillGroup" value="Primitive Weapons" />
+		<property name="CraftingSkillGroup" value="Weapon Smithing" />
+	</item>
+	<item id="" name="nailedBat">
+		<property name="DescriptionKey" value="nailedBatDesc" />
+		<property name="Meshfile" value="#crudeweapons?nailedBat" />
+		<property name="Material" value="wood" />
+		<property name="HoldType" value="2" />
+		<property name="Stacknumber" value="1" />
+		<property name="RepairTools" value="wood" />
+		<property name="Degradation" value="150" param1="true" />
+		<property name="FuelValue" value="4" />
+		<property name="SoundDestroy" value="wooddestroy1" />
+		<property name="Weight" value="4" />
+		<property class="Action0">
+			<!-- AttackAction -->
+			<property name="Class" value="Melee" />
+			<property name="Delay" value="1.1" />
+			<property name="Range" value="2.5" />
+			<property name="Sphere" value="0.2" />
+			<property name="DamageEntity" value="15" />
+			<property name="DamageBlock" value="1" />
+			<property name="Sound_start" value="swoosh" />
+			<property name="Stamina_usage" value="6" />	
+			<property name="Buff" value="bleeding,criticalBlunt" />
+			<property name="Buff_chance" value=".7,.8" />
+			<property name="DamageBonus.head" value="8" />
+			<property name="DamageBonus.body" value="0.1" />
+			<property name="DamageBonus.glass" value="25" />
+			<property name="DamageBonus.plants" value="25" />
+			<property name="DamageBonus.leaves" value="25" />
+		</property>
+		<property class="Attributes">
+			<property name="EntityDamage" value="10,25" />
+			<property name="BlockDamage" value="1,5" />
+			<property name="DegradationMax" value="100,600" />					
+		</property>
+		<property name="CritChance" value=".5" />
+		<property name="Group" value="Ammo/Weapons" />
+		<property class="Preview">
+			<property name="Zoom" value="8" />
+			<property name="Pos" value="-0.1,-0.7" />
+		</property>		
+		<property name="ActionSkillGroup" value="Primitive Weapons" />
+		<property name="CraftingSkillGroup" value="Weapon Smithing" />
+	</item>
+	<item id="" name="chainNlocks">
+		<property name="DescriptionKey" value="chainNlocksDesc" />
+		<property name="Extends" value="clubIron" />
+		<property name="Meshfile" value="#crudeweapons?ChainNlocksPrefab" />
+		<property class="Action0">	
+			<property name="Stamina_usage" value="5" />
+			<property name="Buff" value="bleeding,criticalBlunt" />
+			<property name="Buff_chance" value=".7,.8" />
+			<property name="DamageBonus.head" value="8" />
+			<property name="DamageBonus.body" value="0.1" />
+			<property name="DamageBonus.glass" value="25" />
+			<property name="DamageBonus.plants" value="25" />
+			<property name="DamageBonus.leaves" value="25" />
+		</property>
+		<property class="Attributes">
+			<property name="EntityDamage" value="10,25" />
+			<property name="BlockDamage" value="7,18" />
+			<property name="DegradationMax" value="400,850" />
+			<property name="DegradationRate" value="1,1" />
+		</property>
+	</item>
+	<item id="" name="nailwood">
+		<property name="DescriptionKey" value="nailwoodDesc" />
+		<property name="Meshfile" value="#crudeweapons?nailwood" />
+		<property name="Material" value="wood" />
+		<property name="HoldType" value="36" />
+		<property name="Stacknumber" value="1" />
+		<property name="RepairTools" value="wood" />
+		<property name="Degradation" value="50" param1="true" />
+		<property name="FuelValue" value="4" />
+		<property name="SoundDestroy" value="metaldestroy1" />
+		<property name="Weight" value="24" />
+		<property class="Action0">
+			<!-- AttackAction -->
+			<property name="Class" value="Melee" />
+			<property name="Delay" value="1.1" />
+			<property name="Range" value="1.9" />
+			<property name="Sphere" value="0.5" />
+			<property name="DamageEntity" value="15" />
+			<property name="DamageBlock" value="0.4" />
+			<property name="Sound_start" value="swoosh" />
+			<property name="Stamina_usage" value="4" />			
+			<property name="DamageBonus.head" value="4" />
+			<property name="DamageBonus.body" value="0.1" />
+			<property name="DamageBonus.glass" value="25" />
+			<property name="DamageBonus.plants" value="25" />
+			<property name="DamageBonus.leaves" value="25" />
+		</property>
+		<property class="Attributes">
+			<property name="EntityDamage" value="5,15" />
+			<property name="BlockDamage" value=".4,1" />
+			<property name="DegradationMax" value="25,50" />					
+		</property>
+		<property name="Group" value="Tools/Traps" />
+			<property name="ActionSkillGroup" value="Blade Weapons" />
+			<property name="CraftingSkillGroup" value="Tool Smithing" />
+	</item>		
+	<item id="" name="bat">
+		<property name="DescriptionKey" value="batDesc" />
+		<property name="Meshfile" value="#bat?Bat" />
+		<property name="Material" value="wood" />
+		<property name="HoldType" value="2" />
+		<property name="Stacknumber" value="1" />
+		<property name="RepairTools" value="wood" />
+		<property name="Degradation" value="150" param1="true" />
+		<property name="FuelValue" value="4" />
+		<property name="SoundDestroy" value="wooddestroy1" />
+		<property name="Weight" value="4" />
+		<property class="Action0">
+		 <!-- AttackAction -->
+		 <property name="Class" value="Melee" />
+		 <property name="Delay" value="1" />
+		 <property name="Range" value="2.5" />
+		 <property name="Sphere" value="0.9" />
+		 <property name="DamageEntity" value="15" />
+		 <property name="DamageBlock" value="1" />
+		 <property name="Sound_start" value="swoosh" />
+		 <property name="Stamina_usage" value="6" /> 
+		 <property name="Buff" value="stunned" />
+		 <property name="Buff_chance" value=".5,.4" />
+		 <property name="DamageBonus.head" value="4" />
+		 <property name="DamageBonus.body" value="0.1" />
+		 <property name="DamageBonus.glass" value="25" />
+		 <property name="DamageBonus.plants" value="25" />
+		 <property name="DamageBonus.leaves" value="25" />
+		</property>
+		<property class="Attributes">
+		 <property name="EntityDamage" value="8,25" />
+		 <property name="BlockDamage" value="1,5" />
+		 <property name="DegradationMax" value="100,600" />     
+		</property>
+		 <property name="CritChance" value=".5" />
+		 <property name="Group" value="Ammo/Weapons" />
+		 <property class="Preview">
+		  <property name="Zoom" value="8" />
+		  <property name="Pos" value="-0.1,-0.7" />
+		 </property>  
+		 <property name="ActionSkillGroup" value="Blunt Weapons" />
+		 <property name="CraftingSkillGroup" value="Weapon Smithing" />
+	</item>
+	<item id="" name="claw">
+		<property name="DescriptionKey" value="forkDesc" />
+		<property name="Meshfile" value="#claw?ClawsPrefab" />
+		<property name="Material" value="metal" />
+		<property name="HoldType" value="36" />
+		<property name="Stacknumber" value="1" />
+		<property name="RepairTools" value="scrapIron" />
+		<property name="Degradation" value="50" param1="true" />
+		<property name="FuelValue" value="4" />
+		<property name="SoundDestroy" value="metaldestroy1" />
+		<property name="Weight" value="24" />
+		<property class="Action0">
+			<!-- AttackAction -->
+			<property name="Class" value="Melee" />
+			<property name="Delay" value="1.2" />
+			<property name="Range" value="3" />
+			<property name="Sphere" value="0.1" />
+			<property name="DamageEntity" value="35" />
+			<property name="DamageBlock" value="0.4" />
+			<property name="Sound_start" value="swoosh" />
+			<property name="Stamina_usage" value="3" />			
+			<property name="DamageBonus.head" value="5" />
+			<property name="DamageBonus.glass" value="2.5" />
+			<property name="DamageBonus.plants" value="2.5" />
+			<property name="DamageBonus.leaves" value="2.5" />
+		</property>
+		<property class="Attributes">
+			<property name="EntityDamage" value="2.5,3.5" />
+			<property name="BlockDamage" value=".4,1" />
+			<property name="DegradationMax" value="1,2" />					
+		</property>
+		<property name="Group" value="Tools/Traps" />
+			<property name="ActionSkillGroup" value="Blade Weapons" />
+			<property name="CraftingSkillGroup" value="Tool Smithing" />
+	</item>		
+</append>	
+</config>
+
+<config name="recipes">
+<append xpath="/recipes">
+	<recipe name="woodenSpear" count="1" scrapable="False">	
+		<ingredient name="wood" count="8" />		
+	</recipe>
+	<recipe name="fullMetalSpear" count="1" craft_area="blacksmithForge" craft_tool="cut-off" scrapable="False">	
+		<ingredient name="shortMetalPipe" count="4" />
+		<ingredient name="cloth" count="5" />
+	</recipe>
+	<recipe name="spearStone" count="1" scrapable="False">	
+		<ingredient name="woodenSpear" count="1" />
+		<ingredient name="yuccaFibers" count="10" />
+		<ingredient name="sharpStone" count="1" />
+	</recipe>
+	<recipe name="spearIron" count="1" craft_area="blacksmithForge" craft_tool="cut-off" scrapable="False">	
+		<ingredient name="woodenSpear" count="1" />
+		<ingredient name="cloth" count="4" />
+		<ingredient name="forgedIron" count="1" />
+	</recipe>
+	<recipe name="spearSteel" count="1" craft_area="blacksmithForge" craft_tool="cut-off" scrapable="False">	
+		<ingredient name="woodenSpear" count="1" />
+		<ingredient name="cloth" count="4" />
+		<ingredient name="forgedSteel" count="1" />
+	</recipe>
+	<recipe name="huntingKnifeSpear" count="1" scrapable="False">	
+			<ingredient name="woodenSpear" count="1" />
+			<ingredient name="yuccaFibers" count="10" />
+			<ingredient name="huntingKnife" count="1" />
+		</recipe>	
+	<recipe name="nailedBat" count="1" scrapable="False">	
+			<ingredient name="bat" count="1" />
+			<ingredient name="nail" count="25" />
+		</recipe>	
+	<recipe name="chainNlocks" count="1" scrapable="False">
+			<ingredient name="forgedIron" count="4" />		
+			<ingredient name="padlock" count="2" />
+			<ingredient name="wood" count="4" />
+		</recipe>
+	<recipe name="nailwood" count="1" scrapable="False">	
+			<ingredient name="wood" count="5" />
+			<ingredient name="nail" count="1" />
+		</recipe>
+ </append>	
+</config>	
+</configs>

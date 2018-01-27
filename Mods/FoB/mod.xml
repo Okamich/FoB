@@ -1,0 +1,41 @@
+<mod>
+	<info>
+		<author>Okami</author>
+		<name>The Fall of Babylon</name>
+		<description>Global SDXmod</description>
+		<mod_version>1.1</mod_version>
+		<game_version>16.3</game_version>
+		<launcher_version>0.0.0</launcher_version>
+	</info>
+	
+	
+	<config_mods>
+		<import file="Configs\00_FoB_UI.xml" />
+		<import file="Configs\01_FoB_Materials.xml" />
+		<import file="Configs\02_FoB_MaterialsRecipes.xml" />	
+		<import file="Configs\03_FoB_Ammunition.xml" />
+		<import file="Configs\04_FoB_AmmunitionRecipes.xml" />	
+		<import file="Configs\05_FoB_Skills.xml" />
+		<import file="Configs\12_FoB_Items.xml" />
+		<import file="Configs\13_FoB_Tools.xml" />
+		<import file="Configs\14_FoB_ToolsRecipes.xml" />		
+		<import file="Configs\15_FoB_WeaponParts.xml" />	
+		<import file="Configs\16_FoB_Weapon.xml" />
+		<import file="Configs\07_FoB_Blocks.xml" />
+		<import file="Configs\08_FoB_CrudeWeapons.xml" />
+		<import file="Configs\09_FoB_Food.xml" />
+		<import file="Configs\10_FoB_FoodRecipes.xml" />	
+		<import file="Configs\11_FoB_Hands.xml" />		
+		<import file="Configs\18_FoB_WoodBlocks.xml" />
+		<import file="Configs\19_FoB_Literature.xml" />
+		<import file="Configs\20_FoB_Quests.xml" />
+		<import file="Configs\21_FoB_Loot.xml" />
+		<import file="Configs\22_FoB_Vice.xml" />
+		<import file="Configs\23_FoB_AnimalsEntityclasses.xml" />
+		<import file="Configs\24_FoB_AZombieEntityclasses.xml" />
+		<import file="Configs\25_FoB_Spawning.xml" />
+		<import file="Configs\26_FoB_NewWorkbenchs.xml" />
+		<import file="Configs\100_FoB_ADMIN.xml" />
+	</config_mods>
+	
+</mod>

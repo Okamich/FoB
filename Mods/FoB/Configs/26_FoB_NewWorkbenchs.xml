@@ -1,0 +1,194 @@
+<configs>
+<config name="xui">	
+<append xpath="/xui/ruleset[@name='default']">
+	<window_group name="workstation_ArmorWorkbench" controller="XUiC_WorkstationWindowGroup">		
+		<window name="windowCraftingList" />
+		<window name="windowToolsForge" />
+		<window name="craftingInfoPanel" />
+		<window name="windowCraftingQueue" />			
+		<window name="windowOutput" />
+		<window name="windowNonPagingHeader" />
+	</window_group>
+	
+	<window_group name="workstation_SawTable" controller="XUiC_WorkstationWindowGroup">		
+		<window name="windowCraftingList" />
+		<window name="windowToolsForge" />
+		<window name="craftingInfoPanel" />
+		<window name="windowCraftingQueue" />			
+		<window name="windowOutput" />
+		<window name="windowNonPagingHeader" />
+	</window_group>	
+		
+	<window_group name="workstation_weldingStation" controller="XUiC_WorkstationWindowGroup">		
+		<window name="windowCraftingList" />
+		<window name="windowToolsForge" />
+		<window name="craftingInfoPanel" />
+		<window name="windowCraftingQueue" />			
+		<window name="windowOutput" />
+		<window name="windowNonPagingHeader" />
+	</window_group>	
+			
+	<window_group name="workstation_AmmoBench" controller="XUiC_WorkstationWindowGroup">		
+		<window name="windowCraftingList" />
+		<window name="windowToolsForge" />
+		<window name="craftingInfoPanel" />
+		<window name="windowCraftingQueue" />			
+		<window name="windowOutput" />
+		<window name="windowNonPagingHeader" />
+	</window_group>	
+				
+	<window_group name="workstation_lathe" controller="XUiC_WorkstationWindowGroup">		
+		<window name="windowCraftingList" />
+		<window name="windowToolsForge" />
+		<window name="craftingInfoPanel" />
+		<window name="windowCraftingQueue" />			
+		<window name="windowOutput" />
+		<window name="windowNonPagingHeader" />
+	</window_group>	
+				
+	<window_group name="workstation_milling" controller="XUiC_WorkstationWindowGroup">		
+		<window name="windowCraftingList" />
+		<window name="windowToolsForge" />
+		<window name="craftingInfoPanel" />
+		<window name="windowCraftingQueue" />			
+		<window name="windowOutput" />
+		<window name="windowNonPagingHeader" />
+	</window_group>	
+				
+	<window_group name="workstation_chargingStation" controller="XUiC_WorkstationWindowGroup">		
+		<window name="windowCraftingList" />
+		<window name="windowToolsForge" />
+		<window name="craftingInfoPanel" />
+		<window name="windowCraftingQueue" />			
+		<window name="windowOutput" />
+		<window name="windowNonPagingHeader" />
+	</window_group>	
+
+	<window_group name="workstation_blacksmithForge" controller="XUiC_WorkstationWindowGroup">		
+		<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsBlacksmithForge" />
+			<window name="windowFuel" />
+			<window name="windowForgeInput" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+	</window_group>	
+	</append>
+</config>
+
+<config name="XUi/windows">
+<append xpath="/windows">
+	<window name="windowToolsBlacksmithForge" width="228" height="121" panel="Right">
+		<panel style="header.panel">
+			<sprite style="header.icon" sprite="ui_b_forge" />
+			<label style="header.name" text="TOOLS" text_key="xuiTools" />
+		</panel>
+		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true" on_press="true">				
+			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="blacksmithHammer,forceps,cut-off" required_tools_only="true">
+				<required_item_stack name="0" />
+			</grid>
+			<grid name="slot_preview" depth="1" rows="1" cols="4" pos="3,-2" cell_width="75" cell_height="75" controller="SlotPreview">
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="blacksmithHammer" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center" foregroundlayer="true" />
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="forceps" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center" foregroundlayer="true" />
+				</rect>
+				<rect>
+					<sprite name="slot" depth="2" width="70" height="50" color="[white_quarter_alpha]" sprite="cut-off" atlas="ItemIconAtlasGreyscale" pos="35,-30" pivot="center" foregroundlayer="true" />
+				</rect>
+			</grid>
+		</rect>
+	</window>
+</append>
+</config>
+
+<config name="recipes">
+<append xpath="/recipes">
+	<recipe name="ArmorWorkbench" count="1" craft_area="workbench">
+		<ingredient name="forgedIron" count="25" />
+		<ingredient name="mechanicalParts" count="20" />
+		<ingredient name="calipers" count="1" />
+		<ingredient name="toolAndDieSet" count="1" />
+		<ingredient name="wood" count="50" />
+	</recipe>	
+
+	<recipe name="SawTable" count="1" craft_area="workbench">
+		<ingredient name="forgedIron" count="25" />
+		<ingredient name="mechanicalParts" count="20" />
+		<ingredient name="calipers" count="1" />
+		<ingredient name="toolAndDieSet" count="1" />
+		<ingredient name="wood" count="50" />
+	</recipe>		
+	
+	<recipe name="plasmaCuter" count="1" craft_area="workbench">
+		<ingredient name="forgedIron" count="25" />
+		<ingredient name="mechanicalParts" count="20" />
+		<ingredient name="calipers" count="1" />
+		<ingredient name="toolAndDieSet" count="1" />
+		<ingredient name="wood" count="50" />
+	</recipe>
+		
+	<recipe name="solderingStation" count="1" craft_area="workbench">
+		<ingredient name="forgedIron" count="25" />
+		<ingredient name="mechanicalParts" count="20" />
+		<ingredient name="calipers" count="1" />
+		<ingredient name="toolAndDieSet" count="1" />
+		<ingredient name="wood" count="50" />
+	</recipe>
+			
+	<recipe name="lathe" count="1" craft_area="workbench">
+		<ingredient name="forgedIron" count="25" />
+		<ingredient name="mechanicalParts" count="20" />
+		<ingredient name="calipers" count="1" />
+		<ingredient name="toolAndDieSet" count="1" />
+		<ingredient name="wood" count="50" />
+	</recipe>
+			
+	<recipe name="milling" count="1" craft_area="workbench">
+		<ingredient name="forgedIron" count="25" />
+		<ingredient name="mechanicalParts" count="20" />
+		<ingredient name="calipers" count="1" />
+		<ingredient name="toolAndDieSet" count="1" />
+		<ingredient name="wood" count="50" />
+	</recipe>
+			
+	<recipe name="chargingStation" count="1" craft_area="workbench">
+		<ingredient name="forgedIron" count="25" />
+		<ingredient name="mechanicalParts" count="20" />
+		<ingredient name="calipers" count="1" />
+		<ingredient name="toolAndDieSet" count="1" />
+		<ingredient name="wood" count="50" />
+	</recipe>
+
+	<recipe name="bHamHead" count="1" craft_area="blacksmithForge" scrapable="False">
+		<ingredient name="unit_iron" count="50" />
+		<ingredient name="unit_clay" count="20"/>
+	</recipe>
+	<recipe name="bHamHandle" count="1" craft_area="workbench" scrapable="False">
+		<ingredient name="wood" count="5" />
+	</recipe>
+	<recipe name="blacksmithHammer" count="1" craft_area="workbench" scrapable="False">
+		<ingredient name="bHamHead" count="1" />
+		<ingredient name="bHamHandle" count="1" />
+	</recipe>
+	<recipe name="blacksmithAnvil" count="1" craft_area="workbench" scrapable="False">
+		<ingredient name="anvil" count="1" />
+		<ingredient name="woodLog" count="1" />
+		<ingredient name="nail" count="10" />
+	</recipe>
+	<recipe name="blacksmithTube" count="1" craft_area="workbench" scrapable="False">
+		<ingredient name="plank" count="20" />
+		<ingredient name="wood" count="10" />
+		<ingredient name="nail" count="20" />
+		<ingredient name="bucketWater" count="1" />
+	</recipe>
+	<recipe name="blacksmithForge" count="1" craft_area="workbench" scrapable="False">
+		<ingredient name="blacksmithHammer" count="1" />
+		<ingredient name="blacksmithAnvil" count="1" />
+		<ingredient name="blacksmithTube" count="1" />
+	</recipe>	
+	</append>
+</config>	
+</configs>

@@ -1,0 +1,274 @@
+<configs>
+	<config name="items">
+	<remove xpath="/items/item[@name='partsPistol_barrel']" />
+	<remove xpath="/items/item[@name='parts44Magnum_frame']" />
+	<remove xpath="/items/item[@name='partsMP5_barrel']" />
+	<remove xpath="/items/item[@name='partsAK47_barrel']" />
+	<remove xpath="/items/item[@name='partsHuntingRifle_barrel']" />
+	<remove xpath="/items/item[@name='partsSniperRifle_barrel']" />
+	<remove xpath="/items/item[@name='partsRocketLauncher_barrel']" />
+	<remove xpath="/items/item[@name='partsChainsaw_blade']" />
+	<remove xpath="/items/item[@name='partsAuger_blade']" />
+	
+<append xpath="/items">
+<item id="213" name="partsPistol_barrel">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsPistolGroupDesc"/>
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="10" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="0.1, 0.2" />
+		<property name="BlockDamage" value="0.1,0.2" />
+		<property name="DegradationMax" value="700,4000" />
+	</property>
+	<property name="EconomicValue" value="412" />
+</item>			
+<item id="219" name="parts44Magnum_frame">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="parts44MagnumGroupDesc"/>
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="20" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="0.1,0.2" />
+		<property name="BlockDamage" value="0.1,0.2" />
+		<property name="DegradationMax" value="2000,10000" />
+	</property>
+	<property name="EconomicValue" value="1125" />
+</item>
+<item id="233" name="partsMP5_barrel">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsMP5GroupDesc"/>
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="25" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="0.1,0.2" />
+		<property name="BlockDamage" value="0.1,0.2" />
+		<!--
+		<property name="DismembermentBaseChance" value="0.0,0.15"/>
+		<property name="DismembermentBonus" value="0,0"/>
+		-->
+		<property name="DegradationMax" value="2250,10000" />
+	</property>
+	<property name="EconomicValue" value="1125" />
+</item>	
+<item id="239" name="partsAK47_barrel">
+	<property name="Extends" value="partsMaster" />
+	<property name="CustomIcon" value="partsPistol_barrel" /> <!-- xxx -->
+	<property name="DescriptionKey" value="partsAK47GroupDesc"/>
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="35" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="0.1,0.2" />
+		<property name="BlockDamage" value="0.1,0.2" />
+		<property name="DegradationMax" value="2250,10000" />
+	</property>
+	<property name="EconomicValue" value="1500" />
+</item>
+<item id="245" name="partsHuntingRifle_barrel">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsHuntingRifleGroupDesc"/>
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="35" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="0.1,0.2" />
+		<property name="BlockDamage" value="0.1,0.2" />
+		<property name="DegradationMax" value="1500,5000" />
+	</property>
+</item>
+<item id="251" name="partsSniperRifle_barrel">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsSniperRifleGroupDesc"/>
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="40" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="0.1,0.2" />
+		<property name="BlockDamage" value="0.1,0.2" />
+		<property name="DegradationMax" value="1700,7000" />
+	</property>
+	<property name="EconomicValue" value="875" />
+</item>			
+<item id="257" name="partsRocketLauncher_barrel">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsRocketLauncherGroupDesc"/>
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="45" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="0.1,0.2" />
+		<property name="EntityDamage" value="0.1,0.2" /> <!-- xxx is this working? -->
+		<property name="DegradationMax" value="2500,10000" />
+	</property>
+	<property name="EconomicValue" value="1500" />
+</item>
+<item id="262" name="partsChainsaw_blade">
+	<property name="Extends" value="partsMaster" />
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="50" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="10,25" />
+		<property name="BlockDamage" value="7,13" />
+		<property name="Accuracy" value="1, 0.01" />
+		<property name="DismembermentBaseChance" value=".2,.3"/>
+		<property name="DismembermentBonus" value="0,0.00036"/>
+		<property name="DegradationMax" value="3000,6000" />
+	</property>
+	<!-- 15.0 workaround. Should be Science -->
+	<property name="Group" value="Resources,Tools/Traps" />
+</item>
+<item id="266" name="partsAuger_blade">
+	<property name="Extends" value="partsMaster" />
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="40" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="10,22" />
+		<property name="BlockDamage" value="18,44" />
+		<property name="Accuracy" value="1, 0.01" />
+		<property name="DegradationMax" value="3000,6000" />
+	</property>
+	<!-- 15.0 workaround. Should be Science -->
+	<property name="Group" value="Resources,Tools/Traps" />
+</item>			
+			<!--CRUGER_RIFEL-->
+<item id="" name="partsCrugerRifle_stock">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsHuntingRifleGroupDesc"/>
+	<property name="PartType" value="Stock" />
+	<property name="Material" value="wood" />
+	<property name="Weight" value="20" />
+	<property name="FuelValue" value="40" />
+	<property class="Attributes">
+		<property name="DismembermentBaseChance" value="0.1,0.25"/>
+		<property name="DismembermentBonus" value="0,0.00045"/>
+		<property name="DegradationRate" value="10,15" />
+		<property name="DegradationMax" value="1500,5000" />
+	</property>
+</item>
+<item id="" name="partsCrugerRifle_receiver">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsHuntingRifleGroupDesc"/>
+	<property name="PartType" value="Receiver" />
+	<property name="Weight" value="30" />
+	<property class="Attributes">
+		<property name="FalloffRange" value="54,160" />
+		<property name="DegradationMax" value="1500,5000" />
+	</property>
+</item>
+<item id="" name="partsCrugerRifle_parts">
+	<property name="Extends" value="partsMaster" />
+	<property name="CustomIcon" value="partsPistol_parts" /> <!-- xxx -->
+	<property name="DescriptionKey" value="partsHuntingRifleGroupDesc"/>
+	<property name="PartType" value="Pump" />
+	<property name="Weight" value="15" />
+	<property class="Attributes">
+		<property name="Accuracy" value=".7,0.01" />
+		<property name="DegradationMax" value="1500,5000" />
+	</property>
+</item>
+<item id="" name="partsCrugerRifle_barrel">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsHuntingRifleGroupDesc"/>
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="35" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="0.1,0.2" />
+		<property name="BlockDamage" value="0.1,0.2" />
+		<property name="DegradationMax" value="1500,5000" />
+	</property>
+</item>			
+			<!--AK-12(SAIGA)-->
+<item id="" name="partsAK12_stock">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsAK12GroupDesc"/>
+	<property name="PartType" value="Stock" />
+	<property name="Weight" value="30" />
+	<property class="Attributes">
+		<property name="DegradationRate" value="12,16" />
+		<property name="DegradationMax" value="2250,10000" />
+	</property>
+	<property name="EconomicValue" value="1500" />
+</item>
+<item id="" name="partsAK12_receiver">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsAK12GroupDesc"/>
+	<property name="PartType" value="Receiver" />
+	<property name="Weight" value="30" />
+	<property class="Attributes">
+		<property name="FalloffRange" value="30,60" />
+		<property name="DegradationMax" value="2250,10000" />
+	</property>
+	<property name="EconomicValue" value="1500" />
+</item>
+<item id="" name="partsAK12_parts">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsAK12GroupDesc"/>
+	<property name="PartType" value="Pump" />
+	<property name="Weight" value="15" />
+	<property class="Attributes">
+		<!--<property name="Accuracy" value="0.25,1.1" />-->
+		<property name="DegradationMax" value="2250,10000" />
+	</property>
+	<property name="EconomicValue" value="1500" />
+</item>
+<item id="" name="partsAK12_barrel">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsAK12GroupDesc"/>
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="35" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="0.1,0.2" />
+		<property name="BlockDamage" value="0.1,0.2" />
+		<property name="DegradationMax" value="2250,10000" />
+	</property>
+	<property name="EconomicValue" value="1500" />
+</item>
+			
+				<!-- PARTS TOMMY GUN -->			
+<item id="" name="partsTommy_stock">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsTommyGroupDesc"/>
+	<property name="PartType" value="Stock" />
+	<property name="Weight" value="30" />
+	<property class="Attributes">
+		<property name="DegradationRate" value="12,16" />
+		<property name="DegradationMax" value="2250,10000" />
+	</property>
+	<property name="EconomicValue" value="1500" />
+</item>
+<item id="" name="partsTommy_receiver">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsTommyGroupDesc"/>
+	<property name="PartType" value="Receiver" />
+	<property name="Weight" value="30" />
+	<property class="Attributes">
+		<property name="FalloffRange" value="30,90" />
+		<property name="DegradationMax" value="2250,10000" />
+	</property>
+	<property name="EconomicValue" value="1500" />
+</item>
+<item id="" name="partsTommy_parts">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsTommyGroupDesc"/>
+	<property name="PartType" value="Pump" />
+	<property name="Weight" value="15" />
+	<property class="Attributes">
+		<property name="Accuracy" value="0.25,1.1" />
+		<property name="DegradationMax" value="2250,10000" />
+	</property>
+	<property name="EconomicValue" value="1500" />
+</item>
+<item id="" name="partsTommy_barrel">
+	<property name="Extends" value="partsMaster" />
+	<property name="DescriptionKey" value="partsTommyGroupDesc"/>
+	<property name="PartType" value="Barrel" />
+	<property name="Weight" value="35" />
+	<property class="Attributes">
+		<property name="EntityDamage" value="0.1,0.2" />
+		<property name="BlockDamage" value="0.1,0.2" />
+		<property name="DegradationMax" value="2250,10000" />
+	</property>
+	<property name="EconomicValue" value="1500" />
+</item>			
+			
+			
+			</append>
+	</config>
+</configs>

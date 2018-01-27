@@ -1,0 +1,23 @@
+<!--37-->
+<configs>
+	<config name="items">
+			<append xpath="/items">	
+</append>
+</config>
+	
+
+	
+<config name="xui">	
+<append xpath="/xui/ruleset[@name='default']">
+
+</append>
+</config>
+
+
+
+<config name="recipes">
+<append xpath="/recipes">
+
+</append>
+</config>	
+</configs>

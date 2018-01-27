@@ -1,0 +1,204 @@
+					<!--TOOLS-->
+<configs>
+	<config name="recipes">
+	<remove xpath="/recipes/recipe[@name='stoneAxe']" />
+	<remove xpath="/recipes/recipe[@name='fireaxeIron']" />
+	<remove xpath="/recipes/recipe[@name='fireaxeSteel']" />
+	<remove xpath="/recipes/recipe[@name='pickaxeIron']" />
+	<remove xpath="/recipes/recipe[@name='pickaxeSteel']" />
+	<remove xpath="/recipes/recipe[@name='stoneShovel']" />
+	<remove xpath="/recipes/recipe[@name='shovelIron']" />
+	<remove xpath="/recipes/recipe[@name='shovelSteel']" />
+	<remove xpath="/recipes/recipe[@name='hoeIron']" />
+	<remove xpath="/recipes/recipe[@name='sledgehammer']" />
+	<remove xpath="/recipes/recipe[@name='clawHammer']" />
+
+		<append xpath="/recipes">
+
+			<recipe name="smashStone" count="1">
+				<ingredient name="rockSmall" count="1"/>
+			</recipe>
+			
+			<recipe name="primitiveHandle" count="1">
+				<ingredient name="fibersRope" count="2"/>
+				<ingredient name="stick" count="5"/>
+			</recipe>
+			
+			<recipe name="stoneAxeHead" count="1">
+				<ingredient name="sharpStone" count="1"/>
+				<ingredient name="sSharpStone" count="1"/>
+			</recipe>
+			
+			<recipe name="stonePickaxeHead" count="1">
+				<ingredient name="sharpStone" count="2"/>
+				<ingredient name="sSharpStone" count="1"/>
+			</recipe>
+			
+			<recipe name="stoneShovelHead" count="1">
+				<ingredient name="sharpStone" count="1"/>
+				<ingredient name="sSharpStone" count="1"/>
+			</recipe>	
+
+			<recipe name="stoneHammerHead" count="1">
+				<ingredient name="rockMedium" count="1"/>
+				<ingredient name="sSharpStone" count="1"/>
+			</recipe>
+			
+			<recipe name="stoneHammerHead" count="1">
+				<ingredient name="rockMedium" count="1"/>
+				<ingredient name="sSharpStone" count="1"/>
+			</recipe>
+			
+			<recipe name="stoneHoeHead" count="1">
+				<ingredient name="sharpStone" count="2"/>
+				<ingredient name="sSharpStone" count="3"/>
+			</recipe>
+			
+			<recipe name="ironAxeHead" count="1" craft_area="forge" material_based="true">
+				<ingredient name="unit_iron" count="20" />
+				<ingredient name="unit_clay" count="5" />
+			</recipe>
+			<recipe name="ironPickaxexeHead" count="1" craft_area="forge" material_based="true">
+				<ingredient name="unit_iron" count="25" />
+				<ingredient name="unit_clay" count="5" />
+			</recipe>
+			<recipe name="ironShovelHead" count="1" craft_area="forge" material_based="true">
+				<ingredient name="unit_iron" count="15" />
+				<ingredient name="unit_clay" count="5" />
+			</recipe>
+			<recipe name="ironHoeHead" count="1" craft_area="forge" material_based="true">
+				<ingredient name="unit_iron" count="10" />
+				<ingredient name="unit_clay" count="5" />
+			</recipe>
+			<recipe name="ironHammerHead" count="1" craft_area="forge" material_based="true">
+				<ingredient name="unit_iron" count="5" />
+				<ingredient name="unit_clay" count="5" />
+			</recipe>
+			
+			<recipe name="steelAxeHead" count="1" craft_area="forge" material_based="true">
+				<ingredient name="unit_iron" count="30" />
+				<ingredient name="unit_clay" count="10" />
+			</recipe>
+			<recipe name="steelPickaxeHead" count="1" craft_area="forge" material_based="true">
+				<ingredient name="unit_iron" count="50" />
+				<ingredient name="unit_clay" count="10" />
+			</recipe>
+			<recipe name="steelShovelHead" count="1" craft_area="forge" material_based="true">
+				<ingredient name="unit_iron" count="40" />
+				<ingredient name="unit_clay" count="10" />
+			</recipe>
+			<recipe name="steelHoeHead" count="1" craft_area="forge" material_based="true">
+				<ingredient name="unit_iron" count="20" />
+				<ingredient name="unit_clay" count="10" />
+			</recipe>
+			<recipe name="steelHammerHead" count="1" craft_area="forge" material_based="true">
+				<ingredient name="unit_iron" count="10" />
+				<ingredient name="unit_clay" count="10" />
+			</recipe>
+	
+			<recipe name="woodHandle" count="1" craft_area="SawTable">
+				<ingredient name="wood" count="2"/>
+			</recipe>
+
+			<recipe name="pickaxeStone" count="1">
+				<ingredient name="stonePickaxeHead" count="1"/>
+				<ingredient name="fibersRope" count="2"/>
+				<ingredient name="primitiveHandle" count="1"/>
+			</recipe>
+			
+			<recipe name="stoneAxe" count="1">
+				<ingredient name="stoneAxeHead" count="1"/>
+				<ingredient name="fibersRope" count="2"/>
+				<ingredient name="primitiveHandle" count="1"/>
+			</recipe>
+			
+			<recipe name="stoneShovel" count="1">
+				<ingredient name="stoneShovelHead" count="1"/>
+				<ingredient name="fibersRope" count="2"/>
+				<ingredient name="primitiveHandle" count="1"/>
+			</recipe>
+			
+			<recipe name="stoneHammer" count="1">
+				<ingredient name="stoneHammerHead" count="1"/>
+				<ingredient name="fibersRope" count="2"/>
+				<ingredient name="primitiveHandle" count="1"/>
+			</recipe>
+		
+			<recipe name="stoneHoe" count="1">
+				<ingredient name="stoneHoeHead" count="1"/>
+				<ingredient name="fibersRope" count="2"/>
+				<ingredient name="primitiveHandle" count="1"/>
+			</recipe>
+						
+			<recipe name="woodFireaxeIron" count="1" craft_area="workbench">
+				<ingredient name="ironAxeHead" count="1"/>
+				<ingredient name="nail" count="2"/>
+				<ingredient name="woodHandle" count="1"/>
+			</recipe>
+			
+			<recipe name="metalFireaxeSteel" count="1" craft_area="workbench">
+				<ingredient name="steelAxeHead" count="1"/>
+				<ingredient name="nail" count="2"/>
+				<ingredient name="metalHandle" count="1"/>
+			</recipe>
+			
+			<recipe name="woodPickaxeIron" count="1" craft_area="workbench">
+				<ingredient name="ironPickaxexeHead" count="1"/>
+				<ingredient name="nail" count="2"/>
+				<ingredient name="woodHandle" count="1"/>
+			</recipe>
+			
+			<recipe name="metalPickaxeSteel" count="1" craft_area="workbench">
+				<ingredient name="steelPickaxeHead" count="1"/>
+				<ingredient name="nail" count="2"/>
+				<ingredient name="metalHandle" count="1"/>
+			</recipe>
+			
+			<recipe name="woodShovelIron" count="1" craft_area="workbench">
+				<ingredient name="ironShovelHead" count="1"/>
+				<ingredient name="nail" count="2"/>
+				<ingredient name="woodHandle" count="1"/>
+			</recipe>
+			
+			<recipe name="metalShovelSteel" count="1" craft_area="workbench">
+				<ingredient name="steelShovelHead" count="1"/>
+				<ingredient name="nail" count="2"/>
+				<ingredient name="metalHandle" count="1"/>
+			</recipe>
+			
+			<recipe name="woodHoeIron" count="1" craft_area="workbench">
+				<ingredient name="ironHoeHead" count="1"/>
+				<ingredient name="nail" count="2"/>
+				<ingredient name="woodHandle" count="1"/>
+			</recipe>
+			
+			<recipe name="metalHoeSteel" count="1" craft_area="workbench">
+				<ingredient name="steelHoeHead" count="1"/>
+				<ingredient name="nail" count="2"/>
+				<ingredient name="metalHandle" count="1"/>
+			</recipe>
+		
+			<recipe name="woodHammerIron" count="1" craft_area="workbench">
+				<ingredient name="ironHammerHead" count="1"/>
+				<ingredient name="nail" count="2"/>
+				<ingredient name="woodHandle" count="1"/>
+			</recipe>
+			
+			<recipe name="metalHammerSteel" count="1" craft_area="workbench">
+				<ingredient name="steelHammerHead" count="1"/>
+				<ingredient name="nail" count="2"/>
+				<ingredient name="metalHandle" count="1"/>
+			</recipe>
+		
+			<recipe name="stoneShiv" count="1">
+				<ingredient name="sharpStone" count="1"/>
+				<ingredient name="cloth" count="1"/>
+				<ingredient name="fibersRope" count="1"/>
+			</recipe>
+			
+			
+			
+			
+		</append>
+	</config>
+</configs>

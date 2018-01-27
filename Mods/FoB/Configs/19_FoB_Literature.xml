@@ -1,0 +1,78 @@
+<configs>
+	<config name="items">
+		<append xpath="/items">
+<item id="" name="sPage">
+<property name="Meshfile" value="Items/Misc/paper" />
+<property name="HoldType" value="21" />
+<property name="Material" value="paper" />
+<property name="Weight" value="1" />
+<property name="Stacknumber" value="500" />
+<property name="FuelValue" value="20" />
+<property name="Group" value="Special Items" />
+</item>
+<item id="" name="sBookSection">
+<property name="DescriptionKey" value="survivorNotes2Desc"/>
+<property name="Meshfile" value="Items/Misc/paper" />
+<property name="HoldType" value="21" />
+<property name="Material" value="paper" />
+<property name="Weight" value="1" />
+<property name="Stacknumber" value="200" />
+<property name="FuelValue" value="20" />
+<property name="Group" value="Special Items" />
+<property class="Action1">
+	<property name="Class" value="Quest"/>
+	<property name="QuestGiven" value="sNotesSection" />
+	<property name="Delay" value="0" />
+</property>
+</item>
+<item id="" name="sBookChapter">
+<property name="DescriptionKey" value="survivorNotes2Desc"/>
+<property name="Meshfile" value="Items/Misc/paper" />
+<property name="HoldType" value="21" />
+<property name="Material" value="paper" />
+<property name="Weight" value="1" />
+<property name="Stacknumber" value="100" />
+<property name="FuelValue" value="20" />
+<property name="Group" value="Special Items" />
+<property class="Action1">
+	<property name="Class" value="Quest"/>
+	<property name="QuestGiven" value="sNotesChapter" />
+	<property name="Delay" value="0" />
+</property>
+</item>
+<item id="" name="sBook">
+<property name="DescriptionKey" value="survivorNotes2Desc"/>
+<property name="Meshfile" value="Items/Misc/paper" />
+<property name="HoldType" value="21" />
+<property name="Material" value="paper" />
+<property name="Weight" value="1" />
+<property name="Stacknumber" value="10" />
+<property name="FuelValue" value="20" />
+<property name="Group" value="Special Items" />
+<property class="Action1">
+	<property name="Class" value="Quest"/>
+	<property name="QuestGiven" value="sNotesBook" />
+	<property name="Delay" value="0" />
+</property>
+</item>	
+				
+	</append>
+</config>
+	
+<config name="recipes">
+	<append xpath="/recipes">
+<recipe name="sBookSection" count="1">
+	<ingredient name="sPage" count="5" />
+	<ingredient name="glue" count="1" />
+</recipe>
+<recipe name="sBookChapter" count="1">
+	<ingredient name="sBookSection" count="4" />
+	<ingredient name="glue" count="3" />
+</recipe>
+<recipe name="sBook" count="1">
+	<ingredient name="sBookChapter" count="10" />
+	<ingredient name="glue" count="5" />
+</recipe>
+		</append>
+	</config>
+</configs>

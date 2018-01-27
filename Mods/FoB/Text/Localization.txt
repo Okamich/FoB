@@ -1,0 +1,26 @@
+Key,Source,Context,Changes,English,French,German,Klingon,Spanish
+HomeMadeRoundCraftingDesc,progression,Perk,GrChanged,Learn how create different types of ammo in home.,.,.,,.
+HomeMadeRoundCrafting,progression,Perk,GrChanged,Homemade Round Crafting,.,.,,.
+LightMachineGunsDesc,progression,Skill,GrChanged,Do more damage from this weapon type.,.,.,,.
+LightMachineGuns,progression,Skill,GrChanged,Light Machine Guns,.,.,,.
+HeavyGunsDesc,progression,Perk,GrChanged,Do more damage from this weapon type.,.,.,,.
+HeavyGuns,progression,Skill,GrChanged,Heavy Guns,.,.,,.
+AssaultRiflesDesc,progression,Perk,GrChanged,Do more damage from this weapon type.,.,.,,.
+AssaultRifles,progression,Skill,GrChanged,Assault Rifles,.,.,,.
+PrimitiveWeaponsDesc,progression,Perk,GrChanged,Do more damage from this weapon type.,.,.,,.
+PrimitiveWeapons,progression,Skill,GrChanged,Primitive Weapons,.,.,,.
+DigingToolsDesc,progression,Perk,GrChanged,Dig better. Dig faster.,.,.,,.
+DigingTools,progression,Skill,GrChanged,Diging Tools,.,.,,.
+ChopingToolsDesc,progression,Perk,GrChanged,Chop better. Chop faster.,.,.,,.
+ChopingTools,progression,Skill,GrChanged,Choping Tools,.,.,,.
+AutomatedToolsDesc,progression,Perk,GrChanged,Do more damage with this Auger and Chainsaw.,.,.,,.
+AutomatedTools,progression,Skill,GrChanged,Automated Tools,.,.,,.
+wildManDesc,progression,Perk,GrChanged,You are Wild and Unsociable. You are child of forest. You know all about Survival.,.,.,,.
+wildMan,progression,Perk,GrChanged,Wild Man,.,.,,.
+clothingDesc,progression,Skill,GrChanged,Take more less damage with every new level.,.,.,,.
+clothing,progression,Perk,GrChanged,Clothing,.,.,,.
+lightArmorDesc,progression,Skill,GrChanged,Take more less damage with every new level.,.,.,,.
+lightArmor,progression,Perk,GrChanged,Light Armor,.,.,,.
+heavyArmorDesc,progression,Skill,GrChanged,Take more less damage with every new level.,.,.,,.
+heavyArmor,progression,Perk,GrChanged,Heavy Armor,.,.,,.
+xuiBuffsActive,UI,XUI,KgNone,BUFFS,.,.,,.

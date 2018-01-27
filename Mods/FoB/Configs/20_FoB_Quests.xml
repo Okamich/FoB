@@ -1,0 +1,42 @@
+<configs>
+	<config name="quests">
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival2']" />
+	
+	<insertAfter xpath="/quests/quest[@id='quest_BasicSurvival1']">
+	<!-- Basic Survival 2 - Craft a Stone Axe /> -->
+    <quest id="quest_BasicSurvival2" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival2" subtitle="Craft a Stone Axe" subtitle_key="quest_BasicSurvival2_subtitle" description_key="quest_BasicSurvival2_description"
+	icon="ui_game_symbol_hammer" category_key="quest" offer_key="quest_BasicSurvival_offer" >
+
+		<objective type="FetchKeep" id="fibersRope" value="4" />
+		<objective type="FetchKeep" id="stick" value="5" />
+		<objective type="FetchKeep" id="sharpStone" value="4" />
+		<objective type="FetchKeep" id="sSharpStone" value="2" />
+		
+		<objective type="Craft" id="stoneAxeHead" value="1" />
+		<objective type="Craft" id="primitiveHandle" value="1" />
+		<objective type="Craft" id="stoneAxe" value="1" />
+		<reward type="Quest" id="quest_BasicSurvival3" />
+
+    </quest>
+	</insertAfter>
+	
+		<append xpath="/quests">
+<quest id="sNotesSection" name="Survivor Book Section" subtitle="Survivor Book Section" 
+offer="This crumbled, bloodied note from a survivor might give you a little insight on surviving in this harsh world. Or at least teach you how not to end up like one who left the note..." description="Your experience surviving in this harsh world has given you a skill point." icon="misc_crafting" 
+repeatable="true" category_key="challenge" difficulty="easy">
+	<reward type="SkillPoints" value="1" />
+</quest>
+<quest id="sNotesChapter" name="Survivor Book Chapter" subtitle="Survivor Book Chapter" 
+offer="This crumbled, bloodied note from a survivor might give you a little insight on surviving in this harsh world. Or at least teach you how not to end up like one who left the note..." description="Your experience surviving in this harsh world has given you a skill point." icon="misc_crafting" 
+repeatable="true" category_key="challenge" difficulty="easy">
+	<reward type="SkillPoints" value="5" />
+</quest>
+<quest id="sNotesBook" name="Survivor Book" subtitle="Survivor Book" 
+offer="This crumbled, bloodied note from a survivor might give you a little insight on surviving in this harsh world. Or at least teach you how not to end up like one who left the note..." description="Your experience surviving in this harsh world has given you a skill point." icon="misc_crafting" 
+repeatable="true" category_key="challenge" difficulty="easy">
+	<reward type="SkillPoints" value="25" />
+</quest>
+
+		</append>
+	</config>
+</configs>

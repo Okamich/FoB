@@ -1,0 +1,94 @@
+<configs>
+	<config name="recipes">
+		<remove xpath="/recipes/recipe[@name='baconAndEggs']" />
+		<append xpath="/recipes">
+			<recipe name="bacon" count="1">
+				<ingredient name="pigMeat" count="1" />
+			</recipe>
+			
+			<recipe name="saltDryed" count="1">
+				<ingredient name="salt" count="10" />
+			</recipe>
+			<recipe name="saltPocket" count="1">
+				<ingredient name="saltDryed" count="10" />
+			</recipe>
+			<recipe name="saltDryed" count="10">
+				<ingredient name="saltPocket" count="1" />
+			</recipe>
+			
+			<recipe name="sugarDryed" count="1">
+				<ingredient name="sugar" count="10" />
+			</recipe>
+			<recipe name="sugarBag" count="1">
+				<ingredient name="sugarDryed" count="10" />
+			</recipe>
+			<recipe name="sugarDryed" count="10">
+				<ingredient name="sugarBag" count="1" />
+			</recipe>
+			<recipe name="sugarCubesPack" count="1">
+				<ingredient name="sugarCubes" count="100" />
+			</recipe>
+			<recipe name="sugarCubes" count="100">
+				<ingredient name="sugarCubesPack" count="1" />
+			</recipe>
+			
+			<recipe name="bearMeatCharred" count="1" craft_area="campfire">
+				<ingredient name="bearMeat" count="1" />
+			</recipe>
+			<recipe name="rabbitMeatCharred" count="1" craft_area="campfire">
+				<ingredient name="rabbitMeat" count="1" />
+			</recipe>
+			<recipe name="chickenMeatCharred" count="1" craft_area="campfire">
+				<ingredient name="chickenMeat" count="1" />
+			</recipe>
+			<recipe name="pigMeatCharred" count="1" craft_area="campfire">
+				<ingredient name="pigMeat" count="1" />
+			</recipe>
+			<recipe name="baconAndEggs" count="1" craft_area="campfire" craft_tool="cookingPot">
+				<ingredient name="egg" count="1" />
+				<ingredient name="bacon" count="1" />
+			</recipe> 
+			<recipe name="bearMeatStew" count="1" craft_area="campfire" craft_tool="cookingPot">
+				<ingredient name="bearMeat" count="1" />
+				<ingredient name="potato" count="1" />
+				<ingredient name="corn" count="1" />
+				<ingredient name="bottledWater" count="1" />
+			</recipe>
+			<recipe name="bearMeatBoiled" count="1" craft_area="campfire" craft_tool="cookingPot">
+				<ingredient name="bearMeat" count="1" />
+				<ingredient name="bottledWater" count="1" />
+			</recipe>
+			<recipe name="rabbitMeatStew" count="1" craft_area="campfire" craft_tool="cookingPot">
+				<ingredient name="rabbitMeat" count="4" />
+				<ingredient name="potato" count="1" />
+				<ingredient name="corn" count="1" />
+				<ingredient name="bottledWater" count="1" />
+			</recipe>
+			<recipe name="rabbitMeatBoiled" count="1" craft_area="campfire" craft_tool="cookingPot">
+				<ingredient name="rabbitMeat" count="1" />
+				<ingredient name="bottledWater" count="1" />
+			</recipe>
+			<recipe name="chickenMeatBoiled" count="1" craft_area="campfire" craft_tool="cookingPot">
+				<ingredient name="chickenMeat" count="1" />
+				<ingredient name="bottledWater" count="1" />
+			</recipe>
+			<recipe name="pigMeatBoiled" count="1" craft_area="campfire" craft_tool="cookingPot">
+				<ingredient name="pigMeat" count="1" />
+				<ingredient name="bottledWater" count="1" />
+			</recipe>
+			<recipe name="bearMeatGrilled" count="1" craft_area="campfire" craft_tool="cookingGrill">
+				<ingredient name="bearMeat" count="1" />
+			</recipe>
+			<recipe name="rabbitMeatGrilled" count="1" craft_area="campfire" craft_tool="cookingGrill">
+				<ingredient name="rabbitMeat" count="1" />
+			</recipe>
+			<recipe name="pigMeatGrilled" count="1" craft_area="campfire" craft_tool="cookingGrill">
+				<ingredient name="pigMeat" count="1" />
+			</recipe>
+			<recipe name="chickenMeatGrilled" count="1" craft_area="campfire" craft_tool="cookingGrill">
+				<ingredient name="chickenMeat" count="2" />
+			</recipe>
+					
+		</append>
+	</config>
+</configs>

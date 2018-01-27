@@ -1,0 +1,78 @@
+<!-- WEAPONS -->
+<configs>
+	<config name="recipes">
+	<remove xpath="/recipes/recipe[@name='arrow']" />
+	<remove xpath="/recipes/recipe[@name='ironArrowHead']" />
+	<remove xpath="/recipes/recipe[@name='ironArrow']" />
+	<remove xpath="/recipes/recipe[@name='steelArrowHead']" />
+	<remove xpath="/recipes/recipe[@name='steelArrow']" />
+	<remove xpath="/recipes/recipe[@name='ironCrossbowBolt']" />
+	<remove xpath="/recipes/recipe[@name='steelCrossbowBolt']" />
+		<append xpath="/recipes">
+			<recipe name="stoneArrowHead" count="1">
+				<ingredient name="sSharpStone" count="1" />
+				<ingredient name="rockSmall" count="1" />
+			</recipe>
+			<recipe name="stoneBoltHead" count="1">
+				<ingredient name="sSharpStone" count="1" />
+				<ingredient name="rockSmall" count="1" />
+			</recipe>
+			<recipe name="ironBoltHead" count="1" craft_area="blacksmithForge" craft_tool="blacksmithHammer" material_based="true">
+				<ingredient name="unit_iron" count="3"/>
+				<ingredient name="unit_clay" count="1"/>
+			</recipe>
+			<recipe name="steelBoltHead" count="1" craft_area="blacksmithForge" craft_tool="blacksmithHammer" material_based="true">
+				<ingredient name="unit_iron" count="7"/>
+				<ingredient name="unit_clay" count="1"/>
+			</recipe>			
+			<recipe name="ironArrowHead" count="1" craft_area="blacksmithForge" craft_tool="blacksmithHammer" material_based="true">
+				<ingredient name="unit_iron" count="2"/>
+				<ingredient name="unit_clay" count="1"/>
+			</recipe>	
+			<recipe name="steelArrowHead" count="1" craft_area="blacksmithForge" craft_tool="blacksmithHammer" material_based="true">
+				<ingredient name="unit_iron" count="6"/>
+				<ingredient name="unit_clay" count="1"/>
+			</recipe>			
+			<recipe name="woodArrowBlank" count="1">
+				<ingredient name="stick" count="1" />
+				<ingredient name="feather" count="2" />
+			</recipe>
+			<recipe name="woodBoltBlank" count="1">
+				<ingredient name="stick" count="1" />
+				<ingredient name="feather" count="4" />
+			</recipe>
+			<recipe name="arrow" count="1">
+				<ingredient name="sharpStick" count="1" />
+				<ingredient name="feather" count="2" />
+			</recipe>
+			<recipe name="bolt" count="1">
+				<ingredient name="sharpStick" count="1" />
+				<ingredient name="feather" count="4" />
+			</recipe>				
+			<recipe name="stoneArrow" count="1"> 
+				<ingredient name="stoneArrowHead" count="1" />
+				<ingredient name="woodArrowBlank" count="1" />
+			</recipe>
+			<recipe name="stoneBolt" count="1"> 
+				<ingredient name="stoneBoltHead" count="1" />
+				<ingredient name="woodBoltBlank" count="1" />
+			</recipe>
+			<recipe name="ironCrossbowBolt" count="1">
+				<ingredient name="ironBoltHead" count="1"/>
+				<ingredient name="woodBoltBlank" count="1"/>
+			</recipe>
+			<recipe name="steelCrossbowBolt" count="1">
+				<ingredient name="steelBoltHead" count="1"/>
+				<ingredient name="woodBoltBlank" count="1"/>
+			</recipe>			
+			<recipe name="ironArrow" count="1">
+				<ingredient name="ironArrowHead" count="1"/>
+				<ingredient name="woodArrowBlank" count="1"/>
+			</recipe>
+			<recipe name="steelArrow" count="1">
+				<ingredient name="steelArrowHead" count="1"/>
+				<ingredient name="woodArrowBlank" count="1"/>
+			</recipe>
+		</append>
+	</config>
+</configs>

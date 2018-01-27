@@ -1,0 +1,188 @@
+<configs>
+	<config name="items">
+			<append xpath="/items">
+				<item id="" name="rockMedium"><!--have no rec-->
+					<property name="Meshfile" value="Items/Crafting/rock_smallPrefab" />
+					<property name="Material" value="stone" />
+					<property name="HoldType" value="40" />
+					<property name="Stacknumber" value="50" />
+					<property name="RepairAmount" value="300" />
+					<property name="Weight" value="5" />
+					<property name="EconomicValue" value="5" />
+					<property name="Group" value="Basics,Resources" />
+					<property name="EconomicBundleSize" value="50" />
+				</item>
+				<item id="" name="fibersRope">
+					<property name="Meshfile" value="Items/Crafting/plant_fibers" />
+					<property name="Weight" value="1" />
+					<property name="Material" value="plants" />
+					<property name="RepairTime" value="1" />
+					<property name="RepairAmount" value="30" />
+					<property name="HoldType" value="16" />
+					<property name="Stacknumber" value="500" />
+					<property name="FuelValue" value="1" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="SellableToTrader" value="false" />
+					<property name="Group" value="Basics,Resources" />
+				</item>
+				<item id="" name="plank">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="wood" />
+					<property name="Weight" value="5" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="5000" />
+					<property name="FuelValue" value="7" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="Group" value="Resources,Basics" />
+					<property name="LootExpValue" value="1" />
+					<property name="DescriptionKey" value="woodDesc" />
+					<property name="CraftingIngredientTime" value="0.25" />
+				</item>
+				<item id="" name="stick">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="wood" />
+					<property name="Weight" value="5" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="5000" />
+					<property name="FuelValue" value="10" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="Group" value="Resources,Basics" />
+					<property name="RepairAmount" value="100" />
+					<property name="LootExpValue" value="1" />
+					<property name="DescriptionKey" value="woodDesc" />
+					<property name="CraftingIngredientTime" value="0.05" />
+				</item>
+				<item id="" name="woodLog">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="wood" />
+					<property name="Weight" value="10" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="500" />
+					<property name="FuelValue" value="15" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="Group" value="Resources" />
+					<property name="LootExpValue" value="2" />
+					<property name="DescriptionKey" value="woodDesc" />
+					<property name="CraftingIngredientTime" value="0.55" />
+				</item>		
+				<item id="" name="burnWood">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="wood" />
+					<property name="Weight" value="5" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="5000" />
+					<property name="FuelValue" value="7" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="Group" value="Resources" />
+					<property name="LootExpValue" value="1" />
+					<property name="DescriptionKey" value="woodDesc" />
+					<property name="CraftingIngredientTime" value="0.15" />
+				</item>			
+				<item id="" name="burnWoodLog">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="wood" />
+					<property name="Weight" value="10" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="500" />
+					<property name="FuelValue" value="15" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="Group" value="Resources" />
+					<property name="LootExpValue" value="2" />
+					<property name="DescriptionKey" value="woodDesc" />
+					<property name="CraftingIngredientTime" value="0.55" />
+				</item>	
+				<item id="" name="deadWoodLog">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="wood" />
+					<property name="Weight" value="10" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="500" />
+					<property name="FuelValue" value="15" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="Group" value="Resources" />
+					<property name="LootExpValue" value="2" />
+					<property name="DescriptionKey" value="woodDesc" />
+					<property name="CraftingIngredientTime" value="0.55" />
+				</item>						
+				<item id="" name="deadWood">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="wood" />
+					<property name="Weight" value="5" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="5000" />
+					<property name="FuelValue" value="10" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="Group" value="Resources" />
+					<property name="RepairAmount" value="100" />
+					<property name="LootExpValue" value="1" />
+					<property name="DescriptionKey" value="woodDesc" />
+					<property name="CraftingIngredientTime" value="0.25" />
+				</item>						
+				<item id="" name="sharpStick">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="wood" />
+					<property name="Weight" value="5" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="5000" />
+					<property name="FuelValue" value="10" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="Group" value="Resources,Basics" />
+					<property name="RepairAmount" value="100" />
+					<property name="LootExpValue" value="1" />
+					<property name="DescriptionKey" value="woodDesc" />
+					<property name="CraftingIngredientTime" value="0.5" />
+				</item>			
+				<item id="" name="sSharpStone">
+					<property name="Meshfile" value="Items/Crafting/rock_smallPrefab" />
+					<property name="Material" value="stone" />
+					<property name="HoldType" value="40" />
+					<property name="Stacknumber" value="150" />
+					<property name="RepairAmount" value="100" />
+					<property name="Weight" value="1" />
+					<property name="EconomicValue" value="5" />
+					<property name="Group" value="Basics,Resources" />
+					<property name="EconomicBundleSize" value="50" />
+				</item>				
+				<item id="" name="sharpStone">
+					<property name="Meshfile" value="Items/Crafting/rock_smallPrefab" />
+					<property name="Material" value="stone" />
+					<property name="HoldType" value="40" />
+					<property name="Stacknumber" value="100" />
+					<property name="RepairAmount" value="300" />
+					<property name="Weight" value="3" />
+					<property name="EconomicValue" value="5" />
+					<property name="Group" value="Basics,Resources" />
+					<property name="EconomicBundleSize" value="50" />
+				</item>				
+	<item id="" name="snakeSkin">
+		<property name="Meshfile" value="Items/Crafting/animal_hidePrefab" />
+		<property name="HoldType" value="21" />
+		<property name="Material" value="leather" />
+		<property name="Weight" value="5" />
+		<property name="Stacknumber" value="250" />
+		<property name="FuelValue" value="5" />
+		<property name="EconomicValue" value="20" />
+		<property name="Group" value="Resources" />
+		<property name="CraftingIngredientTime" value="2" />
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous" />
+	</item>
+			</append>
+	</config>
+</configs>

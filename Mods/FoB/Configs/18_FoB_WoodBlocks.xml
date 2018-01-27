@@ -1,0 +1,741 @@
+<configs>
+	<config name="blocks">
+		<remove xpath="/blocks/block[@name='treeSnowyDeadBush']" />
+		<remove xpath="/blocks/block[@name='treeAzalea']" />
+		<remove xpath="/blocks/block[@name='treePlantedWinterPine6m']" />
+		<remove xpath="/blocks/block[@name='treePlantedWinterPine13m']" />
+		<remove xpath="/blocks/block[@name='treePlantedWinterPine16m']" />
+		<remove xpath="/blocks/block[@name='treePlantedWinterPine19m']" />
+		<remove xpath="/blocks/block[@name='treePlantedWinterPine19mPlus']" />
+		<remove xpath="/blocks/block[@name='treeWinterPine01']" />
+		<remove xpath="/blocks/block[@name='treeWinterPine02']" />
+		<remove xpath="/blocks/block[@name='treeWinterPine03']" />
+		<remove xpath="/blocks/block[@name='treeJuniper6m']" />
+		<remove xpath="/blocks/block[@name='treeMountainPine8m']" />
+		<remove xpath="/blocks/block[@name='treeMountainPine13m']" />
+		<remove xpath="/blocks/block[@name='treeMountainPine16m']" />
+		<remove xpath="/blocks/block[@name='treeMountainPine19m']" />
+		<remove xpath="/blocks/block[@name='treeMountainPine20m']" />
+		<remove xpath="/blocks/block[@name='treeMountainPineDry']" />
+		<remove xpath="/blocks/block[@name='treePlantedMountainPine1m']" />
+		<remove xpath="/blocks/block[@name='treePlantedMountainPine6m']" />
+		<remove xpath="/blocks/block[@name='treePlantedMountainPine8m']" />
+		<remove xpath="/blocks/block[@name='treePlantedMountainPine13m']" />
+		<remove xpath="/blocks/block[@name='treePlantedMountainPine16m']" />
+		<remove xpath="/blocks/block[@name='treePlantedMountainPine19m']" />
+		<remove xpath="/blocks/block[@name='treeBirch10m']" />
+		<remove xpath="/blocks/block[@name='treeBirch12m']" />
+		<remove xpath="/blocks/block[@name='treeBirch15m']" />
+		<remove xpath="/blocks/block[@name='treeDeadShrub']" />
+		<remove xpath="/blocks/block[@name='treeMaple6m']" />
+		<remove xpath="/blocks/block[@name='treeMaple13m']" />
+		<remove xpath="/blocks/block[@name='treeMaple15m']" />
+		<remove xpath="/blocks/block[@name='treeMaple16m']" />
+		<remove xpath="/blocks/block[@name='treeMaple17m']" />
+		<remove xpath="/blocks/block[@name='treePlantedMaple1m']" />
+		<remove xpath="/blocks/block[@name='treePlantedMaple6m']" />
+		<remove xpath="/blocks/block[@name='treePlantedMaple13m']" />
+		<remove xpath="/blocks/block[@name='treePlantedMaple15m']" />
+		<remove xpath="/blocks/block[@name='treePlantedMaple17m']" />
+		<remove xpath="/blocks/block[@name='treePlantedMaple17mPlus']" />
+		<remove xpath="/blocks/block[@name='treeBurntPine01']" />
+		<remove xpath="/blocks/block[@name='treeBurntPine02']" />
+		<remove xpath="/blocks/block[@name='treeBurntPine03']" />
+		<remove xpath="/blocks/block[@name='treeDeadTree01']" />
+		<remove xpath="/blocks/block[@name='treeDeadTree02']" />
+		<remove xpath="/blocks/block[@name='treeWinterEverGreen']" />
+		<remove xpath="/blocks/block[@name='treePlainsTree']" />
+		<remove xpath="/blocks/block[@name='treePlainsTree2']" />
+		<remove xpath="/blocks/block[@name='treeDeadPineLeaf']" />
+		
+	<insertAfter xpath="/blocks/block[@name='corrugatedMetalCNRRound']">
+			<block id="1652" name="treePlantedWinterPine19mPlus">
+				<property name="Extends" value="treeWinterPine03" />
+				<property name="IsDeveloper" value="true" />
+				<property name="CustomIcon" value="treeWinterPine03" />
+				<property name="PlantGrowing.FertileLevel" value="15" />
+				<drop event="Harvest" name="wood" count="550" />
+				<drop event="Destroy" name="wood" count="250" prob="1" />
+				<drop event="Destroy" name="stick" count="35,50" prob="1" />
+				<drop event="Destroy" name="woodLog" count="8,9" prob="1" />
+				<drop event="Destroy" name="blueSpruceSeed" count="2" />
+			</block>
+	</insertAfter>
+	<insertAfter xpath="/blocks/block[@name='treePlantedWinterPine1m']">
+			<block id="1565" name="treePlantedWinterPine6m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="Model" value="Entities/Trees/MountainPine40mPrefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,10,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine13m" />
+				<drop event="Harvest" name="wood" count="100" />
+				<drop event="Destroy" name="wood" count="50" prob="1" />
+				<drop event="Destroy" name="stick" count="5,10" prob="1" />
+				<drop event="Destroy" name="woodLog" count="3" prob="1" />
+				<drop event="Destroy" name="blueSpruceSeed" count="1" />
+			</block>
+			<block id="1567" name="treePlantedWinterPine13m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="Material" value="treeWoodMedium" />
+				<property name="Model" value="Entities/Trees/Blue_Spruce45Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,12,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine16m" />
+				<drop event="Harvest" name="wood" count="235" />
+				<drop event="Destroy" name="wood" count="115" prob="1" />
+				<drop event="Destroy" name="stick" count="10,20" prob="1" />
+				<drop event="Destroy" name="woodLog" count="5,6" prob="1" />
+				<drop event="Destroy" name="blueSpruceSeed" count="2" />
+			</block>
+			<block id="1568" name="treePlantedWinterPine16m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="Material" value="treeWoodLarge" />
+				<property name="Model" value="Entities/Trees/Blue_Spruce55Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,19,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine19m" />
+				<property name="PlantGrowing.FertileLevel" value="3" />
+				<drop event="Harvest" name="wood" count="365" />
+				<drop event="Destroy" name="wood" count="185" prob="1" />
+				<drop event="Destroy" name="stick" count="15,30" prob="1" />
+				<drop event="Destroy" name="woodLog" count="6,7" prob="1" />
+				<drop event="Destroy" name="blueSpruceSeed" count="2" />
+			</block>
+			<block id="1569" name="treePlantedWinterPine19m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="CustomIcon" value="treeWinterPine03" />
+				<property name="Material" value="treeWoodFull" />
+				<property name="Model" value="Entities/Trees/Blue_Spruce66Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,28,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine19mPlus" />
+				<property name="PlantGrowing.GrowthRate" value="1" />
+				<property name="PlantGrowing.FertileLevel" value="5" />
+				<drop event="Harvest" name="wood" count="500" />
+				<drop event="Destroy" name="wood" count="250" prob="1" />
+				<drop event="Destroy" name="stick" count="35,50" prob="1" />
+				<drop event="Destroy" name="woodLog" count="7,9" prob="1" />
+				<drop event="Destroy" name="blueSpruceSeed" count="2" />
+			</block>	
+	</insertAfter>	
+		<insertAfter xpath="/blocks/block[@name='treeHauntedTreeWasteland42']">
+	<block id="1402" name="treeAzalea">
+				<property name="Class" value="Plant" />
+				<!-- dont set it as tree as it would block other trees from getting planted nearby -->
+				<property name="Material" value="leaves" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Texture" value="292" />
+				<property name="Tag" value="TreeTrunk" />
+				<property name="Model" value="Entities/Trees/AzaleaPrefab" />
+				<property name="IsTerrainDecoration" value="true" />
+				<property name="Collide" value="melee" />
+				<drop event="Destroy" name="stick" count="1,3" prob="1" />
+				<!-- property name="FallOver" value="false" /-->
+				<property name="EconomicValue" value="20" />
+				<!-- disassemble value -->
+			</block>
+	</insertAfter>	
+		<insertAfter xpath="/blocks/block[@name='rConcreteWedgeStairs']">		
+				<block id="1122" name="treeSnowyDeadBush">
+				<property name="Material" value="leaves" />
+				<property name="Shape" value="BillboardPlant" />
+				<property name="Mesh" value="grass" />
+				<property name="Texture" value="351" />
+				<property name="Collide" value="melee" />
+				<property name="CanDecorateOnSlopes" value="true" />
+				<property name="IsTerrainDecoration" value="true" />
+				<drop event="Destroy" name="stick" count="1,3" prob="1" />
+			</block>
+	</insertAfter>	
+	<insertAfter xpath="/blocks/block[@name='plantedChrysanthemum2']">		
+			<block id="871" name="treeDeadPineLeaf">
+				<property name="Material" value="leaves" />
+				<property name="Shape" value="BillboardPlant" />
+				<property name="Mesh" value="grass" />
+				<property name="Texture" value="177" />
+				<property name="Collide" value="melee" />
+				<property name="CanDecorateOnSlopes" value="true" />
+				<property name="IsTerrainDecoration" value="true" />
+				<drop event="Destroy" name="stick" count="1,3" />
+			</block>	
+</insertAfter>		
+	<insertAfter xpath="/blocks/block[@name='rWoodArrowSlitHalf']">		
+			<block id="863" name="treePlainsTree2">
+				<property name="Extends" value="treeMaster" />
+				<property name="Model" value="Entities/Trees/White_Oak42Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,9,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="IsTerrainDecoration" value="true" />
+				<property name="CanPlayersSpawnOn" value="false" />
+				<drop event="Harvest" name="wood" count="100" />
+				<drop event="Destroy" name="woodLog" count="3,4" prob="1" />
+				<drop event="Destroy" name="wood" count="50" prob="1" />
+				<drop event="Destroy" name="stick" count="8,15" prob="1" />
+			</block>	
+</insertAfter>	
+	<insertAfter xpath="/blocks/block[@name='corrugatedMetalCNRRamp']">	
+			<block id="816" name="treePlainsTree">
+				<!-- shrubbery -->
+				<property name="Material" value="leaves" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Texture" value="292" />
+				<property name="Tag" value="TreeTrunk" />
+				<property name="Collide" value="melee" />
+				<property name="IsTerrainDecoration" value="true" />
+				<property name="Model" value="Entities/Trees/SnakeweedPrefab" />
+				<property name="ParticleOnDeath" value="treeGib_burnt" />
+				<!-- uses dummy texture id from opaque atlas -->
+				<drop event="Destroy" name="stick" count="1,2" prob="1" />
+			</block>		
+</insertAfter>	
+	<insertAfter xpath="/blocks/block[@name='rConcreteWedgeTipCNRFullTop']">	
+			<block id="732" name="treePlantedMaple17mPlus">
+				<property name="Extends" value="treeMaple17m" />
+				<property name="IsDeveloper" value="true" />
+				<property name="CustomIcon" value="treeMaple17m" />
+				<property name="PlantGrowing.FertileLevel" value="15" />
+				<drop event="Harvest" name="wood" count="550" />
+				<drop event="Destroy" name="wood" count="250" prob="1" />
+				<drop event="Destroy" name="stick" count="16,35" prob="1" />
+				<drop event="Destroy" name="woodLog" count="6,8" prob="1" />
+				<drop event="Destroy" name="mapleSeed" count="2" />
+			</block>		
+</insertAfter>	
+	<insertAfter xpath="/blocks/block[@name='steelCNRRoundTop']">
+		<block id="590" name="treeWinterPine03">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodFull" />
+				<property name="Model" value="Entities/Trees/Blue_Spruce66Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,28,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<drop event="Harvest" name="wood" count="500" />
+				<drop event="Destroy" name="wood" count="250" prob="1" />
+				<drop event="Destroy" name="woodLog" count="5,6" prob="1" />
+				<drop event="Destroy" name="stick" count="5,20" prob="1" />
+				<drop event="Destroy" name="blueSpruceSeed" count="2" />
+			</block>
+		<block id="589" name="treeWinterPine02">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodLarge" />
+				<property name="Model" value="Entities/Trees/Blue_Spruce55Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,19,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<drop event="Harvest" name="wood" count="365" />
+				<drop event="Destroy" name="wood" count="185" prob="1" />
+				<drop event="Destroy" name="woodLog" count="3,4" prob="1" />
+				<drop event="Destroy" name="stick" count="5,20" prob="1" />
+				<drop event="Destroy" name="blueSpruceSeed" count="2" />
+			</block>
+		<block id="587" name="treeWinterPine01">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodMedium" />
+				<property name="Model" value="Entities/Trees/Blue_Spruce45Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,12,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<drop event="Harvest" name="wood" count="235" />
+				<drop event="Destroy" name="wood" count="115" prob="1" />
+				<drop event="Destroy" name="woodLog" count="2,3" prob="1" />
+				<drop event="Destroy" name="stick" count="5,20" prob="1" />
+				<drop event="Destroy" name="blueSpruceSeed" count="2" />
+			</block>
+		<block id="586" name="treeWinterEverGreen">
+				<property name="Extends" value="treeMaster" />
+				<property name="Model" value="Entities/Trees/AlaskaCedar60Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,6,1" />
+				<property name="BigDecorationRadius" value="1" />
+				<drop event="Harvest" name="everGreenWood" count="100" />
+				<drop event="Destroy" name="everGreenWood" count="50" prob="1" />
+				<drop event="Destroy" name="everGreenWoodLog" count="1,2" prob="1" />
+				<drop event="Destroy" name="everGreenStick" count="10,20" prob="1" />
+				<property name="FallOver" value="true" />
+			</block>
+		<block id="582" name="treeDeadTree02">
+				<!-- almost a shrub -->
+				<property name="Extends" value="treeMaster" />
+				<property name="IsTerrainDecoration" value="true" />
+				<property name="Model" value="Entities/Trees/Haunted_Shrub_WastelandPrefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+				<drop event="Harvest" name="deadWood" count="50" />
+				<drop event="Destroy" name="deadWood" count="25,50" prob="1" />
+				<drop event="Destroy" name="deadWoodLog" count="1" prob="1" />
+				<drop event="Destroy" name="stick" count="8,10" prob="1" />
+			</block>
+		<block id="581" name="treeDeadTree01">
+			<property name="Extends" value="treeMaster" />
+			<property name="Model" value="Entities/Trees/White_Oak22Prefab" />
+			<property name="ModelOffset" value="0,-0.3,0" />
+			<property name="MultiBlockDim" value="1,4,1" />
+			<property name="BigDecorationRadius" value="2" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<drop event="Harvest" name="deadWood" count="50" />
+			<drop event="Destroy" name="deadWood" count="25,50" prob="1" />
+			<drop event="Destroy" name="deadWoodLog" count="1" prob="1" />
+			<drop event="Destroy" name="stick" count="8,10" prob="1" />
+		</block>
+	</insertAfter>	
+	
+	<insertAfter xpath="/blocks/block[@name='rConcreteCNRRoundTop']">
+	<block id="579" name="treeBurntPine03">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodFull" />
+				<property name="Model" value="Entities/Trees/Haunted_Tree_Wasteland42Prefab" />
+				<property name="ModelOffset" value="-.5,-1.3,-.5" />
+				<property name="MultiBlockDim" value="2,9,2" />
+				<property name="BigDecorationRadius" value="4" />
+				<drop event="Harvest" name="burnWood" count="500" />
+				<drop event="Destroy" name="burnWood" count="250" prob="4" />
+				<drop event="Destroy" name="burnWoodLog" count="3,4" prob="1" />
+				<drop event="Destroy" name="stick" count="10,15" prob="1" />
+			</block>
+	<block id="578" name="treeBurntPine02">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodLarge" />
+				<property name="Model" value="Entities/Trees/Haunted_Tree_Wasteland39Prefab" />
+				<property name="ModelOffset" value=".7,-1,-.7" />
+				<property name="MultiBlockDim" value="1,5,1" />
+				<property name="BigDecorationRadius" value="4" />
+				<drop event="Harvest" name="burnWood" count="365" />
+				<drop event="Destroy" name="burnWood" count="185" prob="1" />
+				<drop event="Destroy" name="burnWoodLog" count="2,3" prob="1" />
+				<drop event="Destroy" name="stick" count="10,15" prob="1" />
+			</block>
+	<block id="577" name="treeBurntPine01">
+				<property name="Extends" value="treeMaster" />
+				<property name="Model" value="Entities/Trees/Haunted_Tree_Wasteland25Prefab" />
+				<property name="ModelOffset" value="0,-1,0" />
+				<property name="MultiBlockDim" value="1,3,1" />
+				<property name="BigDecorationRadius" value="3" />
+				<property name="ParticleOnDeath" value="treeGib_burnt_small" />
+				<drop event="Harvest" name="burnWood" count="100" />
+				<drop event="Destroy" name="burnWood" count="50" prob="1" />
+				<drop event="Destroy" name="burnWoodLog" count="1" prob="1" />
+				<drop event="Destroy" name="stick" count="10,15" prob="1" />
+			</block>
+	</insertAfter>	
+	<insertAfter xpath="/blocks/block[@name='rConcreteCNRRoundTop']">		
+			<block id="575" name="treeMaple17m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodFull" />
+				<property name="Model" value="Entities/Trees/Red_Maple80Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,6,1" />
+				<property name="BigDecorationRadius" value="6" />
+				<property name="ParticleOnDeath" value="treeGib_birch" />
+				<drop event="Harvest" name="wood" count="500" />
+				<drop event="Destroy" name="wood" count="250" prob="1" />
+				<drop event="Destroy" name="stick" count="17,33" prob="1" />
+				<drop event="Destroy" name="woodLog" count="6,7" prob="1" />
+				<drop event="Destroy" name="mapleSeed" count="2" />
+			</block>
+			<block id="574" name="treeMaple16m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodLarge" />
+				<property name="Model" value="Entities/Trees/Maple81Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,10,1" />
+				<property name="BigDecorationRadius" value="5" />
+				<property name="ParticleOnDeath" value="treeGib_birch" />
+				<drop event="Harvest" name="wood" count="365" />
+				<drop event="Destroy" name="wood" count="185" prob="1" />
+				<drop event="Destroy" name="stick" count="15,30" prob="1" />
+				<drop event="Destroy" name="woodLog" count="6,7" prob="1" />
+				<drop event="Destroy" name="mapleSeed" count="2" />
+			</block>
+			<block id="573" name="treeMaple15m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodLarge" />
+				<property name="Model" value="Entities/Trees/Maple33Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,7,1" />
+				<property name="BigDecorationRadius" value="4" />
+				<property name="ParticleOnDeath" value="treeGib_birch" />
+				<drop event="Harvest" name="wood" count="365" />
+				<drop event="Destroy" name="wood" count="185" prob="1" />
+				<drop event="Destroy" name="stick" count="14,28" prob="1" />
+				<drop event="Destroy" name="woodLog" count="5,6" prob="1" />
+				<drop event="Destroy" name="mapleSeed" count="2" />
+			</block>
+	</insertAfter>		
+	<insertAfter xpath="/blocks/block[@name='ironBarsCentered']">
+			<block id="571" name="treeMaple13m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodMedium" />
+				<property name="Model" value="Entities/Trees/Maple30Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,7,1" />
+				<property name="BigDecorationRadius" value="3" />
+				<property name="ParticleOnDeath" value="treeGib_birch_small" />
+				<drop event="Harvest" name="wood" count="235" />
+				<drop event="Destroy" name="wood" count="115" prob="1" />
+				<drop event="Destroy" name="stick" count="10,20" prob="1" />
+				<drop event="Destroy" name="woodLog" count="5,6" prob="1" />
+				<drop event="Destroy" name="mapleSeed" count="1" />
+			</block>
+			<block id="570" name="treeMaple6m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Model" value="Entities/Trees/Maple20Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,5,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="ParticleOnDeath" value="treeGib_birch_small" />
+				<drop event="Harvest" name="wood" count="100" />
+				<drop event="Destroy" name="wood" count="50" prob="1" />
+				<drop event="Destroy" name="stick" count="5,10" prob="1" />
+				<drop event="Destroy" name="woodLog" count="3" prob="1" />
+				<drop event="Destroy" name="mapleSeed" count="1" />
+			</block>
+			<block id="569" name="treeDeadShrub">
+				<property name="Material" value="wood_weak" />
+				<property name="MaxDamage" value="15" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Texture" value="116" />
+				<property name="Tag" value="TreeTrunk" />
+				<property name="IsTerrainDecoration" value="true" />
+				<property name="Model" value="Entities/Trees/Haunted_Shrub_Wasteland2Prefab" />
+				<!-- uses dummy texture id from opaque atlas -->
+				<drop event="Harvest" name="deadWood" count="10" />
+				<drop event="Destroy" name="deadWood" count="2" prob="1" />
+				<drop event="Destroy" name="stick" count="1,4" prob="1" />
+			</block>
+			<block id="568" name="treeBirch15m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodLarge" />
+				<property name="Model" value="Entities/Trees/Birch55Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,13,1" />
+				<property name="BigDecorationRadius" value="4" />
+				<property name="ParticleOnDeath" value="treeGib_birch" />
+				<drop event="Harvest" name="wood" count="365" />
+				<drop event="Destroy" name="wood" count="185" prob="1" />
+				<drop event="Destroy" name="woodLog" count="6,7" prob="1" />
+				<drop event="Destroy" name="stick" count="14,28" prob="1" />
+			</block>
+			<block id="567" name="treeBirch12m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodMedium" />
+				<property name="Model" value="Entities/Trees/Birch50Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,4,1" />
+				<property name="BigDecorationRadius" value="3" />
+				<property name="ParticleOnDeath" value="treeGib_birch_small" />
+				<drop event="Harvest" name="wood" count="235" />
+				<drop event="Destroy" name="wood" count="115" prob="1" />
+				<drop event="Destroy" name="woodLog" count="5,6" prob="1" />
+				<drop event="Destroy" name="stick" count="9,18" prob="1" />
+			</block>
+			<block id="566" name="treeBirch10m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Model" value="Entities/Trees/Birch35Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,7,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="ParticleOnDeath" value="treeGib_birch_small" />
+				<drop event="Harvest" name="wood" count="100" />
+				<drop event="Destroy" name="wood" count="50" prob="1" />
+				<drop event="Destroy" name="woodLog" count="3,5" prob="1" />
+				<drop event="Destroy" name="stick" count="8,15" prob="1" />
+			</block>
+			<block id="565" name="treeMountainPineDry">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodLarge" />
+				<property name="Model" value="Entities/Trees/MountainPineDeadPrefab" />
+				<property name="MultiBlockDim" value="1,21,1" />
+				<property name="BigDecorationRadius" value="3" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<drop event="Harvest" name="wood" count="365" />
+				<drop event="Destroy" name="stick" count="1,40" prob="1" />
+				<drop event="Destroy" name="woodLog" count="3,6" prob="1" />
+				<drop event="Destroy" name="wood" count="185" prob="1" />
+			</block>
+			<block id="564" name="treeMountainPine20m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodFull" />
+				<property name="Model" value="Entities/Trees/MountainPine75Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,28,1" />
+				<property name="BigDecorationRadius" value="4" />
+				<drop event="Harvest" name="wood" count="500" />
+				<drop event="Destroy" name="wood" count="250" prob="1" />
+				<drop event="Destroy" name="stick" count="35,50" prob="1" />
+				<drop event="Destroy" name="woodLog" count="8,9" prob="1" />
+				<drop event="Destroy" name="pineSeed" count="2" />
+			</block>
+			<block id="563" name="treeMountainPine19m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodLarge" />
+				<property name="Model" value="Entities/Trees/MountainPine60mPrefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,27,1" />
+				<property name="BigDecorationRadius" value="3" />
+				<drop event="Harvest" name="wood" count="365" />
+				<drop event="Destroy" name="wood" count="185" prob="1" />
+				<drop event="Destroy" name="stick" count="35,50" prob="1" />
+				<drop event="Destroy" name="woodLog" count="7,9" prob="1" />
+				<drop event="Destroy" name="pineSeed" count="2" />
+			</block>
+			<block id="562" name="treeMountainPine16m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodLarge" />
+				<property name="Model" value="Entities/Trees/MountainPine55mPrefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,24,1" />
+				<property name="BigDecorationRadius" value="3" />
+				<drop event="Harvest" name="wood" count="365" />
+				<drop event="Destroy" name="wood" count="185" prob="1" />
+				<drop event="Destroy" name="stick" count="15,30" prob="1" />
+				<drop event="Destroy" name="woodLog" count="15,30" prob="1" />
+				<drop event="Destroy" name="pineSeed" count="2" />
+			</block>
+			<block id="561" name="treeMountainPine13m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Material" value="treeWoodMedium" />
+				<property name="Model" value="Entities/Trees/MountainPine45mPrefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,19,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<drop event="Harvest" name="wood" count="235" />
+				<drop event="Destroy" name="wood" count="115" prob="1" />
+				<drop event="Destroy" name="stick" count="10,20" prob="1" />
+				<drop event="Destroy" name="woodLog" count="5,6" prob="1" />
+				<drop event="Destroy" name="pineSeed" count="1" />
+			</block>
+			<block id="560" name="treeMountainPine8m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Model" value="Entities/Trees/MountainPine40mPrefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,10,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<drop event="Harvest" name="wood" count="100" />
+				<drop event="Destroy" name="wood" count="50" prob="1" />
+				<drop event="Destroy" name="stick" count="8,16" prob="1" />
+				<drop event="Destroy" name="woodLog" count="3,4" prob="1" />
+				<drop event="Destroy" name="pineSeed" count="1" />
+			</block>
+			<block id="559" name="treeJuniper6m">
+				<property name="Extends" value="treeMaster" />
+				<property name="Model" value="Entities/Trees/Hollywood_Juniper15mPrefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,4,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="CanPlayersSpawnOn" value="false" />
+				<property name="ParticleOnDeath" value="treeGib_small_dust" />
+				<drop event="Harvest" name="wood" count="100" />
+				<drop event="Destroy" name="wood" count="50" prob="1" />
+				<drop event="Destroy" name="woodLog" count="3" prob="1" />
+				<drop event="Destroy" name="stick" count="5,10" prob="1" />
+			</block>
+	</insertAfter>	
+<insertAfter xpath="/blocks/block[@name='treeCactus06']">	
+<block id="684" name="treePlantedMaple17m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="CustomIcon" value="treeMaple17m" />
+				<property name="Material" value="treeWoodFull" />
+				<property name="Model" value="Entities/Trees/Red_Maple80Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,6,1" />
+				<property name="BigDecorationRadius" value="6" />
+				<property name="ParticleOnDeath" value="treeGib_birch" />
+				<property name="PlantGrowing.Next" value="treePlantedMaple17mPlus" />
+				<property name="PlantGrowing.GrowthRate" value="1" />
+				<property name="PlantGrowing.FertileLevel" value="5" />
+				<drop event="Harvest" name="wood" count="500" />
+				<drop event="Destroy" name="wood" count="250" prob="1" />
+				<drop event="Destroy" name="stick" count="16,33" prob="1" />
+				<drop event="Destroy" name="woodLog" count="6,7" prob="1" />
+				<drop event="Destroy" name="mapleSeed" count="2" />
+			</block>
+<block id="683" name="treePlantedMaple15m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="Material" value="treeWoodLarge" />
+				<property name="Model" value="Entities/Trees/Maple33Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,7,1" />
+				<property name="BigDecorationRadius" value="4" />
+				<property name="PlantGrowing.Next" value="treePlantedMaple17m" />
+				<property name="PlantGrowing.FertileLevel" value="3" />
+				<property name="ParticleOnDeath" value="treeGib_birch" />
+				<drop event="Harvest" name="wood" count="365" />
+				<drop event="Destroy" name="wood" count="185" prob="1" />
+				<drop event="Destroy" name="stick" count="14,28" prob="1" />
+				<drop event="Destroy" name="woodLog" count="5,6" prob="1" />
+				<drop event="Destroy" name="mapleSeed" count="2" />
+			</block>
+<block id="682" name="treePlantedMaple13m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="Material" value="treeWoodMedium" />
+				<property name="Model" value="Entities/Trees/Maple30Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,7,1" />
+				<property name="BigDecorationRadius" value="3" />
+				<property name="PlantGrowing.Next" value="treePlantedMaple15m" />
+				<property name="ParticleOnDeath" value="treeGib_birch_small" />
+				<drop event="Harvest" name="wood" count="235" />
+				<drop event="Destroy" name="wood" count="115" prob="1" />
+				<drop event="Destroy" name="woodLog" count="5,6" prob="1" />
+				<drop event="Destroy" name="stick" count="10,20" prob="1" />
+				<drop event="Destroy" name="mapleSeed" count="2" />
+			</block>
+<block id="681" name="treePlantedMaple6m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="Model" value="Entities/Trees/Maple20Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,5,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="PlantGrowing.Next" value="treePlantedMaple13m" />
+				<property name="ParticleOnDeath" value="treeGib_birch_small" />
+				<drop event="Harvest" name="wood" count="100" />
+				<drop event="Destroy" name="wood" count="50" prob="1" />
+				<drop event="Destroy" name="woodLog" count="3" prob="1" />
+				<drop event="Destroy" name="stick" count="5,10" prob="1" />
+				<drop event="Destroy" name="mapleSeed" count="1" />
+			</block>
+<block id="680" name="treePlantedMaple1m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="CustomIcon" value="mapleSeed" />
+				<property name="StabilitySupport" value="false" />
+				<property name="IsDeveloper" value="true" />
+				<property name="Material" value="wood_weak" />
+				<property name="Model" value="Entities/Trees/Prefabs/MountainPine1mPrefab" />
+				<property name="BigDecorationRadius" value="1" />
+				<property name="RotationAllowed" value="pivotOnFloor" />
+				<property name="PlantGrowing.Next" value="treePlantedMaple6m" />
+				<property name="Collide" value="melee" />
+				<drop event="Destroy" name="mapleSeed" count="1" />
+				<property name="FallOver" value="false" />
+				<property name="DescriptionKey" value="mapleSeedDesc" />
+			</block>
+<block id="679" name="treePlantedMountainPine19m">
+				<property name="Extends" value="treeMountainPine20m" />
+				<property name="IsDeveloper" value="true" />
+				<property name="CustomIcon" value="treeMountainPine20m" />
+				<property name="PlantGrowing.FertileLevel" value="15" />
+				<drop event="Harvest" name="wood" count="550" />
+				<drop event="Destroy" name="wood" count="250" prob="1" />
+				<drop event="Destroy" name="stick" count="35,50" prob="1" />
+				<drop event="Destroy" name="woodLog" count="7,9" prob="1" />
+				<drop event="Destroy" name="pineSeed" count="2" />
+			</block>
+<block id="678" name="treePlantedMountainPine16m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="CustomIcon" value="treeMountainPine20m" />
+				<property name="Material" value="treeWoodFull" />
+				<property name="Model" value="Entities/Trees/MountainPine75Prefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,28,1" />
+				<property name="BigDecorationRadius" value="4" />
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine19m" />
+				<property name="PlantGrowing.GrowthRate" value="1" />
+				<property name="PlantGrowing.FertileLevel" value="5" />
+				<drop event="Harvest" name="wood" count="500" />
+				<drop event="Destroy" name="wood" count="250" prob="1" />
+				<drop event="Destroy" name="woodLog" count="6,7" prob="1" />
+				<drop event="Destroy" name="stick" count="15,30" prob="1" />
+				<drop event="Destroy" name="pineSeed" count="2" />
+			</block>
+<block id="677" name="treePlantedMountainPine13m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="Material" value="treeWoodLarge" />
+				<property name="Model" value="Entities/Trees/MountainPine55mPrefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,24,1" />
+				<property name="BigDecorationRadius" value="3" />
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine16m" />
+				<property name="PlantGrowing.FertileLevel" value="3" />
+				<drop event="Harvest" name="wood" count="365" />
+				<drop event="Destroy" name="wood" count="185" prob="1" />
+				<drop event="Destroy" name="stick" count="10,20" prob="1" />
+				<drop event="Destroy" name="woodLog" count="5,6" prob="1" />
+				<drop event="Destroy" name="pineSeed" count="2" />
+			</block>
+<block id="676" name="treePlantedMountainPine8m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="Material" value="treeWoodMedium" />
+				<property name="Model" value="Entities/Trees/MountainPine45mPrefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,19,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine13m" />
+				<drop event="Harvest" name="wood" count="235" />
+				<drop event="Destroy" name="wood" count="115" prob="1" />
+				<drop event="Destroy" name="woodLog" count="3,4" prob="1" />
+				<drop event="Destroy" name="stick" count="7,14" prob="1" />
+				<drop event="Destroy" name="pineSeed" count="2" />
+			</block>
+<block id="675" name="treePlantedMountainPine6m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="IsDeveloper" value="true" />
+				<property name="Model" value="Entities/Trees/MountainPine40mPrefab" />
+				<property name="ModelOffset" value="0,-0.3,0" />
+				<property name="MultiBlockDim" value="1,10,1" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine8m" />
+				<drop event="Harvest" name="wood" count="100" />
+				<drop event="Destroy" name="wood" count="50" prob="1" />
+				<drop event="Destroy" name="woodLog" count="3" prob="1" />
+				<drop event="Destroy" name="stick" count="5,10" prob="1" />
+				<drop event="Destroy" name="pineSeed" count="1" />
+			</block>
+<block id="674" name="treePlantedMountainPine1m">
+				<property name="Extends" value="treeMasterGrowing" />
+				<property name="CustomIcon" value="pineSeed" />
+				<property name="IsDeveloper" value="true" />
+				<property name="Material" value="wood_weak" />
+				<property name="Model" value="Entities/Trees/Prefabs/MountainPine1mPrefab" />
+				<property name="StabilitySupport" value="false" />
+				<property name="Collide" value="melee" />
+				<property name="BigDecorationRadius" value="1" />
+				<property name="RotationAllowed" value="pivotOnFloor" />
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine6m" />
+				<drop event="Destroy" name="pineSeed" count="1" />
+				<property name="FallOver" value="false" />
+				<property name="DescriptionKey" value="pineSeedDesc" />
+			</block>
+</insertAfter>
+	
+	
+			
+			
+	
+
+
+		
+			
+						
+			
+			
+			
+			
+			
+			
+
+			
+					
+
+			
+<append xpath="/blocks">
+			
+
+		</append>
+	</config>
+</configs>

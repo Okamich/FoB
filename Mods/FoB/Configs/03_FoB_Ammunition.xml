@@ -1,0 +1,899 @@
+<configs>
+	<config name="items">
+	<remove xpath="/items/item[@name='arrow']" />
+	<remove xpath="/items/item[@name='9mmBullet']" />
+	<remove xpath="/items/item[@name='44MagBullet']" />
+	<remove xpath="/items/item[@name='762mmBullet']" />
+	<remove xpath="/items/item[@name='shotgunShell']" />
+	<remove xpath="/items/item[@name='shotgunSlug']" />
+	<insertBefore xpath="/items/item[@name='ironArrow']">
+<item id="164" name="arrow">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Bows/WoodenBow/Arrow" />
+	<property name="DropMeshfile" value="Items/Misc/arrow_dropped" />
+	<property name="HandMeshfile" value="Items/Misc/arrow_hand" />
+	<property name="HoldType" value="32" />
+	<property name="Material" value="wood" />
+	<property name="Stacknumber" value="300" />
+	<property name="FuelValue" value="8" />		
+	<property name="EconomicValue" value="12" />
+	<property name="EconomicBundleSize" value="5" />
+	<property class="Action1">
+		<property name="Class" value="Projectile" />
+			<property name="Explosion.ParticleIndex" value="0" />
+		<property name="Velocity" value="60" />
+		<property name="FlyTime" value="0" />
+		<property name="Gravity" value="-2" />
+		<property name="LifeTime" value="12" />
+		<property name="Buff" value="arrowCriticalBleedout" />
+		<property name="Buff_chance" value="0.1" />
+		<property name="DamageBonus.head" value="1" />
+		<property name="DamageBonus.glass" value="10" />
+		<property name="DamageBonus.wood" value="0" />
+		<property name="DamageBonus.earth" value="0" />
+		<property name="DamageBonus.metal" value="0" />
+		<property name="DamageBonus.cloth" value="0" />
+	</property>
+	<property name="Group" value="Ammo/Weapons,Basics" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+			<property name="EntityDamage" value="10,15" />
+			<property name="BlockDamage" value="1,3" />
+	</property>
+	<property name="DescriptionKey" value="arrowDesc" />
+	<property name="CraftingSkillGroup" value="Weapon Smithing" />
+</item>				
+</insertBefore>
+			<append xpath="/items">
+			
+				<item id="" name="stoneArrowHead">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="metal" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="500" />
+					<property name="EconomicValue" value="12" />
+					<property name="EconomicBundleSize" value="5" />
+					<property name="Group" value="Resources,Ammo/Weapons" />
+					<property name="CraftingSkillGroup" value="Weapon Smithing" />
+				</item>
+				<item id="" name="stoneBoltHead">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="metal" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="500" />
+					<property name="EconomicValue" value="12" />
+					<property name="EconomicBundleSize" value="5" />
+					<property name="Group" value="Resources,Ammo/Weapons" />
+					<property name="CraftingSkillGroup" value="Weapon Smithing" />
+				</item>
+				<item id="" name="ironBoltHead">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="metal" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="500" /> <!-- STK resource -->
+					<property name="EconomicValue" value="12" />
+					<property name="EconomicBundleSize" value="5" />
+					<property name="Group" value="Resources,Ammo/Weapons" />
+					<property name="CraftingSkillGroup" value="Weapon Smithing"/>
+				</item>
+				<item id="" name="steelBoltHead">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="metal" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="500" /> <!-- STK resource -->
+					<property name="EconomicValue" value="20" />
+					<property name="EconomicBundleSize" value="5" />
+					<property name="Group" value="Resources,Ammo/Weapons" />
+					<property name="CraftingSkillGroup" value="Weapon Smithing"/>
+				</item>				
+				<item id="" name="woodArrowBlank">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="wood" />
+					<property name="Weight" value="5" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="500" />
+					<property name="FuelValue" value="10" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="Group" value="Resources,Ammo/Weapons" />
+					<property name="CraftingSkillGroup" value="Weapon Smithing" />
+					<property name="CraftingIngredientTime" value="0.25" />
+				</item>		
+				<item id="" name="woodBoltBlank">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="wood" />
+					<property name="Weight" value="5" />
+					<property name="HoldType" value="45" />
+					<property name="Stacknumber" value="500" />
+					<property name="FuelValue" value="10" />
+					<property name="EconomicValue" value="5" />
+					<property name="EconomicBundleSize" value="50" />
+					<property name="Group" value="Resources,Ammo/Weapons" />
+					<property name="CraftingSkillGroup" value="Weapon Smithing" />
+					<property name="CraftingIngredientTime" value="0.25" />
+				</item>
+				<item id="" name="bolt">
+					<property name="Meshfile" value="Items/Weapons/Ranged/Bows/Crossbow/crossbowBoltPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/crossbow_bolt_droppedPrefab" />
+					<property name="HandMeshfile" value="Items/Misc/crossbow_bolt_handPrefab" />
+					<property name="HoldType" value="32" />
+					<property name="Material" value="wood" />
+					<property name="Stacknumber" value="300" /> <!-- STK ammo -->
+					<property name="FuelValue" value="10" />
+					<property name="EconomicValue" value="25" />
+					<property name="EconomicBundleSize" value="5" />
+					<property class="Action1">
+						<property name="Class" value="Projectile" />
+						<property name="Buff" value="arrowCriticalBleedout" />
+						<property name="Buff_chance" value="0.5" />
+						<property name="Explosion.ParticleIndex" value="0" /> <!-- no expl. -->
+						<property name="Velocity" value="100" />
+						<property name="FlyTime" value="0" />
+						<property name="Gravity" value="-2" />
+						<property name="LifeTime" value="14" />
+						<property name="DamageBonus.head" value="2" />
+						<property name="DamageBonus.glass" value="10" />
+						<property name="DamageBonus.wood" value="0" />
+						<property name="DamageBonus.earth" value="0" />
+						<property name="DamageBonus.metal" value="0" />
+						<property name="DamageBonus.cloth" value="0" />
+					</property>
+					<property class="Attributes">
+						<property name="GetQualityFromWeapon" value="true" />
+						<property name="EntityDamage" value="22,45" />
+						<property name="BlockDamage" value="2,5" />
+					</property>
+					<property name="Group" value="Ammo/Weapons" />
+					<property name="CraftingSkillGroup" value="Weapon Smithing"/>
+				</item>				
+				<item id="" name="stoneArrow">
+					<property name="Meshfile" value="Items/Weapons/Ranged/Bows/WoodenBow/Arrow" />
+					<property name="DropMeshfile" value="Items/Misc/arrow_dropped" />
+					<property name="HandMeshfile" value="Items/Misc/arrow_hand" />
+					<property name="HoldType" value="32" />
+					<property name="Material" value="wood" />
+					<property name="Stacknumber" value="300" />
+					<property name="FuelValue" value="8" />
+					<property name="EconomicValue" value="12" />
+					<property name="EconomicBundleSize" value="5" />
+					<property class="Action1">
+						<property name="Class" value="Projectile" />
+						<property name="Explosion.ParticleIndex" value="0" />
+						<property name="Velocity" value="55" />
+						<property name="FlyTime" value="0" />
+						<property name="Gravity" value="-4" />
+						<property name="LifeTime" value="12" />
+						<property name="Buff" value="arrowCriticalBleedout" />
+						<property name="Buff_chance" value="0.5" />
+						<property name="DamageBonus.head" value="7" />
+						<property name="DamageBonus.glass" value="10" />
+						<property name="DamageBonus.wood" value="0" />
+						<property name="DamageBonus.earth" value="0" />
+						<property name="DamageBonus.metal" value="0" />
+						<property name="DamageBonus.cloth" value="0" />
+					</property>
+					<property name="Group" value="Ammo/Weapons,Basics" />
+					<property class="Attributes">
+						<property name="GetQualityFromWeapon" value="true" />
+						<property name="EntityDamage" value="22,35" />
+						<property name="BlockDamage" value="2,7" />
+					</property>
+					<property name="DescriptionKey" value="arrowDesc" />
+					<property name="CraftingSkillGroup" value="Weapon Smithing" />
+				</item>
+				<item id="" name="stoneBolt">
+					<property name="Meshfile" value="Items/Weapons/Ranged/Bows/Crossbow/crossbowBoltPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/crossbow_bolt_droppedPrefab" />
+					<property name="HandMeshfile" value="Items/Misc/crossbow_bolt_handPrefab" />
+					<property name="HoldType" value="32" />
+					<property name="Material" value="wood" />
+					<property name="Stacknumber" value="300" /> <!-- STK ammo -->
+					<property name="FuelValue" value="10" />
+					<property name="EconomicValue" value="25" />
+					<property name="EconomicBundleSize" value="5" />
+					<property class="Action1">
+						<property name="Class" value="Projectile" />
+						<property name="Buff" value="arrowCriticalBleedout" />
+						<property name="Buff_chance" value="0.5" />
+						<property name="Explosion.ParticleIndex" value="0" /> <!-- no expl. -->
+						<property name="Velocity" value="85" />
+						<property name="FlyTime" value="0" />
+						<property name="Gravity" value="-3" />
+						<property name="LifeTime" value="13" />
+						<property name="DamageBonus.head" value="4" />
+						<property name="DamageBonus.glass" value="10" />
+						<property name="DamageBonus.wood" value="0" />
+						<property name="DamageBonus.earth" value="0" />
+						<property name="DamageBonus.metal" value="0" />
+						<property name="DamageBonus.cloth" value="0" />
+					</property>
+					<property class="Attributes">
+						<property name="GetQualityFromWeapon" value="true" />
+						<property name="EntityDamage" value="24,48" />
+						<property name="BlockDamage" value="4,8" />
+					</property>
+					<property name="Group" value="Ammo/Weapons" />
+					<property name="CraftingSkillGroup" value="Weapon Smithing"/>
+				</item>
+				<item id="" name="tacticArrow">
+					<property name="Meshfile" value="Items/Weapons/Ranged/Bows/WoodenBow/Arrow" />
+					<property name="DropMeshfile" value="Items/Misc/arrow_dropped" />
+					<property name="HandMeshfile" value="Items/Misc/arrow_hand" />
+					<property name="HoldType" value="32" />
+					<property name="Material" value="wood" />
+					<property name="Stacknumber" value="300" />
+					<property name="FuelValue" value="8" />
+					<property name="EconomicValue" value="120" />
+					<property name="EconomicBundleSize" value="50" />
+					<property class="Action1">
+						<property name="Class" value="Projectile" />
+						<property name="Explosion.ParticleIndex" value="0" />
+						<property name="Velocity" value="100" />
+						<property name="FlyTime" value="0" />
+						<property name="Gravity" value="-1" />
+						<property name="LifeTime" value="20" />
+						<property name="Buff" value="arrowCriticalBleedout" />
+						<property name="Buff_chance" value="0.85" />
+						<property name="DamageBonus.head" value="9" />
+						<property name="DamageBonus.glass" value="10" />
+						<property name="DamageBonus.wood" value="0" />
+						<property name="DamageBonus.earth" value="0" />
+						<property name="DamageBonus.metal" value="0" />
+						<property name="DamageBonus.cloth" value="0" />
+					</property>
+					<property name="Group" value="Ammo/Weapons,Basics" />
+					<property class="Attributes">
+						<property name="GetQualityFromWeapon" value="true" />
+						<property name="EntityDamage" value="30,42" />
+						<property name="BlockDamage" value="4,9" />
+					</property>
+					<property name="DescriptionKey" value="arrowDesc" />
+					<property name="CraftingSkillGroup" value="Weapon Smithing" />
+				</item>
+				<item id="" name="tacticBolt">			
+					<property name="Meshfile" value="Items/Weapons/Ranged/Bows/Crossbow/crossbowBoltPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/crossbow_bolt_droppedPrefab" />
+					<property name="HandMeshfile" value="Items/Misc/crossbow_bolt_handPrefab" />
+					<property name="HoldType" value="32" />
+					<property name="Material" value="wood" />
+					<property name="Stacknumber" value="300" /> <!-- STK ammo -->
+					<property name="FuelValue" value="10" />
+					<property name="EconomicValue" value="250" />
+					<property name="EconomicBundleSize" value="50" />
+					<property class="Action1">
+						<property name="Class" value="Projectile" />
+						<property name="Buff" value="arrowCriticalBleedout" />
+						<property name="Buff_chance" value="0.9" />
+						<property name="Explosion.ParticleIndex" value="0" /> <!-- no expl. -->
+						<property name="Velocity" value="120" />
+						<property name="FlyTime" value="1" />
+						<property name="Gravity" value="-3" />
+						<property name="LifeTime" value="18" />
+						<property name="DamageBonus.head" value="11" />
+						<property name="DamageBonus.glass" value="10" />
+						<property name="DamageBonus.wood" value="0" />
+						<property name="DamageBonus.earth" value="0" />
+						<property name="DamageBonus.metal" value="0" />
+						<property name="DamageBonus.cloth" value="0" />
+					</property>
+					<property class="Attributes">
+						<property name="GetQualityFromWeapon" value="true" />
+						<property name="EntityDamage" value="40,64" />
+						<property name="BlockDamage" value="6,10" />
+					</property>
+					<property name="Group" value="Ammo/Weapons" />
+					<property name="CraftingSkillGroup" value="Weapon Smithing"/>
+				</item>		
+
+				<!--factory bullets-->
+<item id="150" name="9mmBullet">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Pistol/9mm_bulletPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="500" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="14" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="2,10" />
+		<property name="BlockDamage" value="1,1" />
+		<property name="ApplyBuff" value="0.05, 0.07" param1="bleeding" />
+		<property name="DismembermentBaseChance" value="0.01,0.05"/>
+		<property name="DismembermentBonus" value="0,0"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="9mmBulletHE">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Pistol/9mm_bulletPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="500" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="56" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="8,40" />
+		<property name="BlockDamage" value="4,4" />
+		<property name="ApplyBuff" value="0.2, 0.28" param1="bleeding" />
+		<property name="DismembermentBaseChance" value="0.04,0.20"/>
+		<property name="DismembermentBonus" value="0,0"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item id="" name="10mmBullet">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Pistol/10mm_bulletPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="500" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="17" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="10,20" />
+		<property name="BlockDamage" value="1,1" />
+		<property name="ApplyBuff" value="0.05, 0.07" param1="bleeding" />
+		<property name="DismembermentBaseChance" value="0.01,0.05"/>
+		<property name="DismembermentBonus" value="0,0"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item id="152" name="44MagBullet">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Magnums/44_roundPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="500" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="19" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="10,20" />
+		<property name="BlockDamage" value="1,1" />
+		<property name="ApplyBuff" value="0.05, 0.07" param1="bleeding" />
+		<property name="DismembermentBaseChance" value="0.01,0.05"/>
+		<property name="DismembermentBonus" value="0,0"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item id="153" name="762mmBullet">
+	<property name="Meshfile" value="Items/Weapons/Ranged/HuntingRifle/762mm_bulletPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="500" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="19" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="10,20" />
+		<property name="BlockDamage" value="1,1" />
+		<property name="ApplyBuff" value="0.05, 0.07" param1="bleeding" />
+		<property name="DismembermentBaseChance" value="0.01,0.05"/>
+		<property name="DismembermentBonus" value="0,0"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="45ACPBullet">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Magnums/44_roundPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="500" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="19" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="20,40" />
+		<property name="BlockDamage" value="5,10" />
+		<property name="ApplyBuff" value="0.1, 0.2" param1="bleeding" />
+		<property name="DismembermentBaseChance" value="0.1,0.5"/>
+		<property name="DismembermentBonus" value="0.01,0.1"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="545mmBullet">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Pistol/762mm_bulletPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="30" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="14" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="10,20" />
+		<property name="BlockDamage" value="1,1" />
+		<property name="ApplyBuff" value="0.05, 0.07" param1="bleeding" />
+		<property name="DismembermentBaseChance" value="0.01,0.05"/>
+		<property name="DismembermentBonus" value="0,0"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="50CALBullet">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Pistol/762mm_bulletPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="30" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="14" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="10,20" />
+		<property name="BlockDamage" value="1,1" />
+		<property name="ApplyBuff" value="0.05, 0.07" param1="bleeding" />
+		<property name="DismembermentBaseChance" value="0.01,0.05"/>
+		<property name="DismembermentBonus" value="0,0"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="3006mmBullet">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Pistol/762mm_bulletPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="30" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="14" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="10,20" />
+		<property name="BlockDamage" value="1,1" />
+		<property name="ApplyBuff" value="0.05, 0.07" param1="bleeding" />
+		<property name="DismembermentBaseChance" value="0.01,0.05"/>
+		<property name="DismembermentBonus" value="0,0"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="156" name="shotgunShell">
+	<property name="Meshfile" value="Items/Weapons/Ranged/SawedOffPumpShotgun/shotgunShellPrefab" />
+	<property name="Material" value="lead" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="250" /> <!-- STK ammo -->
+	<property name="DropScale" value="4" />
+	<property name="EconomicValue" value="17" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="3,9" />
+		<property name="BlockDamage" value="5.4,13.5" />
+		<property name="ApplyBuff" value="0.05, 0.07" param1="bleeding" />
+		<property name="DismembermentBaseChance" value="0.01,0.05"/>
+		<property name="DismembermentBonus" value="0,0"/>
+	</property>
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item id="157" name="shotgunSlug">
+	<property name="Meshfile" value="Items/Weapons/Ranged/SawedOffPumpShotgun/shotgunShellPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="128" /> <!-- STK ammo -->
+	<property name="EconomicValue" value="56" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="20,35" />
+		<property name="BlockDamage" value="10,20" />
+		<property name="ApplyBuff" value="0.05, 0.07" param1="bleeding" />
+		<property name="DismembermentBaseChance" value="0.5,1"/>
+		<property name="DismembermentBonus" value="0,0"/>
+	</property>
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+			
+			<!--homemade bullets-->
+<item id="" name="9mmBulletH">
+	<property name="Extends" value="9mmBullet" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="1,5" />
+		<property name="DegradationMax" value="100,300" />
+		<property name="DegradationRate" value="10,1" />
+	</property>
+	<property name="EconomicValue" value="4" />
+</item>
+<item id="" name="10mmBulletH">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Pistol/10mm_bulletPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="30" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="17" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="44MagBulletH">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Magnums/44_roundPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="30" /> <!-- STK ammo -->
+	<property name="Group" value="Ammo/Weapons" />
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="19" />
+</item>
+<item id="" name="762mmBulletH">
+	<property name="Meshfile" value="Items/Weapons/Ranged/HuntingRifle/762mm_bulletPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="30" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="19" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="shotgunShellH">
+	<property name="Meshfile" value="Items/Weapons/Ranged/SawedOffPumpShotgun/shotgunShellPrefab" />
+	<property name="Material" value="lead" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="10" /> <!-- STK ammo -->
+	<property name="DropScale" value="4" />
+	<property name="EconomicValue" value="17" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="1.8,4.5" />
+		<property name="BlockDamage" value="2.7,6.75" />
+	</property>
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="shotgunSlugH">
+	<property name="Meshfile" value="Items/Weapons/Ranged/SawedOffPumpShotgun/shotgunShellPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="10" /> <!-- STK ammo -->
+	<property name="EconomicValue" value="56" />
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true" />
+		<property name="EntityDamage" value="10,15" />
+		<property name="BlockDamage" value="8,10" />
+	</property>
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="bulletTipH">
+		<property name="Meshfile" value="Items/Misc/sackPrefab" />
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+		<property name="Material" value="lead" />
+		<property name="HoldType" value="45" />
+		<property name="Stacknumber" value="500" />
+		<property name="Weight" value="1" />
+		<property name="Group" value="Resources" />
+</item>	
+<item id="" name="bulletCasingH">
+	<property name="Meshfile" value="Items/Crafting/bullet_casingPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="500" /> <!-- STK resource -->
+	<property name="EconomicValue" value="25" />
+	<property name="EconomicBundleSize" value="5" />
+	<property name="Group" value="Resources,Ammo/Weapons" />
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+</item>	
+<item id="" name="545mmBulletH">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Pistol/762mm_bulletPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="30" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="14" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="3006mmBulletH">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Pistol/762mm_bulletPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="30" /> <!-- STK ammo -->
+	<property name="CraftingSkillGroup" value="Gun Smithing"/>
+	<property name="EconomicValue" value="14" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>	
+		
+				<!--factory bullets box's-->
+<item id="" name="9mmAmmoBox">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="3" />
+	<property name="EconomicValue" value="1" />
+	<property name="CraftingIngredientTime" value="1" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="10mmAmmoBox">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="3" />
+	<property name="EconomicValue" value="1" />
+	<property name="CraftingIngredientTime" value="1" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="12AmmoBox">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="3" />
+	<property name="EconomicValue" value="1" />
+	<property name="CraftingIngredientTime" value="1" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="12AmmoBoxSST">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="3" />
+	<property name="EconomicValue" value="1" />
+	<property name="CraftingIngredientTime" value="1" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="44AmmoBox">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="3" />
+	<property name="EconomicValue" value="1" />
+	<property name="CraftingIngredientTime" value="1" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="545AmmoBox">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="3" />
+	<property name="EconomicValue" value="1" />
+	<property name="CraftingIngredientTime" value="1" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="762AmmoBox">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="3" />
+	<property name="EconomicValue" value="1" />
+	<property name="CraftingIngredientTime" value="1" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+<item id="" name="50calAmmoBox">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="Material" value="brass" />
+	<property name="HoldType" value="21" />
+	<property name="Stacknumber" value="3" />
+	<property name="EconomicValue" value="1" />
+	<property name="CraftingIngredientTime" value="1" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+				<item id="" name="3006AmmoBox">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="brass" />
+					<property name="HoldType" value="21" />
+					<property name="Stacknumber" value="3" />
+					<property name="EconomicValue" value="1" />
+					<property name="CraftingIngredientTime" value="1" />
+					<property name="Group" value="Ammo/Weapons" />
+				</item>
+
+              
+				<!--homemade bullets box's-->
+				<item id="" name="H9mmAmmoBox">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="brass" />
+					<property name="HoldType" value="21" />
+					<property name="Stacknumber" value="3" />
+					<property name="EconomicValue" value="1" />
+					<property name="CraftingIngredientTime" value="1" />
+					<property name="Group" value="Ammo/Weapons" />
+				</item>
+				<item id="" name="H10mmAmmoBox">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="brass" />
+					<property name="HoldType" value="21" />
+					<property name="Stacknumber" value="3" />
+					<property name="EconomicValue" value="1" />
+					<property name="CraftingIngredientTime" value="1" />
+					<property name="Group" value="Ammo/Weapons" />
+				</item>
+				<item id="" name="H12AmmoBox">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="brass" />
+					<property name="HoldType" value="21" />
+					<property name="Stacknumber" value="3" />
+					<property name="EconomicValue" value="1" />
+					<property name="CraftingIngredientTime" value="1" />
+					<property name="Group" value="Ammo/Weapons" />
+				</item>
+				<item id="" name="H12AmmoBoxSST">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="brass" />
+					<property name="HoldType" value="21" />
+					<property name="Stacknumber" value="3" />
+					<property name="EconomicValue" value="1" />
+					<property name="CraftingIngredientTime" value="1" />
+					<property name="Group" value="Ammo/Weapons" />
+				</item>
+				<item id="" name="H44AmmoBox">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="brass" />
+					<property name="HoldType" value="21" />
+					<property name="Stacknumber" value="3" />
+					<property name="EconomicValue" value="1" />
+					<property name="CraftingIngredientTime" value="1" />
+					<property name="Group" value="Ammo/Weapons" />
+				</item>
+				<item id="" name="H545AmmoBox">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="brass" />
+					<property name="HoldType" value="21" />
+					<property name="Stacknumber" value="3" />
+					<property name="EconomicValue" value="1" />
+					<property name="CraftingIngredientTime" value="1" />
+					<property name="Group" value="Ammo/Weapons" />
+				</item>
+				<item id="" name="H762AmmoBox">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="brass" />
+					<property name="HoldType" value="21" />
+					<property name="Stacknumber" value="3" />
+					<property name="EconomicValue" value="1" />
+					<property name="CraftingIngredientTime" value="1" />
+					<property name="Group" value="Ammo/Weapons" />
+				</item>
+				<item id="" name="H3006AmmoBox">
+					<property name="Meshfile" value="Items/Misc/sackPrefab" />
+					<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+					<property name="Material" value="brass" />
+					<property name="HoldType" value="21" />
+					<property name="Stacknumber" value="3" />
+					<property name="EconomicValue" value="1" />
+					<property name="CraftingIngredientTime" value="1" />
+					<property name="Group" value="Ammo/Weapons" />
+</item>
+			</append>
+</config>
+<config name="recipes">
+	<remove xpath="/recipes/recipe[@name='9mmBullet']" />
+	<remove xpath="/recipes/recipe[@name='shotgunShell']" />
+	<remove xpath="/recipes/recipe[@name='shotgunSlug']" />
+	<remove xpath="/recipes/recipe[@name='44MagBullet']" />
+	<remove xpath="/recipes/recipe[@name='762mmBullet']" />
+		<append xpath="/recipes">
+		<recipe name="9mmBulletH" count="70">
+			<ingredient name="H9mmAmmoBox" count="1"/>
+		</recipe>
+		<recipe name="10mmBulletH" count="60">
+			<ingredient name="H10mmAmmoBox" count="1"/>
+		</recipe>
+		<recipe name="shotgunShellH" count="40">
+			<ingredient name="H12AmmoBox" count="1"/>
+		</recipe>
+		<recipe name="shotgunSlugH" count="20">
+			<ingredient name="H12AmmoBoxSST" count="1"/>
+		</recipe>
+		<recipe name="44MagBulletH" count="55">
+			<ingredient name="H44AmmoBox" count="1"/>
+		</recipe>
+		<recipe name="545mmBulletH" count="35">
+			<ingredient name="H545AmmoBox" count="1"/>
+		</recipe>
+		<recipe name="762mmBulletH" count="30">
+			<ingredient name="H762AmmoBox" count="1"/>
+		</recipe>
+		<recipe name="3006mmBulletH" count="25">
+			<ingredient name="H3006AmmoBox" count="1"/>
+		</recipe>
+		<recipe name="H9mmAmmoBox" count="1">
+			<ingredient name="9mmBulletH" count="70"/>
+		</recipe>
+		<recipe name="H10mmAmmoBox" count="1">
+			<ingredient name="10mmBulletH" count="60"/>
+		</recipe>
+		<recipe name="H12AmmoBox" count="1">
+			<ingredient name="shotgunShellH" count="40"/>
+		</recipe>
+		<recipe name="H12AmmoBoxSST" count="1">
+			<ingredient name="shotgunSlugH" count="20"/>
+		</recipe>
+		<recipe name="H44AmmoBox" count="1">
+			<ingredient name="44MagBulletH" count="55"/>
+		</recipe>
+		<recipe name="H545AmmoBox" count="1">
+			<ingredient name="545mmBulletH" count="35"/>
+		</recipe>
+		<recipe name="H762AmmoBox" count="1">
+			<ingredient name="762mmBulletH" count="30"/>
+		</recipe>
+		<recipe name="H3006AmmoBox" count="1">
+			<ingredient name="3006mmBulletH" count="25"/>
+		</recipe>
+		
+		<recipe name="9mmBullet" count="50">
+			<ingredient name="9mmAmmoBox" count="1"/>
+		</recipe>
+		<recipe name="10mmBullet" count="50">
+			<ingredient name="10mmAmmoBox" count="1"/>
+		</recipe>
+		<recipe name="shotgunShell" count="30">
+			<ingredient name="12AmmoBox" count="1"/>
+		</recipe>
+		<recipe name="shotgunSlug" count="15">
+			<ingredient name="12AmmoBoxSST" count="1"/>
+		</recipe>
+		<recipe name="44MagBullet" count="50">
+			<ingredient name="44AmmoBox" count="1"/>
+		</recipe>
+		<recipe name="545mmBullet" count="20">
+			<ingredient name="545AmmoBox" count="1"/>
+		</recipe>
+		<recipe name="762mmBullet" count="20">
+			<ingredient name="762AmmoBox" count="1"/>
+		</recipe>
+		<recipe name="3006mmBullet" count="20">
+			<ingredient name="3006AmmoBox" count="1"/>
+		</recipe>
+		
+		<recipe name="10mmBulletH" count="1" craft_area="WeaponWorkbench">
+	<ingredient name="bulletTipH" count="1"/>
+	<ingredient name="gunPowder" count="2"/>
+	<ingredient name="bulletCasingH" count="1"/>
+</recipe>
+
+<recipe name="44MagBulletH" count="1" craft_area="WeaponWorkbench">
+	<ingredient name="bulletTipH" count="1"/>
+	<ingredient name="gunPowder" count="3"/>
+	<ingredient name="bulletCasingH" count="1"/>
+</recipe>
+
+<recipe name="762mmBulletH" count="1" craft_area="WeaponWorkbench">
+	<ingredient name="bulletTipH" count="1"/>
+	<ingredient name="gunPowder" count="3"/>
+	<ingredient name="bulletCasingH" count="1"/>
+</recipe>
+
+<recipe name="545mmBulletH" count="1" craft_area="WeaponWorkbench">
+	<ingredient name="bulletTipH" count="1"/>
+	<ingredient name="gunPowder" count="3"/>
+	<ingredient name="bulletCasingH" count="1"/>
+</recipe>
+
+<recipe name="3006mmBulletH" count="1" craft_area="WeaponWorkbench">
+	<ingredient name="bulletTipH" count="1"/>
+	<ingredient name="gunPowder" count="3"/>
+	<ingredient name="bulletCasingH" count="1"/>
+</recipe>
+
+<recipe name="9mmBulletH" count="1" craft_area="WeaponWorkbench">
+	<ingredient name="bulletTipH" count="1"/>
+	<ingredient name="gunPowder" count="1"/>
+	<ingredient name="bulletCasingH" count="1"/>
+</recipe>
+
+<recipe name="shotgunShellH" count="1" craft_area="WeaponWorkbench">
+	<ingredient name="buckshot" count="1"/>
+	<ingredient name="gunPowder" count="2"/>
+	<ingredient name="paper" count="1"/>
+</recipe>
+
+<recipe name="shotgunSlugH" count="1" craft_area="WeaponWorkbench">
+	<ingredient name="bulletTipH" count="5"/>
+	<ingredient name="gunPowder" count="4"/>
+	<ingredient name="bulletCasingH" count="3"/>
+</recipe>
+		</append>
+	</config>	
+</configs>
